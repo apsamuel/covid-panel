@@ -1,9 +1,13 @@
 .ipynb_checkpoints
 lib/__pycache__
+# Ignore shape files
 data/*.shp 
 data/*.dbf 
 data/*.prj
 data/*.shx
 data/*.txt
 data/*.html
+
+# Local & development files which may be ignored
 .DS_Store
+.vscode/.ropeproject/objectdb
