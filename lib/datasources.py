@@ -24,7 +24,9 @@ import pycountry as country
 from pyproj import Proj, transform
 # for date and time functions
 from datetime import date, datetime, timedelta
+import pytest
 
+warnings.filterwarnings('ignore')
 
 class PandasTimeStampEncoder(json.JSONEncoder):
     def default(self, o):
@@ -32,36 +34,37 @@ class PandasTimeStampEncoder(json.JSONEncoder):
             return o.strftime('%Y-%m-%d')
         return json.JSONEncoder.default(self, o)
 
-
-def srcbase():
+#@pytest.fixture
+def srcbase() -> dict:
     srcbase = {
+    'base': 'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/',
+    'countrycodes': {
+        'base': "https://countrycode.org/"
+    },
+    'countryshapes': {
+        'base': 'https://naciscdn.org/naturalearth/110m/cultural/ne_110m_admin_0_countries.zip'
+    },
+    'timeseries': {
         'base': 'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/',
-        'countrycodes': {
-            'base': "https://countrycode.org/"
-        },
-        'countryshapes': {
-            'base': 'https://naciscdn.org/naturalearth/110m/cultural/ne_110m_admin_0_countries.zip'
-        },
-        'timeseries': {
-            'base': 'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/',
-            'global_confirmed': 'csse_covid_19_time_series/time_series_covid19_confirmed_global.csv',
-            'global_deaths': 'csse_covid_19_time_series/time_series_covid19_deaths_global.csv',
-            'global_recovered': 'csse_covid_19_time_series/time_series_covid19_recovered_global.csv',
-            'us_confirmed': 'csse_covid_19_time_series/time_series_covid19_confirmed_US.csv',
-            'us_deaths': 'csse_covid_19_time_series/time_series_covid19_deaths_US.csv'
-        },
-        'stringency': {
-            'base': 'https://raw.githubusercontent.com/OxCGRT/',
-            'data': 'covid-policy-tracker/master/data/OxCGRT_latest.csv'
-        }
+        'global_confirmed': 'csse_covid_19_time_series/time_series_covid19_confirmed_global.csv',
+        'global_deaths': 'csse_covid_19_time_series/time_series_covid19_deaths_global.csv',
+        'global_recovered': 'csse_covid_19_time_series/time_series_covid19_recovered_global.csv',
+        'us_confirmed': 'csse_covid_19_time_series/time_series_covid19_confirmed_US.csv',
+        'us_deaths': 'csse_covid_19_time_series/time_series_covid19_deaths_US.csv'
+    },
+    'stringency': {
+        'base': 'https://raw.githubusercontent.com/OxCGRT/',
+        'data': 'covid-policy-tracker/master/data/OxCGRT_latest.csv'
     }
+}
     return srcbase
-
 
 srcbase = srcbase()
 
+# def test_base(srcbase):
+#     assert type(srcbase)==dict
 
-def who(variation=False):
+def who(variation: bool = False) -> dict:
     who_region = {}
     if variation:
         afro = "Algeria, Angola, Cabo Verde, Congo, DRC, Eswatini, Sao Tome and Principe, Benin, South Sudan, Western Sahara, Congo (Brazzaville), Congo (Kinshasa), Cote d'Ivoire, Botswana, Burkina Faso, Burundi, Cameroon, Cape Verde, Central African Republic, Chad, Comoros, Ivory Coast, Democratic Republic of the Congo, Equatorial Guinea, Eritrea, Ethiopia, Gabon, Gambia, Ghana, Guinea, Guinea-Bissau, Kenya, Lesotho, Liberia, Madagascar, Malawi, Mali, Mauritania, Mauritius, Mozambique, Namibia, Niger, Nigeria, Republic of the Congo, Rwanda, São Tomé and Príncipe, Senegal, Seychelles, Sierra Leone, Somalia, South Africa, Swaziland, Togo, Uganda, Tanzania, Zambia, Zimbabwe"
@@ -137,7 +140,7 @@ def who(variation=False):
     return who_region
 
 
-def dfget(base, uri):
+def dfget(base: str, uri: str) -> pd.core.frame.DataFrame:
     """
     Fetch a csv format file on the internet, return it as a pandas DataFrame
     """
@@ -151,7 +154,7 @@ def dfget(base, uri):
     return df
 
 
-def dfget_csv(base, uri):
+def dfget_csv(base: str, uri: str) -> pd.core.frame.DataFrame:
     """
     Fetch a csv format file on the internet, return it as a pandas DataFrame
     """
@@ -165,7 +168,7 @@ def dfget_csv(base, uri):
     return df
 
 
-def dfget_timeseries(base, uri):
+def dfget_timeseries(base: str, uri: str) -> pd.core.frame.DataFrame:
     """
     Fetch a csv format file on the internet, return it as a pandas DataFrame
     """
@@ -337,7 +340,7 @@ def fulldb():
                'Confirmed', hubeiFixEntry)
 
     df_full['WHO Region'] = df_full['Country/Region'].map(who(variation=False))
-    return df_full, ship_rows
+    return df_full.reset_index(drop=True), df_ship.reset_index(drop=True)
 
 
 # pass in the full db here
