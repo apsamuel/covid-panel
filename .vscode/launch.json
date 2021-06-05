@@ -1,0 +1,35 @@
+{
+    "version": "0.1.0",
+    "configurations": [
+        {
+            "name": "Bokeh Launch Application",
+            "type": "chrome",
+            "request": "launch",
+            "url": "http://localhost:5006/covid-panel",
+            "webRoot": "${workspaceFolder}/static"
+        },
+        {
+            "name": "Bokeh: Chrome Debug (attach)",
+            "type": "chrome",
+            "request": "attach",
+            "port": 9222,
+            "url": "http://localhost:5006/covid-panel",
+            "webRoot": "${workspaceFolder}/static"
+        },
+        {
+            "name": "Bokeh: Python Debug (attach)",
+            "type": "python",
+            "request": "attach",
+            "port": 5678, 
+            "host": "127.0.0.1",
+            "justMyCode": false, 
+            "redirectOutput": true,
+            "pathMappings": [
+                {
+                    "localRoot": "${workspaceFolder}",
+                    "remoteRoot": "."
+                }
+            ]
+        }
+    ]
+}
