@@ -1,6 +1,7 @@
 #Pycache files
 lib/__pycache__
 __pycache__
+*.pyc
 # Ignore shape files
 data/*.shp 
 data/*.dbf 
