@@ -1,0 +1,1989 @@
+,Province/State,Country/Region,Lat,Long,Date,Confirmed,Deaths,Recovered,Active
+0,Diamond Princess,Canada,0.0,0.0,2020-01-22,0,0,0,0
+1,Grand Princess,Canada,0.0,0.0,2020-01-22,0,0,0,0
+2, ,Diamond Princess,0.0,0.0,2020-01-22,0,0,0,0
+3, ,MS Zaandam,0.0,0.0,2020-01-22,0,0,0,0
+4,Diamond Princess,Canada,0.0,0.0,2020-01-23,0,0,0,0
+5,Grand Princess,Canada,0.0,0.0,2020-01-23,0,0,0,0
+6, ,Diamond Princess,0.0,0.0,2020-01-23,0,0,0,0
+7, ,MS Zaandam,0.0,0.0,2020-01-23,0,0,0,0
+8,Diamond Princess,Canada,0.0,0.0,2020-01-24,0,0,0,0
+9,Grand Princess,Canada,0.0,0.0,2020-01-24,0,0,0,0
+10, ,Diamond Princess,0.0,0.0,2020-01-24,0,0,0,0
+11, ,MS Zaandam,0.0,0.0,2020-01-24,0,0,0,0
+12,Diamond Princess,Canada,0.0,0.0,2020-01-25,0,0,0,0
+13,Grand Princess,Canada,0.0,0.0,2020-01-25,0,0,0,0
+14, ,Diamond Princess,0.0,0.0,2020-01-25,0,0,0,0
+15, ,MS Zaandam,0.0,0.0,2020-01-25,0,0,0,0
+16,Diamond Princess,Canada,0.0,0.0,2020-01-26,0,0,0,0
+17,Grand Princess,Canada,0.0,0.0,2020-01-26,0,0,0,0
+18, ,Diamond Princess,0.0,0.0,2020-01-26,0,0,0,0
+19, ,MS Zaandam,0.0,0.0,2020-01-26,0,0,0,0
+20,Diamond Princess,Canada,0.0,0.0,2020-01-27,0,0,0,0
+21,Grand Princess,Canada,0.0,0.0,2020-01-27,0,0,0,0
+22, ,Diamond Princess,0.0,0.0,2020-01-27,0,0,0,0
+23, ,MS Zaandam,0.0,0.0,2020-01-27,0,0,0,0
+24,Diamond Princess,Canada,0.0,0.0,2020-01-28,0,0,0,0
+25,Grand Princess,Canada,0.0,0.0,2020-01-28,0,0,0,0
+26, ,Diamond Princess,0.0,0.0,2020-01-28,0,0,0,0
+27, ,MS Zaandam,0.0,0.0,2020-01-28,0,0,0,0
+28,Diamond Princess,Canada,0.0,0.0,2020-01-29,0,0,0,0
+29,Grand Princess,Canada,0.0,0.0,2020-01-29,0,0,0,0
+30, ,Diamond Princess,0.0,0.0,2020-01-29,0,0,0,0
+31, ,MS Zaandam,0.0,0.0,2020-01-29,0,0,0,0
+32,Diamond Princess,Canada,0.0,0.0,2020-01-30,0,0,0,0
+33,Grand Princess,Canada,0.0,0.0,2020-01-30,0,0,0,0
+34, ,Diamond Princess,0.0,0.0,2020-01-30,0,0,0,0
+35, ,MS Zaandam,0.0,0.0,2020-01-30,0,0,0,0
+36,Diamond Princess,Canada,0.0,0.0,2020-01-31,0,0,0,0
+37,Grand Princess,Canada,0.0,0.0,2020-01-31,0,0,0,0
+38, ,Diamond Princess,0.0,0.0,2020-01-31,0,0,0,0
+39, ,MS Zaandam,0.0,0.0,2020-01-31,0,0,0,0
+40,Diamond Princess,Canada,0.0,0.0,2020-02-01,0,0,0,0
+41,Grand Princess,Canada,0.0,0.0,2020-02-01,0,0,0,0
+42, ,Diamond Princess,0.0,0.0,2020-02-01,0,0,0,0
+43, ,MS Zaandam,0.0,0.0,2020-02-01,0,0,0,0
+44,Diamond Princess,Canada,0.0,0.0,2020-02-02,0,0,0,0
+45,Grand Princess,Canada,0.0,0.0,2020-02-02,0,0,0,0
+46, ,Diamond Princess,0.0,0.0,2020-02-02,0,0,0,0
+47, ,MS Zaandam,0.0,0.0,2020-02-02,0,0,0,0
+48,Diamond Princess,Canada,0.0,0.0,2020-02-03,0,0,0,0
+49,Grand Princess,Canada,0.0,0.0,2020-02-03,0,0,0,0
+50, ,Diamond Princess,0.0,0.0,2020-02-03,0,0,0,0
+51, ,MS Zaandam,0.0,0.0,2020-02-03,0,0,0,0
+52,Diamond Princess,Canada,0.0,0.0,2020-02-04,0,0,0,0
+53,Grand Princess,Canada,0.0,0.0,2020-02-04,0,0,0,0
+54, ,Diamond Princess,0.0,0.0,2020-02-04,0,0,0,0
+55, ,MS Zaandam,0.0,0.0,2020-02-04,0,0,0,0
+56,Diamond Princess,Canada,0.0,0.0,2020-02-05,0,0,0,0
+57,Grand Princess,Canada,0.0,0.0,2020-02-05,0,0,0,0
+58, ,Diamond Princess,0.0,0.0,2020-02-05,0,0,0,0
+59, ,MS Zaandam,0.0,0.0,2020-02-05,0,0,0,0
+60,Diamond Princess,Canada,0.0,0.0,2020-02-06,0,0,0,0
+61,Grand Princess,Canada,0.0,0.0,2020-02-06,0,0,0,0
+62, ,Diamond Princess,0.0,0.0,2020-02-06,0,0,0,0
+63, ,MS Zaandam,0.0,0.0,2020-02-06,0,0,0,0
+64,Diamond Princess,Canada,0.0,0.0,2020-02-07,0,0,0,0
+65,Grand Princess,Canada,0.0,0.0,2020-02-07,0,0,0,0
+66, ,Diamond Princess,0.0,0.0,2020-02-07,61,0,0,61
+67, ,MS Zaandam,0.0,0.0,2020-02-07,0,0,0,0
+68,Diamond Princess,Canada,0.0,0.0,2020-02-08,0,0,0,0
+69,Grand Princess,Canada,0.0,0.0,2020-02-08,0,0,0,0
+70, ,Diamond Princess,0.0,0.0,2020-02-08,61,0,0,61
+71, ,MS Zaandam,0.0,0.0,2020-02-08,0,0,0,0
+72,Diamond Princess,Canada,0.0,0.0,2020-02-09,0,0,0,0
+73,Grand Princess,Canada,0.0,0.0,2020-02-09,0,0,0,0
+74, ,Diamond Princess,0.0,0.0,2020-02-09,64,0,0,64
+75, ,MS Zaandam,0.0,0.0,2020-02-09,0,0,0,0
+76,Diamond Princess,Canada,0.0,0.0,2020-02-10,0,0,0,0
+77,Grand Princess,Canada,0.0,0.0,2020-02-10,0,0,0,0
+78, ,Diamond Princess,0.0,0.0,2020-02-10,135,0,0,135
+79, ,MS Zaandam,0.0,0.0,2020-02-10,0,0,0,0
+80,Diamond Princess,Canada,0.0,0.0,2020-02-11,0,0,0,0
+81,Grand Princess,Canada,0.0,0.0,2020-02-11,0,0,0,0
+82, ,Diamond Princess,0.0,0.0,2020-02-11,135,0,0,135
+83, ,MS Zaandam,0.0,0.0,2020-02-11,0,0,0,0
+84,Diamond Princess,Canada,0.0,0.0,2020-02-12,0,0,0,0
+85,Grand Princess,Canada,0.0,0.0,2020-02-12,0,0,0,0
+86, ,Diamond Princess,0.0,0.0,2020-02-12,175,0,0,175
+87, ,MS Zaandam,0.0,0.0,2020-02-12,0,0,0,0
+88,Diamond Princess,Canada,0.0,0.0,2020-02-13,0,0,0,0
+89,Grand Princess,Canada,0.0,0.0,2020-02-13,0,0,0,0
+90, ,Diamond Princess,0.0,0.0,2020-02-13,175,0,0,175
+91, ,MS Zaandam,0.0,0.0,2020-02-13,0,0,0,0
+92,Diamond Princess,Canada,0.0,0.0,2020-02-14,0,0,0,0
+93,Grand Princess,Canada,0.0,0.0,2020-02-14,0,0,0,0
+94, ,Diamond Princess,0.0,0.0,2020-02-14,218,0,0,218
+95, ,MS Zaandam,0.0,0.0,2020-02-14,0,0,0,0
+96,Diamond Princess,Canada,0.0,0.0,2020-02-15,0,0,0,0
+97,Grand Princess,Canada,0.0,0.0,2020-02-15,0,0,0,0
+98, ,Diamond Princess,0.0,0.0,2020-02-15,285,0,0,285
+99, ,MS Zaandam,0.0,0.0,2020-02-15,0,0,0,0
+100,Diamond Princess,Canada,0.0,0.0,2020-02-16,0,0,0,0
+101,Grand Princess,Canada,0.0,0.0,2020-02-16,0,0,0,0
+102, ,Diamond Princess,0.0,0.0,2020-02-16,355,0,0,355
+103, ,MS Zaandam,0.0,0.0,2020-02-16,0,0,0,0
+104,Diamond Princess,Canada,0.0,0.0,2020-02-17,0,0,0,0
+105,Grand Princess,Canada,0.0,0.0,2020-02-17,0,0,0,0
+106, ,Diamond Princess,0.0,0.0,2020-02-17,454,0,0,454
+107, ,MS Zaandam,0.0,0.0,2020-02-17,0,0,0,0
+108,Diamond Princess,Canada,0.0,0.0,2020-02-18,0,0,0,0
+109,Grand Princess,Canada,0.0,0.0,2020-02-18,0,0,0,0
+110, ,Diamond Princess,0.0,0.0,2020-02-18,542,0,0,542
+111, ,MS Zaandam,0.0,0.0,2020-02-18,0,0,0,0
+112,Diamond Princess,Canada,0.0,0.0,2020-02-19,0,0,0,0
+113,Grand Princess,Canada,0.0,0.0,2020-02-19,0,0,0,0
+114, ,Diamond Princess,0.0,0.0,2020-02-19,621,0,1,620
+115, ,MS Zaandam,0.0,0.0,2020-02-19,0,0,0,0
+116,Diamond Princess,Canada,0.0,0.0,2020-02-20,0,0,0,0
+117,Grand Princess,Canada,0.0,0.0,2020-02-20,0,0,0,0
+118, ,Diamond Princess,0.0,0.0,2020-02-20,634,2,1,631
+119, ,MS Zaandam,0.0,0.0,2020-02-20,0,0,0,0
+120,Diamond Princess,Canada,0.0,0.0,2020-02-21,0,0,0,0
+121,Grand Princess,Canada,0.0,0.0,2020-02-21,0,0,0,0
+122, ,Diamond Princess,0.0,0.0,2020-02-21,634,2,1,631
+123, ,MS Zaandam,0.0,0.0,2020-02-21,0,0,0,0
+124,Diamond Princess,Canada,0.0,0.0,2020-02-22,0,0,0,0
+125,Grand Princess,Canada,0.0,0.0,2020-02-22,0,0,0,0
+126, ,Diamond Princess,0.0,0.0,2020-02-22,634,2,1,631
+127, ,MS Zaandam,0.0,0.0,2020-02-22,0,0,0,0
+128,Diamond Princess,Canada,0.0,0.0,2020-02-23,0,0,0,0
+129,Grand Princess,Canada,0.0,0.0,2020-02-23,0,0,0,0
+130, ,Diamond Princess,0.0,0.0,2020-02-23,691,3,0,688
+131, ,MS Zaandam,0.0,0.0,2020-02-23,0,0,0,0
+132,Diamond Princess,Canada,0.0,0.0,2020-02-24,0,0,0,0
+133,Grand Princess,Canada,0.0,0.0,2020-02-24,0,0,0,0
+134, ,Diamond Princess,0.0,0.0,2020-02-24,691,3,0,688
+135, ,MS Zaandam,0.0,0.0,2020-02-24,0,0,0,0
+136,Diamond Princess,Canada,0.0,0.0,2020-02-25,0,0,0,0
+137,Grand Princess,Canada,0.0,0.0,2020-02-25,0,0,0,0
+138, ,Diamond Princess,0.0,0.0,2020-02-25,691,3,0,688
+139, ,MS Zaandam,0.0,0.0,2020-02-25,0,0,0,0
+140,Diamond Princess,Canada,0.0,0.0,2020-02-26,0,0,0,0
+141,Grand Princess,Canada,0.0,0.0,2020-02-26,0,0,0,0
+142, ,Diamond Princess,0.0,0.0,2020-02-26,705,4,10,691
+143, ,MS Zaandam,0.0,0.0,2020-02-26,0,0,0,0
+144,Diamond Princess,Canada,0.0,0.0,2020-02-27,0,0,0,0
+145,Grand Princess,Canada,0.0,0.0,2020-02-27,0,0,0,0
+146, ,Diamond Princess,0.0,0.0,2020-02-27,705,4,10,691
+147, ,MS Zaandam,0.0,0.0,2020-02-27,0,0,0,0
+148,Diamond Princess,Canada,0.0,0.0,2020-02-28,0,0,0,0
+149,Grand Princess,Canada,0.0,0.0,2020-02-28,0,0,0,0
+150, ,Diamond Princess,0.0,0.0,2020-02-28,705,6,10,689
+151, ,MS Zaandam,0.0,0.0,2020-02-28,0,0,0,0
+152,Diamond Princess,Canada,0.0,0.0,2020-02-29,0,0,0,0
+153,Grand Princess,Canada,0.0,0.0,2020-02-29,0,0,0,0
+154, ,Diamond Princess,0.0,0.0,2020-02-29,705,6,10,689
+155, ,MS Zaandam,0.0,0.0,2020-02-29,0,0,0,0
+156,Diamond Princess,Canada,0.0,0.0,2020-03-01,0,0,0,0
+157,Grand Princess,Canada,0.0,0.0,2020-03-01,0,0,0,0
+158, ,Diamond Princess,0.0,0.0,2020-03-01,705,6,10,689
+159, ,MS Zaandam,0.0,0.0,2020-03-01,0,0,0,0
+160,Diamond Princess,Canada,0.0,0.0,2020-03-02,0,0,0,0
+161,Grand Princess,Canada,0.0,0.0,2020-03-02,0,0,0,0
+162, ,Diamond Princess,0.0,0.0,2020-03-02,705,6,10,689
+163, ,MS Zaandam,0.0,0.0,2020-03-02,0,0,0,0
+164,Diamond Princess,Canada,0.0,0.0,2020-03-03,0,0,0,0
+165,Grand Princess,Canada,0.0,0.0,2020-03-03,0,0,0,0
+166, ,Diamond Princess,0.0,0.0,2020-03-03,706,6,10,690
+167, ,MS Zaandam,0.0,0.0,2020-03-03,0,0,0,0
+168,Diamond Princess,Canada,0.0,0.0,2020-03-04,0,0,0,0
+169,Grand Princess,Canada,0.0,0.0,2020-03-04,0,0,0,0
+170, ,Diamond Princess,0.0,0.0,2020-03-04,706,6,10,690
+171, ,MS Zaandam,0.0,0.0,2020-03-04,0,0,0,0
+172,Diamond Princess,Canada,0.0,0.0,2020-03-05,0,0,0,0
+173,Grand Princess,Canada,0.0,0.0,2020-03-05,0,0,0,0
+174, ,Diamond Princess,0.0,0.0,2020-03-05,706,6,10,690
+175, ,MS Zaandam,0.0,0.0,2020-03-05,0,0,0,0
+176,Diamond Princess,Canada,0.0,0.0,2020-03-06,0,0,0,0
+177,Grand Princess,Canada,0.0,0.0,2020-03-06,0,0,0,0
+178, ,Diamond Princess,0.0,0.0,2020-03-06,706,6,40,660
+179, ,MS Zaandam,0.0,0.0,2020-03-06,0,0,0,0
+180,Diamond Princess,Canada,0.0,0.0,2020-03-07,0,0,0,0
+181,Grand Princess,Canada,0.0,0.0,2020-03-07,0,0,0,0
+182, ,Diamond Princess,0.0,0.0,2020-03-07,706,6,40,660
+183, ,MS Zaandam,0.0,0.0,2020-03-07,0,0,0,0
+184,Diamond Princess,Canada,0.0,0.0,2020-03-08,0,0,0,0
+185,Grand Princess,Canada,0.0,0.0,2020-03-08,0,0,0,0
+186, ,Diamond Princess,0.0,0.0,2020-03-08,706,6,40,660
+187, ,MS Zaandam,0.0,0.0,2020-03-08,0,0,0,0
+188,Diamond Princess,Canada,0.0,0.0,2020-03-09,0,0,0,0
+189,Grand Princess,Canada,0.0,0.0,2020-03-09,0,0,0,0
+190, ,Diamond Princess,0.0,0.0,2020-03-09,706,6,40,660
+191, ,MS Zaandam,0.0,0.0,2020-03-09,0,0,0,0
+192,Diamond Princess,Canada,0.0,0.0,2020-03-10,0,0,0,0
+193,Grand Princess,Canada,0.0,0.0,2020-03-10,0,0,0,0
+194, ,Diamond Princess,0.0,0.0,2020-03-10,706,6,40,660
+195, ,MS Zaandam,0.0,0.0,2020-03-10,0,0,0,0
+196,Diamond Princess,Canada,0.0,0.0,2020-03-11,0,0,0,0
+197,Grand Princess,Canada,0.0,0.0,2020-03-11,0,0,0,0
+198, ,Diamond Princess,0.0,0.0,2020-03-11,706,7,325,374
+199, ,MS Zaandam,0.0,0.0,2020-03-11,0,0,0,0
+200,Diamond Princess,Canada,0.0,0.0,2020-03-12,0,0,0,0
+201,Grand Princess,Canada,0.0,0.0,2020-03-12,0,0,0,0
+202, ,Diamond Princess,0.0,0.0,2020-03-12,706,7,325,374
+203, ,MS Zaandam,0.0,0.0,2020-03-12,0,0,0,0
+204,Diamond Princess,Canada,0.0,0.0,2020-03-13,0,0,0,0
+205,Grand Princess,Canada,0.0,0.0,2020-03-13,2,0,0,2
+206, ,Diamond Princess,0.0,0.0,2020-03-13,706,7,325,374
+207, ,MS Zaandam,0.0,0.0,2020-03-13,0,0,0,0
+208,Diamond Princess,Canada,0.0,0.0,2020-03-14,0,0,0,0
+209,Grand Princess,Canada,0.0,0.0,2020-03-14,2,0,0,2
+210, ,Diamond Princess,0.0,0.0,2020-03-14,706,7,325,374
+211, ,MS Zaandam,0.0,0.0,2020-03-14,0,0,0,0
+212,Diamond Princess,Canada,0.0,0.0,2020-03-15,0,0,0,0
+213,Grand Princess,Canada,0.0,0.0,2020-03-15,2,0,0,2
+214, ,Diamond Princess,0.0,0.0,2020-03-15,706,7,325,374
+215, ,MS Zaandam,0.0,0.0,2020-03-15,0,0,0,0
+216,Diamond Princess,Canada,0.0,0.0,2020-03-16,0,0,0,0
+217,Grand Princess,Canada,0.0,0.0,2020-03-16,2,0,0,2
+218, ,Diamond Princess,0.0,0.0,2020-03-16,706,7,325,374
+219, ,MS Zaandam,0.0,0.0,2020-03-16,0,0,0,0
+220,Diamond Princess,Canada,0.0,0.0,2020-03-17,0,0,0,0
+221,Grand Princess,Canada,0.0,0.0,2020-03-17,8,0,0,8
+222, ,Diamond Princess,0.0,0.0,2020-03-17,706,7,325,374
+223, ,MS Zaandam,0.0,0.0,2020-03-17,0,0,0,0
+224,Diamond Princess,Canada,0.0,0.0,2020-03-18,0,0,0,0
+225,Grand Princess,Canada,0.0,0.0,2020-03-18,9,0,0,9
+226, ,Diamond Princess,0.0,0.0,2020-03-18,712,7,325,380
+227, ,MS Zaandam,0.0,0.0,2020-03-18,0,0,0,0
+228,Diamond Princess,Canada,0.0,0.0,2020-03-19,0,0,0,0
+229,Grand Princess,Canada,0.0,0.0,2020-03-19,9,0,0,9
+230, ,Diamond Princess,0.0,0.0,2020-03-19,712,7,325,380
+231, ,MS Zaandam,0.0,0.0,2020-03-19,0,0,0,0
+232,Diamond Princess,Canada,0.0,0.0,2020-03-20,0,0,0,0
+233,Grand Princess,Canada,0.0,0.0,2020-03-20,10,0,0,10
+234, ,Diamond Princess,0.0,0.0,2020-03-20,712,7,325,380
+235, ,MS Zaandam,0.0,0.0,2020-03-20,0,0,0,0
+236,Diamond Princess,Canada,0.0,0.0,2020-03-21,0,0,0,0
+237,Grand Princess,Canada,0.0,0.0,2020-03-21,10,0,0,10
+238, ,Diamond Princess,0.0,0.0,2020-03-21,712,8,325,379
+239, ,MS Zaandam,0.0,0.0,2020-03-21,0,0,0,0
+240,Diamond Princess,Canada,0.0,0.0,2020-03-22,0,1,0,-1
+241,Grand Princess,Canada,0.0,0.0,2020-03-22,13,0,0,13
+242, ,Diamond Princess,0.0,0.0,2020-03-22,712,8,325,379
+243, ,MS Zaandam,0.0,0.0,2020-03-22,0,0,0,0
+244,Diamond Princess,Canada,0.0,0.0,2020-03-23,0,1,0,-1
+245,Grand Princess,Canada,0.0,0.0,2020-03-23,13,0,0,13
+246, ,Diamond Princess,0.0,0.0,2020-03-23,712,8,325,379
+247, ,MS Zaandam,0.0,0.0,2020-03-23,0,0,0,0
+248,Diamond Princess,Canada,0.0,0.0,2020-03-24,0,1,0,-1
+249,Grand Princess,Canada,0.0,0.0,2020-03-24,13,0,0,13
+250, ,Diamond Princess,0.0,0.0,2020-03-24,712,10,325,377
+251, ,MS Zaandam,0.0,0.0,2020-03-24,0,0,0,0
+252,Diamond Princess,Canada,0.0,0.0,2020-03-25,0,1,0,-1
+253,Grand Princess,Canada,0.0,0.0,2020-03-25,13,0,0,13
+254, ,Diamond Princess,0.0,0.0,2020-03-25,712,10,587,115
+255, ,MS Zaandam,0.0,0.0,2020-03-25,0,0,0,0
+256,Diamond Princess,Canada,0.0,0.0,2020-03-26,0,1,0,-1
+257,Grand Princess,Canada,0.0,0.0,2020-03-26,13,0,0,13
+258, ,Diamond Princess,0.0,0.0,2020-03-26,712,10,597,105
+259, ,MS Zaandam,0.0,0.0,2020-03-26,0,0,0,0
+260,Diamond Princess,Canada,0.0,0.0,2020-03-27,0,1,0,-1
+261,Grand Princess,Canada,0.0,0.0,2020-03-27,13,0,0,13
+262, ,Diamond Princess,0.0,0.0,2020-03-27,712,10,597,105
+263, ,MS Zaandam,0.0,0.0,2020-03-27,0,0,0,0
+264,Diamond Princess,Canada,0.0,0.0,2020-03-28,0,1,0,-1
+265,Grand Princess,Canada,0.0,0.0,2020-03-28,13,0,0,13
+266, ,Diamond Princess,0.0,0.0,2020-03-28,712,10,597,105
+267, ,MS Zaandam,0.0,0.0,2020-03-28,2,0,0,2
+268,Diamond Princess,Canada,0.0,0.0,2020-03-29,0,1,0,-1
+269,Grand Princess,Canada,0.0,0.0,2020-03-29,13,0,0,13
+270, ,Diamond Princess,0.0,0.0,2020-03-29,712,10,603,99
+271, ,MS Zaandam,0.0,0.0,2020-03-29,2,0,0,2
+272,Diamond Princess,Canada,0.0,0.0,2020-03-30,0,1,0,-1
+273,Grand Princess,Canada,0.0,0.0,2020-03-30,13,0,0,13
+274, ,Diamond Princess,0.0,0.0,2020-03-30,712,10,603,99
+275, ,MS Zaandam,0.0,0.0,2020-03-30,2,0,0,2
+276,Diamond Princess,Canada,0.0,0.0,2020-03-31,0,1,0,-1
+277,Grand Princess,Canada,0.0,0.0,2020-03-31,13,0,0,13
+278, ,Diamond Princess,0.0,0.0,2020-03-31,712,10,603,99
+279, ,MS Zaandam,0.0,0.0,2020-03-31,2,0,0,2
+280,Diamond Princess,Canada,0.0,0.0,2020-04-01,0,1,0,-1
+281,Grand Princess,Canada,0.0,0.0,2020-04-01,13,0,0,13
+282, ,Diamond Princess,0.0,0.0,2020-04-01,712,11,603,98
+283, ,MS Zaandam,0.0,0.0,2020-04-01,9,2,0,7
+284,Diamond Princess,Canada,0.0,0.0,2020-04-02,0,1,0,-1
+285,Grand Princess,Canada,0.0,0.0,2020-04-02,13,0,0,13
+286, ,Diamond Princess,0.0,0.0,2020-04-02,712,11,619,82
+287, ,MS Zaandam,0.0,0.0,2020-04-02,9,2,0,7
+288,Diamond Princess,Canada,0.0,0.0,2020-04-03,0,1,0,-1
+289,Grand Princess,Canada,0.0,0.0,2020-04-03,13,0,0,13
+290, ,Diamond Princess,0.0,0.0,2020-04-03,712,11,619,82
+291, ,MS Zaandam,0.0,0.0,2020-04-03,9,2,0,7
+292,Diamond Princess,Canada,0.0,0.0,2020-04-04,0,1,0,-1
+293,Grand Princess,Canada,0.0,0.0,2020-04-04,13,0,0,13
+294, ,Diamond Princess,0.0,0.0,2020-04-04,712,11,619,82
+295, ,MS Zaandam,0.0,0.0,2020-04-04,9,2,0,7
+296,Diamond Princess,Canada,0.0,0.0,2020-04-05,0,1,0,-1
+297,Grand Princess,Canada,0.0,0.0,2020-04-05,13,0,0,13
+298, ,Diamond Princess,0.0,0.0,2020-04-05,712,11,619,82
+299, ,MS Zaandam,0.0,0.0,2020-04-05,9,2,0,7
+300,Diamond Princess,Canada,0.0,0.0,2020-04-06,0,1,0,-1
+301,Grand Princess,Canada,0.0,0.0,2020-04-06,13,0,0,13
+302, ,Diamond Princess,0.0,0.0,2020-04-06,712,11,619,82
+303, ,MS Zaandam,0.0,0.0,2020-04-06,9,2,0,7
+304,Diamond Princess,Canada,0.0,0.0,2020-04-07,0,1,0,-1
+305,Grand Princess,Canada,0.0,0.0,2020-04-07,13,0,0,13
+306, ,Diamond Princess,0.0,0.0,2020-04-07,712,11,619,82
+307, ,MS Zaandam,0.0,0.0,2020-04-07,9,2,0,7
+308,Diamond Princess,Canada,0.0,0.0,2020-04-08,0,1,0,-1
+309,Grand Princess,Canada,0.0,0.0,2020-04-08,13,0,0,13
+310, ,Diamond Princess,0.0,0.0,2020-04-08,712,11,619,82
+311, ,MS Zaandam,0.0,0.0,2020-04-08,9,2,0,7
+312,Diamond Princess,Canada,0.0,0.0,2020-04-09,0,1,0,-1
+313,Grand Princess,Canada,0.0,0.0,2020-04-09,13,0,0,13
+314, ,Diamond Princess,0.0,0.0,2020-04-09,712,11,619,82
+315, ,MS Zaandam,0.0,0.0,2020-04-09,9,2,0,7
+316,Diamond Princess,Canada,0.0,0.0,2020-04-10,0,1,0,-1
+317,Grand Princess,Canada,0.0,0.0,2020-04-10,13,0,0,13
+318, ,Diamond Princess,0.0,0.0,2020-04-10,712,11,619,82
+319, ,MS Zaandam,0.0,0.0,2020-04-10,9,2,0,7
+320,Diamond Princess,Canada,0.0,0.0,2020-04-11,0,1,0,-1
+321,Grand Princess,Canada,0.0,0.0,2020-04-11,13,0,0,13
+322, ,Diamond Princess,0.0,0.0,2020-04-11,712,11,619,82
+323, ,MS Zaandam,0.0,0.0,2020-04-11,9,2,0,7
+324,Diamond Princess,Canada,0.0,0.0,2020-04-12,0,1,0,-1
+325,Grand Princess,Canada,0.0,0.0,2020-04-12,13,0,0,13
+326, ,Diamond Princess,0.0,0.0,2020-04-12,712,11,619,82
+327, ,MS Zaandam,0.0,0.0,2020-04-12,9,2,0,7
+328,Diamond Princess,Canada,0.0,0.0,2020-04-13,0,1,0,-1
+329,Grand Princess,Canada,0.0,0.0,2020-04-13,13,0,0,13
+330, ,Diamond Princess,0.0,0.0,2020-04-13,712,11,619,82
+331, ,MS Zaandam,0.0,0.0,2020-04-13,9,2,0,7
+332,Diamond Princess,Canada,0.0,0.0,2020-04-14,0,1,0,-1
+333,Grand Princess,Canada,0.0,0.0,2020-04-14,13,0,0,13
+334, ,Diamond Princess,0.0,0.0,2020-04-14,712,12,639,61
+335, ,MS Zaandam,0.0,0.0,2020-04-14,9,2,0,7
+336,Diamond Princess,Canada,0.0,0.0,2020-04-15,0,1,0,-1
+337,Grand Princess,Canada,0.0,0.0,2020-04-15,13,0,0,13
+338, ,Diamond Princess,0.0,0.0,2020-04-15,712,12,639,61
+339, ,MS Zaandam,0.0,0.0,2020-04-15,9,2,0,7
+340,Diamond Princess,Canada,0.0,0.0,2020-04-16,0,1,0,-1
+341,Grand Princess,Canada,0.0,0.0,2020-04-16,13,0,0,13
+342, ,Diamond Princess,0.0,0.0,2020-04-16,712,12,644,56
+343, ,MS Zaandam,0.0,0.0,2020-04-16,9,2,0,7
+344,Diamond Princess,Canada,0.0,0.0,2020-04-17,0,1,0,-1
+345,Grand Princess,Canada,0.0,0.0,2020-04-17,13,0,0,13
+346, ,Diamond Princess,0.0,0.0,2020-04-17,712,13,644,55
+347, ,MS Zaandam,0.0,0.0,2020-04-17,9,2,0,7
+348,Diamond Princess,Canada,0.0,0.0,2020-04-18,0,1,0,-1
+349,Grand Princess,Canada,0.0,0.0,2020-04-18,13,0,0,13
+350, ,Diamond Princess,0.0,0.0,2020-04-18,712,13,644,55
+351, ,MS Zaandam,0.0,0.0,2020-04-18,9,2,0,7
+352,Diamond Princess,Canada,0.0,0.0,2020-04-19,0,1,0,-1
+353,Grand Princess,Canada,0.0,0.0,2020-04-19,13,0,0,13
+354, ,Diamond Princess,0.0,0.0,2020-04-19,712,13,644,55
+355, ,MS Zaandam,0.0,0.0,2020-04-19,9,2,0,7
+356,Diamond Princess,Canada,0.0,0.0,2020-04-20,0,1,0,-1
+357,Grand Princess,Canada,0.0,0.0,2020-04-20,13,0,0,13
+358, ,Diamond Princess,0.0,0.0,2020-04-20,712,13,644,55
+359, ,MS Zaandam,0.0,0.0,2020-04-20,9,2,0,7
+360,Diamond Princess,Canada,0.0,0.0,2020-04-21,0,1,0,-1
+361,Grand Princess,Canada,0.0,0.0,2020-04-21,13,0,0,13
+362, ,Diamond Princess,0.0,0.0,2020-04-21,712,13,644,55
+363, ,MS Zaandam,0.0,0.0,2020-04-21,9,2,0,7
+364,Diamond Princess,Canada,0.0,0.0,2020-04-22,0,1,0,-1
+365,Grand Princess,Canada,0.0,0.0,2020-04-22,13,0,0,13
+366, ,Diamond Princess,0.0,0.0,2020-04-22,712,13,644,55
+367, ,MS Zaandam,0.0,0.0,2020-04-22,9,2,0,7
+368,Diamond Princess,Canada,0.0,0.0,2020-04-23,0,1,0,-1
+369,Grand Princess,Canada,0.0,0.0,2020-04-23,13,0,0,13
+370, ,Diamond Princess,0.0,0.0,2020-04-23,712,13,645,54
+371, ,MS Zaandam,0.0,0.0,2020-04-23,9,2,0,7
+372,Diamond Princess,Canada,0.0,0.0,2020-04-24,0,1,0,-1
+373,Grand Princess,Canada,0.0,0.0,2020-04-24,13,0,0,13
+374, ,Diamond Princess,0.0,0.0,2020-04-24,712,13,645,54
+375, ,MS Zaandam,0.0,0.0,2020-04-24,9,2,0,7
+376,Diamond Princess,Canada,0.0,0.0,2020-04-25,0,1,0,-1
+377,Grand Princess,Canada,0.0,0.0,2020-04-25,13,0,0,13
+378, ,Diamond Princess,0.0,0.0,2020-04-25,712,13,645,54
+379, ,MS Zaandam,0.0,0.0,2020-04-25,9,2,0,7
+380,Diamond Princess,Canada,0.0,0.0,2020-04-26,0,1,0,-1
+381,Grand Princess,Canada,0.0,0.0,2020-04-26,13,0,0,13
+382, ,Diamond Princess,0.0,0.0,2020-04-26,712,13,645,54
+383, ,MS Zaandam,0.0,0.0,2020-04-26,9,2,0,7
+384,Diamond Princess,Canada,0.0,0.0,2020-04-27,0,1,0,-1
+385,Grand Princess,Canada,0.0,0.0,2020-04-27,13,0,0,13
+386, ,Diamond Princess,0.0,0.0,2020-04-27,712,13,645,54
+387, ,MS Zaandam,0.0,0.0,2020-04-27,9,2,0,7
+388,Diamond Princess,Canada,0.0,0.0,2020-04-28,0,1,0,-1
+389,Grand Princess,Canada,0.0,0.0,2020-04-28,13,0,0,13
+390, ,Diamond Princess,0.0,0.0,2020-04-28,712,13,645,54
+391, ,MS Zaandam,0.0,0.0,2020-04-28,9,2,0,7
+392,Diamond Princess,Canada,0.0,0.0,2020-04-29,0,1,0,-1
+393,Grand Princess,Canada,0.0,0.0,2020-04-29,13,0,0,13
+394, ,Diamond Princess,0.0,0.0,2020-04-29,712,13,645,54
+395, ,MS Zaandam,0.0,0.0,2020-04-29,9,2,0,7
+396,Diamond Princess,Canada,0.0,0.0,2020-04-30,0,1,0,-1
+397,Grand Princess,Canada,0.0,0.0,2020-04-30,13,0,0,13
+398, ,Diamond Princess,0.0,0.0,2020-04-30,712,13,645,54
+399, ,MS Zaandam,0.0,0.0,2020-04-30,9,2,0,7
+400,Diamond Princess,Canada,0.0,0.0,2020-05-01,1,1,0,0
+401,Grand Princess,Canada,0.0,0.0,2020-05-01,13,0,0,13
+402, ,Diamond Princess,0.0,0.0,2020-05-01,712,13,645,54
+403, ,MS Zaandam,0.0,0.0,2020-05-01,9,2,0,7
+404,Diamond Princess,Canada,0.0,0.0,2020-05-02,1,1,0,0
+405,Grand Princess,Canada,0.0,0.0,2020-05-02,13,0,0,13
+406, ,Diamond Princess,0.0,0.0,2020-05-02,712,13,645,54
+407, ,MS Zaandam,0.0,0.0,2020-05-02,9,2,0,7
+408,Diamond Princess,Canada,0.0,0.0,2020-05-03,1,1,0,0
+409,Grand Princess,Canada,0.0,0.0,2020-05-03,13,0,0,13
+410, ,Diamond Princess,0.0,0.0,2020-05-03,712,13,645,54
+411, ,MS Zaandam,0.0,0.0,2020-05-03,9,2,0,7
+412,Diamond Princess,Canada,0.0,0.0,2020-05-04,1,1,0,0
+413,Grand Princess,Canada,0.0,0.0,2020-05-04,13,0,0,13
+414, ,Diamond Princess,0.0,0.0,2020-05-04,712,13,645,54
+415, ,MS Zaandam,0.0,0.0,2020-05-04,9,2,0,7
+416,Diamond Princess,Canada,0.0,0.0,2020-05-05,1,1,0,0
+417,Grand Princess,Canada,0.0,0.0,2020-05-05,13,0,0,13
+418, ,Diamond Princess,0.0,0.0,2020-05-05,712,13,645,54
+419, ,MS Zaandam,0.0,0.0,2020-05-05,9,2,0,7
+420,Diamond Princess,Canada,0.0,0.0,2020-05-06,1,1,0,0
+421,Grand Princess,Canada,0.0,0.0,2020-05-06,13,0,0,13
+422, ,Diamond Princess,0.0,0.0,2020-05-06,712,13,645,54
+423, ,MS Zaandam,0.0,0.0,2020-05-06,9,2,0,7
+424,Diamond Princess,Canada,0.0,0.0,2020-05-07,1,1,0,0
+425,Grand Princess,Canada,0.0,0.0,2020-05-07,13,0,0,13
+426, ,Diamond Princess,0.0,0.0,2020-05-07,712,13,645,54
+427, ,MS Zaandam,0.0,0.0,2020-05-07,9,2,0,7
+428,Diamond Princess,Canada,0.0,0.0,2020-05-08,1,1,0,0
+429,Grand Princess,Canada,0.0,0.0,2020-05-08,13,0,0,13
+430, ,Diamond Princess,0.0,0.0,2020-05-08,712,13,645,54
+431, ,MS Zaandam,0.0,0.0,2020-05-08,9,2,0,7
+432,Diamond Princess,Canada,0.0,0.0,2020-05-09,1,1,0,0
+433,Grand Princess,Canada,0.0,0.0,2020-05-09,13,0,0,13
+434, ,Diamond Princess,0.0,0.0,2020-05-09,712,13,645,54
+435, ,MS Zaandam,0.0,0.0,2020-05-09,9,2,0,7
+436,Diamond Princess,Canada,0.0,0.0,2020-05-10,1,1,0,0
+437,Grand Princess,Canada,0.0,0.0,2020-05-10,13,0,0,13
+438, ,Diamond Princess,0.0,0.0,2020-05-10,712,13,651,48
+439, ,MS Zaandam,0.0,0.0,2020-05-10,9,2,0,7
+440,Diamond Princess,Canada,0.0,0.0,2020-05-11,1,1,0,0
+441,Grand Princess,Canada,0.0,0.0,2020-05-11,13,0,0,13
+442, ,Diamond Princess,0.0,0.0,2020-05-11,712,13,651,48
+443, ,MS Zaandam,0.0,0.0,2020-05-11,9,2,0,7
+444,Diamond Princess,Canada,0.0,0.0,2020-05-12,1,1,0,0
+445,Grand Princess,Canada,0.0,0.0,2020-05-12,13,0,0,13
+446, ,Diamond Princess,0.0,0.0,2020-05-12,712,13,651,48
+447, ,MS Zaandam,0.0,0.0,2020-05-12,9,2,0,7
+448,Diamond Princess,Canada,0.0,0.0,2020-05-13,1,1,0,0
+449,Grand Princess,Canada,0.0,0.0,2020-05-13,13,0,0,13
+450, ,Diamond Princess,0.0,0.0,2020-05-13,712,13,651,48
+451, ,MS Zaandam,0.0,0.0,2020-05-13,9,2,0,7
+452,Diamond Princess,Canada,0.0,0.0,2020-05-14,1,1,0,0
+453,Grand Princess,Canada,0.0,0.0,2020-05-14,13,0,0,13
+454, ,Diamond Princess,0.0,0.0,2020-05-14,712,13,651,48
+455, ,MS Zaandam,0.0,0.0,2020-05-14,9,2,0,7
+456,Diamond Princess,Canada,0.0,0.0,2020-05-15,1,1,0,0
+457,Grand Princess,Canada,0.0,0.0,2020-05-15,13,0,0,13
+458, ,Diamond Princess,0.0,0.0,2020-05-15,712,13,651,48
+459, ,MS Zaandam,0.0,0.0,2020-05-15,9,2,0,7
+460,Diamond Princess,Canada,0.0,0.0,2020-05-16,1,1,0,0
+461,Grand Princess,Canada,0.0,0.0,2020-05-16,13,0,0,13
+462, ,Diamond Princess,0.0,0.0,2020-05-16,712,13,651,48
+463, ,MS Zaandam,0.0,0.0,2020-05-16,9,2,0,7
+464,Diamond Princess,Canada,0.0,0.0,2020-05-17,1,1,0,0
+465,Grand Princess,Canada,0.0,0.0,2020-05-17,13,0,0,13
+466, ,Diamond Princess,0.0,0.0,2020-05-17,712,13,651,48
+467, ,MS Zaandam,0.0,0.0,2020-05-17,9,2,0,7
+468,Diamond Princess,Canada,0.0,0.0,2020-05-18,1,1,0,0
+469,Grand Princess,Canada,0.0,0.0,2020-05-18,13,0,0,13
+470, ,Diamond Princess,0.0,0.0,2020-05-18,712,13,651,48
+471, ,MS Zaandam,0.0,0.0,2020-05-18,9,2,0,7
+472,Diamond Princess,Canada,0.0,0.0,2020-05-19,1,1,0,0
+473,Grand Princess,Canada,0.0,0.0,2020-05-19,13,0,0,13
+474, ,Diamond Princess,0.0,0.0,2020-05-19,712,13,651,48
+475, ,MS Zaandam,0.0,0.0,2020-05-19,9,2,0,7
+476,Diamond Princess,Canada,0.0,0.0,2020-05-20,1,1,0,0
+477,Grand Princess,Canada,0.0,0.0,2020-05-20,13,0,0,13
+478, ,Diamond Princess,0.0,0.0,2020-05-20,712,13,651,48
+479, ,MS Zaandam,0.0,0.0,2020-05-20,9,2,0,7
+480,Diamond Princess,Canada,0.0,0.0,2020-05-21,1,1,0,0
+481,Grand Princess,Canada,0.0,0.0,2020-05-21,13,0,0,13
+482, ,Diamond Princess,0.0,0.0,2020-05-21,712,13,651,48
+483, ,MS Zaandam,0.0,0.0,2020-05-21,9,2,0,7
+484,Diamond Princess,Canada,0.0,0.0,2020-05-22,1,1,0,0
+485,Grand Princess,Canada,0.0,0.0,2020-05-22,13,0,0,13
+486, ,Diamond Princess,0.0,0.0,2020-05-22,712,13,651,48
+487, ,MS Zaandam,0.0,0.0,2020-05-22,9,2,0,7
+488,Diamond Princess,Canada,0.0,0.0,2020-05-23,1,1,0,0
+489,Grand Princess,Canada,0.0,0.0,2020-05-23,13,0,0,13
+490, ,Diamond Princess,0.0,0.0,2020-05-23,712,13,651,48
+491, ,MS Zaandam,0.0,0.0,2020-05-23,9,2,0,7
+492,Diamond Princess,Canada,0.0,0.0,2020-05-24,1,1,0,0
+493,Grand Princess,Canada,0.0,0.0,2020-05-24,13,0,0,13
+494, ,Diamond Princess,0.0,0.0,2020-05-24,712,13,651,48
+495, ,MS Zaandam,0.0,0.0,2020-05-24,9,2,0,7
+496,Diamond Princess,Canada,0.0,0.0,2020-05-25,1,1,0,0
+497,Grand Princess,Canada,0.0,0.0,2020-05-25,13,0,0,13
+498, ,Diamond Princess,0.0,0.0,2020-05-25,712,13,651,48
+499, ,MS Zaandam,0.0,0.0,2020-05-25,9,2,0,7
+500,Diamond Princess,Canada,0.0,0.0,2020-05-26,1,1,0,0
+501,Grand Princess,Canada,0.0,0.0,2020-05-26,13,0,0,13
+502, ,Diamond Princess,0.0,0.0,2020-05-26,712,13,651,48
+503, ,MS Zaandam,0.0,0.0,2020-05-26,9,2,0,7
+504,Diamond Princess,Canada,0.0,0.0,2020-05-27,1,1,0,0
+505,Grand Princess,Canada,0.0,0.0,2020-05-27,13,0,0,13
+506, ,Diamond Princess,0.0,0.0,2020-05-27,712,13,651,48
+507, ,MS Zaandam,0.0,0.0,2020-05-27,9,2,0,7
+508,Diamond Princess,Canada,0.0,0.0,2020-05-28,1,1,0,0
+509,Grand Princess,Canada,0.0,0.0,2020-05-28,13,0,0,13
+510, ,Diamond Princess,0.0,0.0,2020-05-28,712,13,651,48
+511, ,MS Zaandam,0.0,0.0,2020-05-28,9,2,0,7
+512,Diamond Princess,Canada,0.0,0.0,2020-05-29,1,1,0,0
+513,Grand Princess,Canada,0.0,0.0,2020-05-29,13,0,0,13
+514, ,Diamond Princess,0.0,0.0,2020-05-29,712,13,651,48
+515, ,MS Zaandam,0.0,0.0,2020-05-29,9,2,0,7
+516,Diamond Princess,Canada,0.0,0.0,2020-05-30,1,1,0,0
+517,Grand Princess,Canada,0.0,0.0,2020-05-30,13,0,0,13
+518, ,Diamond Princess,0.0,0.0,2020-05-30,712,13,651,48
+519, ,MS Zaandam,0.0,0.0,2020-05-30,9,2,0,7
+520,Diamond Princess,Canada,0.0,0.0,2020-05-31,1,1,0,0
+521,Grand Princess,Canada,0.0,0.0,2020-05-31,13,0,0,13
+522, ,Diamond Princess,0.0,0.0,2020-05-31,712,13,651,48
+523, ,MS Zaandam,0.0,0.0,2020-05-31,9,2,0,7
+524,Diamond Princess,Canada,0.0,0.0,2020-06-01,1,1,0,0
+525,Grand Princess,Canada,0.0,0.0,2020-06-01,13,0,0,13
+526, ,Diamond Princess,0.0,0.0,2020-06-01,712,13,651,48
+527, ,MS Zaandam,0.0,0.0,2020-06-01,9,2,0,7
+528,Diamond Princess,Canada,0.0,0.0,2020-06-02,0,1,0,-1
+529,Grand Princess,Canada,0.0,0.0,2020-06-02,13,0,0,13
+530, ,Diamond Princess,0.0,0.0,2020-06-02,712,13,651,48
+531, ,MS Zaandam,0.0,0.0,2020-06-02,9,2,0,7
+532,Diamond Princess,Canada,0.0,0.0,2020-06-03,0,1,0,-1
+533,Grand Princess,Canada,0.0,0.0,2020-06-03,13,0,0,13
+534, ,Diamond Princess,0.0,0.0,2020-06-03,712,13,651,48
+535, ,MS Zaandam,0.0,0.0,2020-06-03,9,2,0,7
+536,Diamond Princess,Canada,0.0,0.0,2020-06-04,0,1,0,-1
+537,Grand Princess,Canada,0.0,0.0,2020-06-04,13,0,0,13
+538, ,Diamond Princess,0.0,0.0,2020-06-04,712,13,651,48
+539, ,MS Zaandam,0.0,0.0,2020-06-04,9,2,0,7
+540,Diamond Princess,Canada,0.0,0.0,2020-06-05,0,1,0,-1
+541,Grand Princess,Canada,0.0,0.0,2020-06-05,13,0,0,13
+542, ,Diamond Princess,0.0,0.0,2020-06-05,712,13,651,48
+543, ,MS Zaandam,0.0,0.0,2020-06-05,9,2,0,7
+544,Diamond Princess,Canada,0.0,0.0,2020-06-06,0,1,0,-1
+545,Grand Princess,Canada,0.0,0.0,2020-06-06,13,0,0,13
+546, ,Diamond Princess,0.0,0.0,2020-06-06,712,13,651,48
+547, ,MS Zaandam,0.0,0.0,2020-06-06,9,2,0,7
+548,Diamond Princess,Canada,0.0,0.0,2020-06-07,0,1,0,-1
+549,Grand Princess,Canada,0.0,0.0,2020-06-07,13,0,0,13
+550, ,Diamond Princess,0.0,0.0,2020-06-07,712,13,651,48
+551, ,MS Zaandam,0.0,0.0,2020-06-07,9,2,0,7
+552,Diamond Princess,Canada,0.0,0.0,2020-06-08,0,1,0,-1
+553,Grand Princess,Canada,0.0,0.0,2020-06-08,13,0,0,13
+554, ,Diamond Princess,0.0,0.0,2020-06-08,712,13,651,48
+555, ,MS Zaandam,0.0,0.0,2020-06-08,9,2,0,7
+556,Diamond Princess,Canada,0.0,0.0,2020-06-09,0,1,0,-1
+557,Grand Princess,Canada,0.0,0.0,2020-06-09,13,0,0,13
+558, ,Diamond Princess,0.0,0.0,2020-06-09,712,13,651,48
+559, ,MS Zaandam,0.0,0.0,2020-06-09,9,2,0,7
+560,Diamond Princess,Canada,0.0,0.0,2020-06-10,0,1,0,-1
+561,Grand Princess,Canada,0.0,0.0,2020-06-10,13,0,0,13
+562, ,Diamond Princess,0.0,0.0,2020-06-10,712,13,651,48
+563, ,MS Zaandam,0.0,0.0,2020-06-10,9,2,0,7
+564,Diamond Princess,Canada,0.0,0.0,2020-06-11,0,1,0,-1
+565,Grand Princess,Canada,0.0,0.0,2020-06-11,13,0,0,13
+566, ,Diamond Princess,0.0,0.0,2020-06-11,712,13,651,48
+567, ,MS Zaandam,0.0,0.0,2020-06-11,9,2,0,7
+568,Diamond Princess,Canada,0.0,0.0,2020-06-12,0,1,0,-1
+569,Grand Princess,Canada,0.0,0.0,2020-06-12,13,0,0,13
+570, ,Diamond Princess,0.0,0.0,2020-06-12,712,13,651,48
+571, ,MS Zaandam,0.0,0.0,2020-06-12,9,2,0,7
+572,Diamond Princess,Canada,0.0,0.0,2020-06-13,0,1,0,-1
+573,Grand Princess,Canada,0.0,0.0,2020-06-13,13,0,0,13
+574, ,Diamond Princess,0.0,0.0,2020-06-13,712,13,651,48
+575, ,MS Zaandam,0.0,0.0,2020-06-13,9,2,0,7
+576,Diamond Princess,Canada,0.0,0.0,2020-06-14,0,1,0,-1
+577,Grand Princess,Canada,0.0,0.0,2020-06-14,13,0,0,13
+578, ,Diamond Princess,0.0,0.0,2020-06-14,712,13,651,48
+579, ,MS Zaandam,0.0,0.0,2020-06-14,9,2,0,7
+580,Diamond Princess,Canada,0.0,0.0,2020-06-15,0,1,0,-1
+581,Grand Princess,Canada,0.0,0.0,2020-06-15,13,0,0,13
+582, ,Diamond Princess,0.0,0.0,2020-06-15,712,13,651,48
+583, ,MS Zaandam,0.0,0.0,2020-06-15,9,2,0,7
+584,Diamond Princess,Canada,0.0,0.0,2020-06-16,0,1,0,-1
+585,Grand Princess,Canada,0.0,0.0,2020-06-16,13,0,0,13
+586, ,Diamond Princess,0.0,0.0,2020-06-16,712,13,651,48
+587, ,MS Zaandam,0.0,0.0,2020-06-16,9,2,0,7
+588,Diamond Princess,Canada,0.0,0.0,2020-06-17,0,1,0,-1
+589,Grand Princess,Canada,0.0,0.0,2020-06-17,13,0,0,13
+590, ,Diamond Princess,0.0,0.0,2020-06-17,712,13,651,48
+591, ,MS Zaandam,0.0,0.0,2020-06-17,9,2,0,7
+592,Diamond Princess,Canada,0.0,0.0,2020-06-18,0,1,0,-1
+593,Grand Princess,Canada,0.0,0.0,2020-06-18,13,0,0,13
+594, ,Diamond Princess,0.0,0.0,2020-06-18,712,13,651,48
+595, ,MS Zaandam,0.0,0.0,2020-06-18,9,2,0,7
+596,Diamond Princess,Canada,0.0,0.0,2020-06-19,0,1,0,-1
+597,Grand Princess,Canada,0.0,0.0,2020-06-19,13,0,0,13
+598, ,Diamond Princess,0.0,0.0,2020-06-19,712,13,651,48
+599, ,MS Zaandam,0.0,0.0,2020-06-19,9,2,0,7
+600,Diamond Princess,Canada,0.0,0.0,2020-06-20,0,1,0,-1
+601,Grand Princess,Canada,0.0,0.0,2020-06-20,13,0,0,13
+602, ,Diamond Princess,0.0,0.0,2020-06-20,712,13,651,48
+603, ,MS Zaandam,0.0,0.0,2020-06-20,9,2,0,7
+604,Diamond Princess,Canada,0.0,0.0,2020-06-21,0,1,0,-1
+605,Grand Princess,Canada,0.0,0.0,2020-06-21,13,0,0,13
+606, ,Diamond Princess,0.0,0.0,2020-06-21,712,13,651,48
+607, ,MS Zaandam,0.0,0.0,2020-06-21,9,2,0,7
+608,Diamond Princess,Canada,0.0,0.0,2020-06-22,0,1,0,-1
+609,Grand Princess,Canada,0.0,0.0,2020-06-22,13,0,0,13
+610, ,Diamond Princess,0.0,0.0,2020-06-22,712,13,651,48
+611, ,MS Zaandam,0.0,0.0,2020-06-22,9,2,0,7
+612,Diamond Princess,Canada,0.0,0.0,2020-06-23,0,1,0,-1
+613,Grand Princess,Canada,0.0,0.0,2020-06-23,13,0,0,13
+614, ,Diamond Princess,0.0,0.0,2020-06-23,712,13,651,48
+615, ,MS Zaandam,0.0,0.0,2020-06-23,9,2,0,7
+616,Diamond Princess,Canada,0.0,0.0,2020-06-24,0,1,0,-1
+617,Grand Princess,Canada,0.0,0.0,2020-06-24,13,0,0,13
+618, ,Diamond Princess,0.0,0.0,2020-06-24,712,13,651,48
+619, ,MS Zaandam,0.0,0.0,2020-06-24,9,2,0,7
+620,Diamond Princess,Canada,0.0,0.0,2020-06-25,0,1,0,-1
+621,Grand Princess,Canada,0.0,0.0,2020-06-25,13,0,0,13
+622, ,Diamond Princess,0.0,0.0,2020-06-25,712,13,651,48
+623, ,MS Zaandam,0.0,0.0,2020-06-25,9,2,0,7
+624,Diamond Princess,Canada,0.0,0.0,2020-06-26,0,1,0,-1
+625,Grand Princess,Canada,0.0,0.0,2020-06-26,13,0,0,13
+626, ,Diamond Princess,0.0,0.0,2020-06-26,712,13,651,48
+627, ,MS Zaandam,0.0,0.0,2020-06-26,9,2,0,7
+628,Diamond Princess,Canada,0.0,0.0,2020-06-27,0,1,0,-1
+629,Grand Princess,Canada,0.0,0.0,2020-06-27,13,0,0,13
+630, ,Diamond Princess,0.0,0.0,2020-06-27,712,13,651,48
+631, ,MS Zaandam,0.0,0.0,2020-06-27,9,2,0,7
+632,Diamond Princess,Canada,0.0,0.0,2020-06-28,0,1,0,-1
+633,Grand Princess,Canada,0.0,0.0,2020-06-28,13,0,0,13
+634, ,Diamond Princess,0.0,0.0,2020-06-28,712,13,651,48
+635, ,MS Zaandam,0.0,0.0,2020-06-28,9,2,0,7
+636,Diamond Princess,Canada,0.0,0.0,2020-06-29,0,1,0,-1
+637,Grand Princess,Canada,0.0,0.0,2020-06-29,13,0,0,13
+638, ,Diamond Princess,0.0,0.0,2020-06-29,712,13,651,48
+639, ,MS Zaandam,0.0,0.0,2020-06-29,9,2,0,7
+640,Diamond Princess,Canada,0.0,0.0,2020-06-30,0,1,0,-1
+641,Grand Princess,Canada,0.0,0.0,2020-06-30,13,0,0,13
+642, ,Diamond Princess,0.0,0.0,2020-06-30,712,13,651,48
+643, ,MS Zaandam,0.0,0.0,2020-06-30,9,2,0,7
+644,Diamond Princess,Canada,0.0,0.0,2020-07-01,0,1,0,-1
+645,Grand Princess,Canada,0.0,0.0,2020-07-01,13,0,0,13
+646, ,Diamond Princess,0.0,0.0,2020-07-01,712,13,651,48
+647, ,MS Zaandam,0.0,0.0,2020-07-01,9,2,0,7
+648,Diamond Princess,Canada,0.0,0.0,2020-07-02,0,1,0,-1
+649,Grand Princess,Canada,0.0,0.0,2020-07-02,13,0,0,13
+650, ,Diamond Princess,0.0,0.0,2020-07-02,712,13,651,48
+651, ,MS Zaandam,0.0,0.0,2020-07-02,9,2,0,7
+652,Diamond Princess,Canada,0.0,0.0,2020-07-03,0,1,0,-1
+653,Grand Princess,Canada,0.0,0.0,2020-07-03,13,0,0,13
+654, ,Diamond Princess,0.0,0.0,2020-07-03,712,13,651,48
+655, ,MS Zaandam,0.0,0.0,2020-07-03,9,2,0,7
+656,Diamond Princess,Canada,0.0,0.0,2020-07-04,0,1,0,-1
+657,Grand Princess,Canada,0.0,0.0,2020-07-04,13,0,0,13
+658, ,Diamond Princess,0.0,0.0,2020-07-04,712,13,651,48
+659, ,MS Zaandam,0.0,0.0,2020-07-04,9,2,0,7
+660,Diamond Princess,Canada,0.0,0.0,2020-07-05,0,1,0,-1
+661,Grand Princess,Canada,0.0,0.0,2020-07-05,13,0,0,13
+662, ,Diamond Princess,0.0,0.0,2020-07-05,712,13,651,48
+663, ,MS Zaandam,0.0,0.0,2020-07-05,9,2,0,7
+664,Diamond Princess,Canada,0.0,0.0,2020-07-06,0,1,0,-1
+665,Grand Princess,Canada,0.0,0.0,2020-07-06,13,0,0,13
+666, ,Diamond Princess,0.0,0.0,2020-07-06,712,13,651,48
+667, ,MS Zaandam,0.0,0.0,2020-07-06,9,2,0,7
+668,Diamond Princess,Canada,0.0,0.0,2020-07-07,0,1,0,-1
+669,Grand Princess,Canada,0.0,0.0,2020-07-07,13,0,0,13
+670, ,Diamond Princess,0.0,0.0,2020-07-07,712,13,651,48
+671, ,MS Zaandam,0.0,0.0,2020-07-07,9,2,0,7
+672,Diamond Princess,Canada,0.0,0.0,2020-07-08,0,1,0,-1
+673,Grand Princess,Canada,0.0,0.0,2020-07-08,13,0,0,13
+674, ,Diamond Princess,0.0,0.0,2020-07-08,712,13,651,48
+675, ,MS Zaandam,0.0,0.0,2020-07-08,9,2,0,7
+676,Diamond Princess,Canada,0.0,0.0,2020-07-09,0,1,0,-1
+677,Grand Princess,Canada,0.0,0.0,2020-07-09,13,0,0,13
+678, ,Diamond Princess,0.0,0.0,2020-07-09,712,13,651,48
+679, ,MS Zaandam,0.0,0.0,2020-07-09,9,2,0,7
+680,Diamond Princess,Canada,0.0,0.0,2020-07-10,0,1,0,-1
+681,Grand Princess,Canada,0.0,0.0,2020-07-10,13,0,0,13
+682, ,Diamond Princess,0.0,0.0,2020-07-10,712,13,651,48
+683, ,MS Zaandam,0.0,0.0,2020-07-10,9,2,0,7
+684,Diamond Princess,Canada,0.0,0.0,2020-07-11,0,1,0,-1
+685,Grand Princess,Canada,0.0,0.0,2020-07-11,13,0,0,13
+686, ,Diamond Princess,0.0,0.0,2020-07-11,712,13,651,48
+687, ,MS Zaandam,0.0,0.0,2020-07-11,9,2,0,7
+688,Diamond Princess,Canada,0.0,0.0,2020-07-12,0,1,0,-1
+689,Grand Princess,Canada,0.0,0.0,2020-07-12,13,0,0,13
+690, ,Diamond Princess,0.0,0.0,2020-07-12,712,13,651,48
+691, ,MS Zaandam,0.0,0.0,2020-07-12,9,2,0,7
+692,Diamond Princess,Canada,0.0,0.0,2020-07-13,0,1,0,-1
+693,Grand Princess,Canada,0.0,0.0,2020-07-13,13,0,0,13
+694, ,Diamond Princess,0.0,0.0,2020-07-13,712,13,651,48
+695, ,MS Zaandam,0.0,0.0,2020-07-13,9,2,0,7
+696,Diamond Princess,Canada,0.0,0.0,2020-07-14,0,1,0,-1
+697,Grand Princess,Canada,0.0,0.0,2020-07-14,13,0,0,13
+698, ,Diamond Princess,0.0,0.0,2020-07-14,712,13,651,48
+699, ,MS Zaandam,0.0,0.0,2020-07-14,9,2,0,7
+700,Diamond Princess,Canada,0.0,0.0,2020-07-15,0,1,0,-1
+701,Grand Princess,Canada,0.0,0.0,2020-07-15,13,0,0,13
+702, ,Diamond Princess,0.0,0.0,2020-07-15,712,13,651,48
+703, ,MS Zaandam,0.0,0.0,2020-07-15,9,2,0,7
+704,Diamond Princess,Canada,0.0,0.0,2020-07-16,0,1,0,-1
+705,Grand Princess,Canada,0.0,0.0,2020-07-16,13,0,0,13
+706, ,Diamond Princess,0.0,0.0,2020-07-16,712,13,651,48
+707, ,MS Zaandam,0.0,0.0,2020-07-16,9,2,0,7
+708,Diamond Princess,Canada,0.0,0.0,2020-07-17,0,1,0,-1
+709,Grand Princess,Canada,0.0,0.0,2020-07-17,13,0,0,13
+710, ,Diamond Princess,0.0,0.0,2020-07-17,712,13,651,48
+711, ,MS Zaandam,0.0,0.0,2020-07-17,9,2,0,7
+712,Diamond Princess,Canada,0.0,0.0,2020-07-18,0,1,0,-1
+713,Grand Princess,Canada,0.0,0.0,2020-07-18,13,0,0,13
+714, ,Diamond Princess,0.0,0.0,2020-07-18,712,13,651,48
+715, ,MS Zaandam,0.0,0.0,2020-07-18,9,2,0,7
+716,Diamond Princess,Canada,0.0,0.0,2020-07-19,0,1,0,-1
+717,Grand Princess,Canada,0.0,0.0,2020-07-19,13,0,0,13
+718, ,Diamond Princess,0.0,0.0,2020-07-19,712,13,651,48
+719, ,MS Zaandam,0.0,0.0,2020-07-19,9,2,0,7
+720,Diamond Princess,Canada,0.0,0.0,2020-07-20,0,1,0,-1
+721,Grand Princess,Canada,0.0,0.0,2020-07-20,13,0,0,13
+722, ,Diamond Princess,0.0,0.0,2020-07-20,712,13,651,48
+723, ,MS Zaandam,0.0,0.0,2020-07-20,9,2,0,7
+724,Diamond Princess,Canada,0.0,0.0,2020-07-21,0,1,0,-1
+725,Grand Princess,Canada,0.0,0.0,2020-07-21,13,0,0,13
+726, ,Diamond Princess,0.0,0.0,2020-07-21,712,13,651,48
+727, ,MS Zaandam,0.0,0.0,2020-07-21,9,2,0,7
+728,Diamond Princess,Canada,0.0,0.0,2020-07-22,0,1,0,-1
+729,Grand Princess,Canada,0.0,0.0,2020-07-22,13,0,0,13
+730, ,Diamond Princess,0.0,0.0,2020-07-22,712,13,651,48
+731, ,MS Zaandam,0.0,0.0,2020-07-22,9,2,0,7
+732,Diamond Princess,Canada,0.0,0.0,2020-07-23,0,1,0,-1
+733,Grand Princess,Canada,0.0,0.0,2020-07-23,13,0,0,13
+734, ,Diamond Princess,0.0,0.0,2020-07-23,712,13,651,48
+735, ,MS Zaandam,0.0,0.0,2020-07-23,9,2,0,7
+736,Diamond Princess,Canada,0.0,0.0,2020-07-24,0,1,0,-1
+737,Grand Princess,Canada,0.0,0.0,2020-07-24,13,0,0,13
+738, ,Diamond Princess,0.0,0.0,2020-07-24,712,13,651,48
+739, ,MS Zaandam,0.0,0.0,2020-07-24,9,2,0,7
+740,Diamond Princess,Canada,0.0,0.0,2020-07-25,0,1,0,-1
+741,Grand Princess,Canada,0.0,0.0,2020-07-25,13,0,0,13
+742, ,Diamond Princess,0.0,0.0,2020-07-25,712,13,651,48
+743, ,MS Zaandam,0.0,0.0,2020-07-25,9,2,0,7
+744,Diamond Princess,Canada,0.0,0.0,2020-07-26,0,1,0,-1
+745,Grand Princess,Canada,0.0,0.0,2020-07-26,13,0,0,13
+746, ,Diamond Princess,0.0,0.0,2020-07-26,712,13,651,48
+747, ,MS Zaandam,0.0,0.0,2020-07-26,9,2,0,7
+748,Diamond Princess,Canada,0.0,0.0,2020-07-27,0,1,0,-1
+749,Grand Princess,Canada,0.0,0.0,2020-07-27,13,0,0,13
+750, ,Diamond Princess,0.0,0.0,2020-07-27,712,13,651,48
+751, ,MS Zaandam,0.0,0.0,2020-07-27,9,2,0,7
+752,Diamond Princess,Canada,0.0,0.0,2020-07-28,0,1,0,-1
+753,Grand Princess,Canada,0.0,0.0,2020-07-28,13,0,0,13
+754, ,Diamond Princess,0.0,0.0,2020-07-28,712,13,651,48
+755, ,MS Zaandam,0.0,0.0,2020-07-28,9,2,0,7
+756,Diamond Princess,Canada,0.0,0.0,2020-07-29,0,1,0,-1
+757,Grand Princess,Canada,0.0,0.0,2020-07-29,13,0,0,13
+758, ,Diamond Princess,0.0,0.0,2020-07-29,712,13,651,48
+759, ,MS Zaandam,0.0,0.0,2020-07-29,9,2,0,7
+760,Diamond Princess,Canada,0.0,0.0,2020-07-30,0,1,0,-1
+761,Grand Princess,Canada,0.0,0.0,2020-07-30,13,0,0,13
+762, ,Diamond Princess,0.0,0.0,2020-07-30,712,13,651,48
+763, ,MS Zaandam,0.0,0.0,2020-07-30,9,2,0,7
+764,Diamond Princess,Canada,0.0,0.0,2020-07-31,0,1,0,-1
+765,Grand Princess,Canada,0.0,0.0,2020-07-31,13,0,0,13
+766, ,Diamond Princess,0.0,0.0,2020-07-31,712,13,651,48
+767, ,MS Zaandam,0.0,0.0,2020-07-31,9,2,0,7
+768,Diamond Princess,Canada,0.0,0.0,2020-08-01,0,1,0,-1
+769,Grand Princess,Canada,0.0,0.0,2020-08-01,13,0,0,13
+770, ,Diamond Princess,0.0,0.0,2020-08-01,712,13,651,48
+771, ,MS Zaandam,0.0,0.0,2020-08-01,9,2,0,7
+772,Diamond Princess,Canada,0.0,0.0,2020-08-02,0,1,0,-1
+773,Grand Princess,Canada,0.0,0.0,2020-08-02,13,0,0,13
+774, ,Diamond Princess,0.0,0.0,2020-08-02,712,13,651,48
+775, ,MS Zaandam,0.0,0.0,2020-08-02,9,2,0,7
+776,Diamond Princess,Canada,0.0,0.0,2020-08-03,0,1,0,-1
+777,Grand Princess,Canada,0.0,0.0,2020-08-03,13,0,0,13
+778, ,Diamond Princess,0.0,0.0,2020-08-03,712,13,651,48
+779, ,MS Zaandam,0.0,0.0,2020-08-03,9,2,0,7
+780,Diamond Princess,Canada,0.0,0.0,2020-08-04,0,1,0,-1
+781,Grand Princess,Canada,0.0,0.0,2020-08-04,13,0,0,13
+782, ,Diamond Princess,0.0,0.0,2020-08-04,712,13,651,48
+783, ,MS Zaandam,0.0,0.0,2020-08-04,9,2,0,7
+784,Diamond Princess,Canada,0.0,0.0,2020-08-05,0,1,0,-1
+785,Grand Princess,Canada,0.0,0.0,2020-08-05,13,0,0,13
+786, ,Diamond Princess,0.0,0.0,2020-08-05,712,13,651,48
+787, ,MS Zaandam,0.0,0.0,2020-08-05,9,2,0,7
+788,Diamond Princess,Canada,0.0,0.0,2020-08-06,0,1,0,-1
+789,Grand Princess,Canada,0.0,0.0,2020-08-06,13,0,0,13
+790, ,Diamond Princess,0.0,0.0,2020-08-06,712,13,651,48
+791, ,MS Zaandam,0.0,0.0,2020-08-06,9,2,0,7
+792,Diamond Princess,Canada,0.0,0.0,2020-08-07,0,1,0,-1
+793,Grand Princess,Canada,0.0,0.0,2020-08-07,13,0,0,13
+794, ,Diamond Princess,0.0,0.0,2020-08-07,712,13,651,48
+795, ,MS Zaandam,0.0,0.0,2020-08-07,9,2,0,7
+796,Diamond Princess,Canada,0.0,0.0,2020-08-08,0,1,0,-1
+797,Grand Princess,Canada,0.0,0.0,2020-08-08,13,0,0,13
+798, ,Diamond Princess,0.0,0.0,2020-08-08,712,13,651,48
+799, ,MS Zaandam,0.0,0.0,2020-08-08,9,2,0,7
+800,Diamond Princess,Canada,0.0,0.0,2020-08-09,0,1,0,-1
+801,Grand Princess,Canada,0.0,0.0,2020-08-09,13,0,0,13
+802, ,Diamond Princess,0.0,0.0,2020-08-09,712,13,651,48
+803, ,MS Zaandam,0.0,0.0,2020-08-09,9,2,0,7
+804,Diamond Princess,Canada,0.0,0.0,2020-08-10,0,1,0,-1
+805,Grand Princess,Canada,0.0,0.0,2020-08-10,13,0,0,13
+806, ,Diamond Princess,0.0,0.0,2020-08-10,712,13,651,48
+807, ,MS Zaandam,0.0,0.0,2020-08-10,9,2,0,7
+808,Diamond Princess,Canada,0.0,0.0,2020-08-11,0,1,0,-1
+809,Grand Princess,Canada,0.0,0.0,2020-08-11,13,0,0,13
+810, ,Diamond Princess,0.0,0.0,2020-08-11,712,13,651,48
+811, ,MS Zaandam,0.0,0.0,2020-08-11,9,2,0,7
+812,Diamond Princess,Canada,0.0,0.0,2020-08-12,0,1,0,-1
+813,Grand Princess,Canada,0.0,0.0,2020-08-12,13,0,0,13
+814, ,Diamond Princess,0.0,0.0,2020-08-12,712,13,651,48
+815, ,MS Zaandam,0.0,0.0,2020-08-12,9,2,0,7
+816,Diamond Princess,Canada,0.0,0.0,2020-08-13,0,1,0,-1
+817,Grand Princess,Canada,0.0,0.0,2020-08-13,13,0,0,13
+818, ,Diamond Princess,0.0,0.0,2020-08-13,712,13,651,48
+819, ,MS Zaandam,0.0,0.0,2020-08-13,9,2,0,7
+820,Diamond Princess,Canada,0.0,0.0,2020-08-14,0,1,0,-1
+821,Grand Princess,Canada,0.0,0.0,2020-08-14,13,0,0,13
+822, ,Diamond Princess,0.0,0.0,2020-08-14,712,13,651,48
+823, ,MS Zaandam,0.0,0.0,2020-08-14,9,2,0,7
+824,Diamond Princess,Canada,0.0,0.0,2020-08-15,0,1,0,-1
+825,Grand Princess,Canada,0.0,0.0,2020-08-15,13,0,0,13
+826, ,Diamond Princess,0.0,0.0,2020-08-15,712,13,651,48
+827, ,MS Zaandam,0.0,0.0,2020-08-15,9,2,0,7
+828,Diamond Princess,Canada,0.0,0.0,2020-08-16,0,1,0,-1
+829,Grand Princess,Canada,0.0,0.0,2020-08-16,13,0,0,13
+830, ,Diamond Princess,0.0,0.0,2020-08-16,712,13,651,48
+831, ,MS Zaandam,0.0,0.0,2020-08-16,9,2,0,7
+832,Diamond Princess,Canada,0.0,0.0,2020-08-17,0,1,0,-1
+833,Grand Princess,Canada,0.0,0.0,2020-08-17,13,0,0,13
+834, ,Diamond Princess,0.0,0.0,2020-08-17,712,13,651,48
+835, ,MS Zaandam,0.0,0.0,2020-08-17,9,2,0,7
+836,Diamond Princess,Canada,0.0,0.0,2020-08-18,0,1,0,-1
+837,Grand Princess,Canada,0.0,0.0,2020-08-18,13,0,0,13
+838, ,Diamond Princess,0.0,0.0,2020-08-18,712,13,651,48
+839, ,MS Zaandam,0.0,0.0,2020-08-18,9,2,0,7
+840,Diamond Princess,Canada,0.0,0.0,2020-08-19,0,1,0,-1
+841,Grand Princess,Canada,0.0,0.0,2020-08-19,13,0,0,13
+842, ,Diamond Princess,0.0,0.0,2020-08-19,712,13,651,48
+843, ,MS Zaandam,0.0,0.0,2020-08-19,9,2,0,7
+844,Diamond Princess,Canada,0.0,0.0,2020-08-20,0,1,0,-1
+845,Grand Princess,Canada,0.0,0.0,2020-08-20,13,0,0,13
+846, ,Diamond Princess,0.0,0.0,2020-08-20,712,13,651,48
+847, ,MS Zaandam,0.0,0.0,2020-08-20,9,2,0,7
+848,Diamond Princess,Canada,0.0,0.0,2020-08-21,0,1,0,-1
+849,Grand Princess,Canada,0.0,0.0,2020-08-21,13,0,0,13
+850, ,Diamond Princess,0.0,0.0,2020-08-21,712,13,651,48
+851, ,MS Zaandam,0.0,0.0,2020-08-21,9,2,0,7
+852,Diamond Princess,Canada,0.0,0.0,2020-08-22,0,1,0,-1
+853,Grand Princess,Canada,0.0,0.0,2020-08-22,13,0,0,13
+854, ,Diamond Princess,0.0,0.0,2020-08-22,712,13,651,48
+855, ,MS Zaandam,0.0,0.0,2020-08-22,9,2,0,7
+856,Diamond Princess,Canada,0.0,0.0,2020-08-23,0,1,0,-1
+857,Grand Princess,Canada,0.0,0.0,2020-08-23,13,0,0,13
+858, ,Diamond Princess,0.0,0.0,2020-08-23,712,13,651,48
+859, ,MS Zaandam,0.0,0.0,2020-08-23,9,2,0,7
+860,Diamond Princess,Canada,0.0,0.0,2020-08-24,0,1,0,-1
+861,Grand Princess,Canada,0.0,0.0,2020-08-24,13,0,0,13
+862, ,Diamond Princess,0.0,0.0,2020-08-24,712,13,651,48
+863, ,MS Zaandam,0.0,0.0,2020-08-24,9,2,0,7
+864,Diamond Princess,Canada,0.0,0.0,2020-08-25,0,1,0,-1
+865,Grand Princess,Canada,0.0,0.0,2020-08-25,13,0,0,13
+866, ,Diamond Princess,0.0,0.0,2020-08-25,712,13,651,48
+867, ,MS Zaandam,0.0,0.0,2020-08-25,9,2,0,7
+868,Diamond Princess,Canada,0.0,0.0,2020-08-26,0,1,0,-1
+869,Grand Princess,Canada,0.0,0.0,2020-08-26,13,0,0,13
+870, ,Diamond Princess,0.0,0.0,2020-08-26,712,13,651,48
+871, ,MS Zaandam,0.0,0.0,2020-08-26,9,2,0,7
+872,Diamond Princess,Canada,0.0,0.0,2020-08-27,0,1,0,-1
+873,Grand Princess,Canada,0.0,0.0,2020-08-27,13,0,0,13
+874, ,Diamond Princess,0.0,0.0,2020-08-27,712,13,651,48
+875, ,MS Zaandam,0.0,0.0,2020-08-27,9,2,0,7
+876,Diamond Princess,Canada,0.0,0.0,2020-08-28,0,1,0,-1
+877,Grand Princess,Canada,0.0,0.0,2020-08-28,13,0,0,13
+878, ,Diamond Princess,0.0,0.0,2020-08-28,712,13,651,48
+879, ,MS Zaandam,0.0,0.0,2020-08-28,9,2,0,7
+880,Diamond Princess,Canada,0.0,0.0,2020-08-29,0,1,0,-1
+881,Grand Princess,Canada,0.0,0.0,2020-08-29,13,0,0,13
+882, ,Diamond Princess,0.0,0.0,2020-08-29,712,13,651,48
+883, ,MS Zaandam,0.0,0.0,2020-08-29,9,2,0,7
+884,Diamond Princess,Canada,0.0,0.0,2020-08-30,0,1,0,-1
+885,Grand Princess,Canada,0.0,0.0,2020-08-30,13,0,0,13
+886, ,Diamond Princess,0.0,0.0,2020-08-30,712,13,651,48
+887, ,MS Zaandam,0.0,0.0,2020-08-30,9,2,0,7
+888,Diamond Princess,Canada,0.0,0.0,2020-08-31,0,1,0,-1
+889,Grand Princess,Canada,0.0,0.0,2020-08-31,13,0,0,13
+890, ,Diamond Princess,0.0,0.0,2020-08-31,712,13,651,48
+891, ,MS Zaandam,0.0,0.0,2020-08-31,9,2,0,7
+892,Diamond Princess,Canada,0.0,0.0,2020-09-01,0,1,0,-1
+893,Grand Princess,Canada,0.0,0.0,2020-09-01,13,0,0,13
+894, ,Diamond Princess,0.0,0.0,2020-09-01,712,13,651,48
+895, ,MS Zaandam,0.0,0.0,2020-09-01,9,2,0,7
+896,Diamond Princess,Canada,0.0,0.0,2020-09-02,0,1,0,-1
+897,Grand Princess,Canada,0.0,0.0,2020-09-02,13,0,0,13
+898, ,Diamond Princess,0.0,0.0,2020-09-02,712,13,651,48
+899, ,MS Zaandam,0.0,0.0,2020-09-02,9,2,0,7
+900,Diamond Princess,Canada,0.0,0.0,2020-09-03,0,1,0,-1
+901,Grand Princess,Canada,0.0,0.0,2020-09-03,13,0,0,13
+902, ,Diamond Princess,0.0,0.0,2020-09-03,712,13,651,48
+903, ,MS Zaandam,0.0,0.0,2020-09-03,9,2,0,7
+904,Diamond Princess,Canada,0.0,0.0,2020-09-04,0,1,0,-1
+905,Grand Princess,Canada,0.0,0.0,2020-09-04,13,0,0,13
+906, ,Diamond Princess,0.0,0.0,2020-09-04,712,13,651,48
+907, ,MS Zaandam,0.0,0.0,2020-09-04,9,2,0,7
+908,Diamond Princess,Canada,0.0,0.0,2020-09-05,0,1,0,-1
+909,Grand Princess,Canada,0.0,0.0,2020-09-05,13,0,0,13
+910, ,Diamond Princess,0.0,0.0,2020-09-05,712,13,651,48
+911, ,MS Zaandam,0.0,0.0,2020-09-05,9,2,0,7
+912,Diamond Princess,Canada,0.0,0.0,2020-09-06,0,1,0,-1
+913,Grand Princess,Canada,0.0,0.0,2020-09-06,13,0,0,13
+914, ,Diamond Princess,0.0,0.0,2020-09-06,712,13,651,48
+915, ,MS Zaandam,0.0,0.0,2020-09-06,9,2,0,7
+916,Diamond Princess,Canada,0.0,0.0,2020-09-07,0,1,0,-1
+917,Grand Princess,Canada,0.0,0.0,2020-09-07,13,0,0,13
+918, ,Diamond Princess,0.0,0.0,2020-09-07,712,13,651,48
+919, ,MS Zaandam,0.0,0.0,2020-09-07,9,2,0,7
+920,Diamond Princess,Canada,0.0,0.0,2020-09-08,0,1,0,-1
+921,Grand Princess,Canada,0.0,0.0,2020-09-08,13,0,0,13
+922, ,Diamond Princess,0.0,0.0,2020-09-08,712,13,651,48
+923, ,MS Zaandam,0.0,0.0,2020-09-08,9,2,0,7
+924,Diamond Princess,Canada,0.0,0.0,2020-09-09,0,1,0,-1
+925,Grand Princess,Canada,0.0,0.0,2020-09-09,13,0,0,13
+926, ,Diamond Princess,0.0,0.0,2020-09-09,712,13,651,48
+927, ,MS Zaandam,0.0,0.0,2020-09-09,9,2,0,7
+928,Diamond Princess,Canada,0.0,0.0,2020-09-10,0,1,0,-1
+929,Grand Princess,Canada,0.0,0.0,2020-09-10,13,0,0,13
+930, ,Diamond Princess,0.0,0.0,2020-09-10,712,13,651,48
+931, ,MS Zaandam,0.0,0.0,2020-09-10,9,2,0,7
+932,Diamond Princess,Canada,0.0,0.0,2020-09-11,0,1,0,-1
+933,Grand Princess,Canada,0.0,0.0,2020-09-11,13,0,0,13
+934, ,Diamond Princess,0.0,0.0,2020-09-11,712,13,651,48
+935, ,MS Zaandam,0.0,0.0,2020-09-11,9,2,0,7
+936,Diamond Princess,Canada,0.0,0.0,2020-09-12,0,1,0,-1
+937,Grand Princess,Canada,0.0,0.0,2020-09-12,13,0,0,13
+938, ,Diamond Princess,0.0,0.0,2020-09-12,712,13,651,48
+939, ,MS Zaandam,0.0,0.0,2020-09-12,9,2,0,7
+940,Diamond Princess,Canada,0.0,0.0,2020-09-13,0,1,0,-1
+941,Grand Princess,Canada,0.0,0.0,2020-09-13,13,0,0,13
+942, ,Diamond Princess,0.0,0.0,2020-09-13,712,13,651,48
+943, ,MS Zaandam,0.0,0.0,2020-09-13,9,2,0,7
+944,Diamond Princess,Canada,0.0,0.0,2020-09-14,0,1,0,-1
+945,Grand Princess,Canada,0.0,0.0,2020-09-14,13,0,0,13
+946, ,Diamond Princess,0.0,0.0,2020-09-14,712,13,651,48
+947, ,MS Zaandam,0.0,0.0,2020-09-14,9,2,0,7
+948,Diamond Princess,Canada,0.0,0.0,2020-09-15,0,1,0,-1
+949,Grand Princess,Canada,0.0,0.0,2020-09-15,13,0,0,13
+950, ,Diamond Princess,0.0,0.0,2020-09-15,712,13,651,48
+951, ,MS Zaandam,0.0,0.0,2020-09-15,9,2,0,7
+952,Diamond Princess,Canada,0.0,0.0,2020-09-16,0,1,0,-1
+953,Grand Princess,Canada,0.0,0.0,2020-09-16,13,0,0,13
+954, ,Diamond Princess,0.0,0.0,2020-09-16,712,13,651,48
+955, ,MS Zaandam,0.0,0.0,2020-09-16,9,2,0,7
+956,Diamond Princess,Canada,0.0,0.0,2020-09-17,0,1,0,-1
+957,Grand Princess,Canada,0.0,0.0,2020-09-17,13,0,0,13
+958, ,Diamond Princess,0.0,0.0,2020-09-17,712,13,651,48
+959, ,MS Zaandam,0.0,0.0,2020-09-17,9,2,0,7
+960,Diamond Princess,Canada,0.0,0.0,2020-09-18,0,1,0,-1
+961,Grand Princess,Canada,0.0,0.0,2020-09-18,13,0,0,13
+962, ,Diamond Princess,0.0,0.0,2020-09-18,712,13,651,48
+963, ,MS Zaandam,0.0,0.0,2020-09-18,9,2,0,7
+964,Diamond Princess,Canada,0.0,0.0,2020-09-19,0,1,0,-1
+965,Grand Princess,Canada,0.0,0.0,2020-09-19,13,0,0,13
+966, ,Diamond Princess,0.0,0.0,2020-09-19,712,13,651,48
+967, ,MS Zaandam,0.0,0.0,2020-09-19,9,2,0,7
+968,Diamond Princess,Canada,0.0,0.0,2020-09-20,0,1,0,-1
+969,Grand Princess,Canada,0.0,0.0,2020-09-20,13,0,0,13
+970, ,Diamond Princess,0.0,0.0,2020-09-20,712,13,651,48
+971, ,MS Zaandam,0.0,0.0,2020-09-20,9,2,0,7
+972,Diamond Princess,Canada,0.0,0.0,2020-09-21,0,1,0,-1
+973,Grand Princess,Canada,0.0,0.0,2020-09-21,13,0,0,13
+974, ,Diamond Princess,0.0,0.0,2020-09-21,712,13,651,48
+975, ,MS Zaandam,0.0,0.0,2020-09-21,9,2,0,7
+976,Diamond Princess,Canada,0.0,0.0,2020-09-22,0,1,0,-1
+977,Grand Princess,Canada,0.0,0.0,2020-09-22,13,0,0,13
+978, ,Diamond Princess,0.0,0.0,2020-09-22,712,13,651,48
+979, ,MS Zaandam,0.0,0.0,2020-09-22,9,2,0,7
+980,Diamond Princess,Canada,0.0,0.0,2020-09-23,0,1,0,-1
+981,Grand Princess,Canada,0.0,0.0,2020-09-23,13,0,0,13
+982, ,Diamond Princess,0.0,0.0,2020-09-23,712,13,651,48
+983, ,MS Zaandam,0.0,0.0,2020-09-23,9,2,0,7
+984,Diamond Princess,Canada,0.0,0.0,2020-09-24,0,1,0,-1
+985,Grand Princess,Canada,0.0,0.0,2020-09-24,13,0,0,13
+986, ,Diamond Princess,0.0,0.0,2020-09-24,712,13,651,48
+987, ,MS Zaandam,0.0,0.0,2020-09-24,9,2,0,7
+988,Diamond Princess,Canada,0.0,0.0,2020-09-25,0,1,0,-1
+989,Grand Princess,Canada,0.0,0.0,2020-09-25,13,0,0,13
+990, ,Diamond Princess,0.0,0.0,2020-09-25,712,13,651,48
+991, ,MS Zaandam,0.0,0.0,2020-09-25,9,2,0,7
+992,Diamond Princess,Canada,0.0,0.0,2020-09-26,0,1,0,-1
+993,Grand Princess,Canada,0.0,0.0,2020-09-26,13,0,0,13
+994, ,Diamond Princess,0.0,0.0,2020-09-26,712,13,651,48
+995, ,MS Zaandam,0.0,0.0,2020-09-26,9,2,0,7
+996,Diamond Princess,Canada,0.0,0.0,2020-09-27,0,1,0,-1
+997,Grand Princess,Canada,0.0,0.0,2020-09-27,13,0,0,13
+998, ,Diamond Princess,0.0,0.0,2020-09-27,712,13,651,48
+999, ,MS Zaandam,0.0,0.0,2020-09-27,9,2,0,7
+1000,Diamond Princess,Canada,0.0,0.0,2020-09-28,0,1,0,-1
+1001,Grand Princess,Canada,0.0,0.0,2020-09-28,13,0,0,13
+1002, ,Diamond Princess,0.0,0.0,2020-09-28,712,13,651,48
+1003, ,MS Zaandam,0.0,0.0,2020-09-28,9,2,0,7
+1004,Diamond Princess,Canada,0.0,0.0,2020-09-29,0,1,0,-1
+1005,Grand Princess,Canada,0.0,0.0,2020-09-29,13,0,0,13
+1006, ,Diamond Princess,0.0,0.0,2020-09-29,712,13,651,48
+1007, ,MS Zaandam,0.0,0.0,2020-09-29,9,2,0,7
+1008,Diamond Princess,Canada,0.0,0.0,2020-09-30,0,1,0,-1
+1009,Grand Princess,Canada,0.0,0.0,2020-09-30,13,0,0,13
+1010, ,Diamond Princess,0.0,0.0,2020-09-30,712,13,651,48
+1011, ,MS Zaandam,0.0,0.0,2020-09-30,9,2,0,7
+1012,Diamond Princess,Canada,0.0,0.0,2020-10-01,0,1,0,-1
+1013,Grand Princess,Canada,0.0,0.0,2020-10-01,13,0,0,13
+1014, ,Diamond Princess,0.0,0.0,2020-10-01,712,13,651,48
+1015, ,MS Zaandam,0.0,0.0,2020-10-01,9,2,0,7
+1016,Diamond Princess,Canada,0.0,0.0,2020-10-02,0,1,0,-1
+1017,Grand Princess,Canada,0.0,0.0,2020-10-02,13,0,0,13
+1018, ,Diamond Princess,0.0,0.0,2020-10-02,712,13,651,48
+1019, ,MS Zaandam,0.0,0.0,2020-10-02,9,2,0,7
+1020,Diamond Princess,Canada,0.0,0.0,2020-10-03,0,1,0,-1
+1021,Grand Princess,Canada,0.0,0.0,2020-10-03,13,0,0,13
+1022, ,Diamond Princess,0.0,0.0,2020-10-03,712,13,651,48
+1023, ,MS Zaandam,0.0,0.0,2020-10-03,9,2,0,7
+1024,Diamond Princess,Canada,0.0,0.0,2020-10-04,0,1,0,-1
+1025,Grand Princess,Canada,0.0,0.0,2020-10-04,13,0,0,13
+1026, ,Diamond Princess,0.0,0.0,2020-10-04,712,13,651,48
+1027, ,MS Zaandam,0.0,0.0,2020-10-04,9,2,0,7
+1028,Diamond Princess,Canada,0.0,0.0,2020-10-05,0,1,0,-1
+1029,Grand Princess,Canada,0.0,0.0,2020-10-05,13,0,0,13
+1030, ,Diamond Princess,0.0,0.0,2020-10-05,712,13,651,48
+1031, ,MS Zaandam,0.0,0.0,2020-10-05,9,2,0,7
+1032,Diamond Princess,Canada,0.0,0.0,2020-10-06,0,1,0,-1
+1033,Grand Princess,Canada,0.0,0.0,2020-10-06,13,0,0,13
+1034, ,Diamond Princess,0.0,0.0,2020-10-06,712,13,651,48
+1035, ,MS Zaandam,0.0,0.0,2020-10-06,9,2,0,7
+1036,Diamond Princess,Canada,0.0,0.0,2020-10-07,0,1,0,-1
+1037,Grand Princess,Canada,0.0,0.0,2020-10-07,13,0,0,13
+1038, ,Diamond Princess,0.0,0.0,2020-10-07,712,13,651,48
+1039, ,MS Zaandam,0.0,0.0,2020-10-07,9,2,0,7
+1040,Diamond Princess,Canada,0.0,0.0,2020-10-08,0,1,0,-1
+1041,Grand Princess,Canada,0.0,0.0,2020-10-08,13,0,0,13
+1042, ,Diamond Princess,0.0,0.0,2020-10-08,712,13,651,48
+1043, ,MS Zaandam,0.0,0.0,2020-10-08,9,2,0,7
+1044,Diamond Princess,Canada,0.0,0.0,2020-10-09,0,1,0,-1
+1045,Grand Princess,Canada,0.0,0.0,2020-10-09,13,0,0,13
+1046, ,Diamond Princess,0.0,0.0,2020-10-09,712,13,651,48
+1047, ,MS Zaandam,0.0,0.0,2020-10-09,9,2,0,7
+1048,Diamond Princess,Canada,0.0,0.0,2020-10-10,0,1,0,-1
+1049,Grand Princess,Canada,0.0,0.0,2020-10-10,13,0,0,13
+1050, ,Diamond Princess,0.0,0.0,2020-10-10,712,13,659,40
+1051, ,MS Zaandam,0.0,0.0,2020-10-10,9,2,0,7
+1052,Diamond Princess,Canada,0.0,0.0,2020-10-11,0,1,0,-1
+1053,Grand Princess,Canada,0.0,0.0,2020-10-11,13,0,0,13
+1054, ,Diamond Princess,0.0,0.0,2020-10-11,712,13,659,40
+1055, ,MS Zaandam,0.0,0.0,2020-10-11,9,2,0,7
+1056,Diamond Princess,Canada,0.0,0.0,2020-10-12,0,1,0,-1
+1057,Grand Princess,Canada,0.0,0.0,2020-10-12,13,0,0,13
+1058, ,Diamond Princess,0.0,0.0,2020-10-12,712,13,659,40
+1059, ,MS Zaandam,0.0,0.0,2020-10-12,9,2,0,7
+1060,Diamond Princess,Canada,0.0,0.0,2020-10-13,0,1,0,-1
+1061,Grand Princess,Canada,0.0,0.0,2020-10-13,13,0,0,13
+1062, ,Diamond Princess,0.0,0.0,2020-10-13,712,13,659,40
+1063, ,MS Zaandam,0.0,0.0,2020-10-13,9,2,0,7
+1064,Diamond Princess,Canada,0.0,0.0,2020-10-14,0,1,0,-1
+1065,Grand Princess,Canada,0.0,0.0,2020-10-14,13,0,0,13
+1066, ,Diamond Princess,0.0,0.0,2020-10-14,712,13,659,40
+1067, ,MS Zaandam,0.0,0.0,2020-10-14,9,2,0,7
+1068,Diamond Princess,Canada,0.0,0.0,2020-10-15,0,1,0,-1
+1069,Grand Princess,Canada,0.0,0.0,2020-10-15,13,0,0,13
+1070, ,Diamond Princess,0.0,0.0,2020-10-15,712,13,659,40
+1071, ,MS Zaandam,0.0,0.0,2020-10-15,9,2,0,7
+1072,Diamond Princess,Canada,0.0,0.0,2020-10-16,0,1,0,-1
+1073,Grand Princess,Canada,0.0,0.0,2020-10-16,13,0,0,13
+1074, ,Diamond Princess,0.0,0.0,2020-10-16,712,13,659,40
+1075, ,MS Zaandam,0.0,0.0,2020-10-16,9,2,0,7
+1076,Diamond Princess,Canada,0.0,0.0,2020-10-17,0,1,0,-1
+1077,Grand Princess,Canada,0.0,0.0,2020-10-17,13,0,0,13
+1078, ,Diamond Princess,0.0,0.0,2020-10-17,712,13,659,40
+1079, ,MS Zaandam,0.0,0.0,2020-10-17,9,2,0,7
+1080,Diamond Princess,Canada,0.0,0.0,2020-10-18,0,1,0,-1
+1081,Grand Princess,Canada,0.0,0.0,2020-10-18,13,0,0,13
+1082, ,Diamond Princess,0.0,0.0,2020-10-18,712,13,659,40
+1083, ,MS Zaandam,0.0,0.0,2020-10-18,9,2,0,7
+1084,Diamond Princess,Canada,0.0,0.0,2020-10-19,0,1,0,-1
+1085,Grand Princess,Canada,0.0,0.0,2020-10-19,13,0,0,13
+1086, ,Diamond Princess,0.0,0.0,2020-10-19,712,13,659,40
+1087, ,MS Zaandam,0.0,0.0,2020-10-19,9,2,0,7
+1088,Diamond Princess,Canada,0.0,0.0,2020-10-20,0,1,0,-1
+1089,Grand Princess,Canada,0.0,0.0,2020-10-20,13,0,0,13
+1090, ,Diamond Princess,0.0,0.0,2020-10-20,712,13,659,40
+1091, ,MS Zaandam,0.0,0.0,2020-10-20,9,2,0,7
+1092,Diamond Princess,Canada,0.0,0.0,2020-10-21,0,1,0,-1
+1093,Grand Princess,Canada,0.0,0.0,2020-10-21,13,0,0,13
+1094, ,Diamond Princess,0.0,0.0,2020-10-21,712,13,659,40
+1095, ,MS Zaandam,0.0,0.0,2020-10-21,9,2,0,7
+1096,Diamond Princess,Canada,0.0,0.0,2020-10-22,0,1,0,-1
+1097,Grand Princess,Canada,0.0,0.0,2020-10-22,13,0,0,13
+1098, ,Diamond Princess,0.0,0.0,2020-10-22,712,13,659,40
+1099, ,MS Zaandam,0.0,0.0,2020-10-22,9,2,0,7
+1100,Diamond Princess,Canada,0.0,0.0,2020-10-23,0,1,0,-1
+1101,Grand Princess,Canada,0.0,0.0,2020-10-23,13,0,0,13
+1102, ,Diamond Princess,0.0,0.0,2020-10-23,712,13,659,40
+1103, ,MS Zaandam,0.0,0.0,2020-10-23,9,2,0,7
+1104,Diamond Princess,Canada,0.0,0.0,2020-10-24,0,1,0,-1
+1105,Grand Princess,Canada,0.0,0.0,2020-10-24,13,0,0,13
+1106, ,Diamond Princess,0.0,0.0,2020-10-24,712,13,659,40
+1107, ,MS Zaandam,0.0,0.0,2020-10-24,9,2,0,7
+1108,Diamond Princess,Canada,0.0,0.0,2020-10-25,0,1,0,-1
+1109,Grand Princess,Canada,0.0,0.0,2020-10-25,13,0,0,13
+1110, ,Diamond Princess,0.0,0.0,2020-10-25,712,13,659,40
+1111, ,MS Zaandam,0.0,0.0,2020-10-25,9,2,0,7
+1112,Diamond Princess,Canada,0.0,0.0,2020-10-26,0,1,0,-1
+1113,Grand Princess,Canada,0.0,0.0,2020-10-26,13,0,0,13
+1114, ,Diamond Princess,0.0,0.0,2020-10-26,712,13,659,40
+1115, ,MS Zaandam,0.0,0.0,2020-10-26,9,2,0,7
+1116,Diamond Princess,Canada,0.0,0.0,2020-10-27,0,1,0,-1
+1117,Grand Princess,Canada,0.0,0.0,2020-10-27,13,0,0,13
+1118, ,Diamond Princess,0.0,0.0,2020-10-27,712,13,659,40
+1119, ,MS Zaandam,0.0,0.0,2020-10-27,9,2,0,7
+1120,Diamond Princess,Canada,0.0,0.0,2020-10-28,0,1,0,-1
+1121,Grand Princess,Canada,0.0,0.0,2020-10-28,13,0,0,13
+1122, ,Diamond Princess,0.0,0.0,2020-10-28,712,13,659,40
+1123, ,MS Zaandam,0.0,0.0,2020-10-28,9,2,0,7
+1124,Diamond Princess,Canada,0.0,0.0,2020-10-29,0,1,0,-1
+1125,Grand Princess,Canada,0.0,0.0,2020-10-29,13,0,0,13
+1126, ,Diamond Princess,0.0,0.0,2020-10-29,712,13,659,40
+1127, ,MS Zaandam,0.0,0.0,2020-10-29,9,2,0,7
+1128,Diamond Princess,Canada,0.0,0.0,2020-10-30,0,1,0,-1
+1129,Grand Princess,Canada,0.0,0.0,2020-10-30,13,0,0,13
+1130, ,Diamond Princess,0.0,0.0,2020-10-30,712,13,659,40
+1131, ,MS Zaandam,0.0,0.0,2020-10-30,9,2,0,7
+1132,Diamond Princess,Canada,0.0,0.0,2020-10-31,0,1,0,-1
+1133,Grand Princess,Canada,0.0,0.0,2020-10-31,13,0,0,13
+1134, ,Diamond Princess,0.0,0.0,2020-10-31,712,13,659,40
+1135, ,MS Zaandam,0.0,0.0,2020-10-31,9,2,0,7
+1136,Diamond Princess,Canada,0.0,0.0,2020-11-01,0,1,0,-1
+1137,Grand Princess,Canada,0.0,0.0,2020-11-01,13,0,0,13
+1138, ,Diamond Princess,0.0,0.0,2020-11-01,712,13,659,40
+1139, ,MS Zaandam,0.0,0.0,2020-11-01,9,2,0,7
+1140,Diamond Princess,Canada,0.0,0.0,2020-11-02,0,1,0,-1
+1141,Grand Princess,Canada,0.0,0.0,2020-11-02,13,0,0,13
+1142, ,Diamond Princess,0.0,0.0,2020-11-02,712,13,659,40
+1143, ,MS Zaandam,0.0,0.0,2020-11-02,9,2,0,7
+1144,Diamond Princess,Canada,0.0,0.0,2020-11-03,0,1,0,-1
+1145,Grand Princess,Canada,0.0,0.0,2020-11-03,13,0,0,13
+1146, ,Diamond Princess,0.0,0.0,2020-11-03,712,13,659,40
+1147, ,MS Zaandam,0.0,0.0,2020-11-03,9,2,0,7
+1148,Diamond Princess,Canada,0.0,0.0,2020-11-04,0,1,0,-1
+1149,Grand Princess,Canada,0.0,0.0,2020-11-04,13,0,0,13
+1150, ,Diamond Princess,0.0,0.0,2020-11-04,712,13,659,40
+1151, ,MS Zaandam,0.0,0.0,2020-11-04,9,2,0,7
+1152,Diamond Princess,Canada,0.0,0.0,2020-11-05,0,1,0,-1
+1153,Grand Princess,Canada,0.0,0.0,2020-11-05,13,0,0,13
+1154, ,Diamond Princess,0.0,0.0,2020-11-05,712,13,659,40
+1155, ,MS Zaandam,0.0,0.0,2020-11-05,9,2,0,7
+1156,Diamond Princess,Canada,0.0,0.0,2020-11-06,0,1,0,-1
+1157,Grand Princess,Canada,0.0,0.0,2020-11-06,13,0,0,13
+1158, ,Diamond Princess,0.0,0.0,2020-11-06,712,13,659,40
+1159, ,MS Zaandam,0.0,0.0,2020-11-06,9,2,0,7
+1160,Diamond Princess,Canada,0.0,0.0,2020-11-07,0,1,0,-1
+1161,Grand Princess,Canada,0.0,0.0,2020-11-07,13,0,0,13
+1162, ,Diamond Princess,0.0,0.0,2020-11-07,712,13,659,40
+1163, ,MS Zaandam,0.0,0.0,2020-11-07,9,2,0,7
+1164,Diamond Princess,Canada,0.0,0.0,2020-11-08,0,1,0,-1
+1165,Grand Princess,Canada,0.0,0.0,2020-11-08,13,0,0,13
+1166, ,Diamond Princess,0.0,0.0,2020-11-08,712,13,659,40
+1167, ,MS Zaandam,0.0,0.0,2020-11-08,9,2,0,7
+1168,Diamond Princess,Canada,0.0,0.0,2020-11-09,0,1,0,-1
+1169,Grand Princess,Canada,0.0,0.0,2020-11-09,13,0,0,13
+1170, ,Diamond Princess,0.0,0.0,2020-11-09,712,13,659,40
+1171, ,MS Zaandam,0.0,0.0,2020-11-09,9,2,0,7
+1172,Diamond Princess,Canada,0.0,0.0,2020-11-10,0,1,0,-1
+1173,Grand Princess,Canada,0.0,0.0,2020-11-10,13,0,0,13
+1174, ,Diamond Princess,0.0,0.0,2020-11-10,712,13,659,40
+1175, ,MS Zaandam,0.0,0.0,2020-11-10,9,2,0,7
+1176,Diamond Princess,Canada,0.0,0.0,2020-11-11,0,1,0,-1
+1177,Grand Princess,Canada,0.0,0.0,2020-11-11,13,0,0,13
+1178, ,Diamond Princess,0.0,0.0,2020-11-11,712,13,659,40
+1179, ,MS Zaandam,0.0,0.0,2020-11-11,9,2,0,7
+1180,Diamond Princess,Canada,0.0,0.0,2020-11-12,0,1,0,-1
+1181,Grand Princess,Canada,0.0,0.0,2020-11-12,13,0,0,13
+1182, ,Diamond Princess,0.0,0.0,2020-11-12,712,13,659,40
+1183, ,MS Zaandam,0.0,0.0,2020-11-12,9,2,0,7
+1184,Diamond Princess,Canada,0.0,0.0,2020-11-13,0,1,0,-1
+1185,Grand Princess,Canada,0.0,0.0,2020-11-13,13,0,0,13
+1186, ,Diamond Princess,0.0,0.0,2020-11-13,712,13,659,40
+1187, ,MS Zaandam,0.0,0.0,2020-11-13,9,2,0,7
+1188,Diamond Princess,Canada,0.0,0.0,2020-11-14,0,1,0,-1
+1189,Grand Princess,Canada,0.0,0.0,2020-11-14,13,0,0,13
+1190, ,Diamond Princess,0.0,0.0,2020-11-14,712,13,659,40
+1191, ,MS Zaandam,0.0,0.0,2020-11-14,9,2,0,7
+1192,Diamond Princess,Canada,0.0,0.0,2020-11-15,0,1,0,-1
+1193,Grand Princess,Canada,0.0,0.0,2020-11-15,13,0,0,13
+1194, ,Diamond Princess,0.0,0.0,2020-11-15,712,13,659,40
+1195, ,MS Zaandam,0.0,0.0,2020-11-15,9,2,0,7
+1196,Diamond Princess,Canada,0.0,0.0,2020-11-16,0,1,0,-1
+1197,Grand Princess,Canada,0.0,0.0,2020-11-16,13,0,0,13
+1198, ,Diamond Princess,0.0,0.0,2020-11-16,712,13,659,40
+1199, ,MS Zaandam,0.0,0.0,2020-11-16,9,2,0,7
+1200,Diamond Princess,Canada,0.0,0.0,2020-11-17,0,1,0,-1
+1201,Grand Princess,Canada,0.0,0.0,2020-11-17,13,0,0,13
+1202, ,Diamond Princess,0.0,0.0,2020-11-17,712,13,659,40
+1203, ,MS Zaandam,0.0,0.0,2020-11-17,9,2,0,7
+1204,Diamond Princess,Canada,0.0,0.0,2020-11-18,0,1,0,-1
+1205,Grand Princess,Canada,0.0,0.0,2020-11-18,13,0,0,13
+1206, ,Diamond Princess,0.0,0.0,2020-11-18,712,13,659,40
+1207, ,MS Zaandam,0.0,0.0,2020-11-18,9,2,0,7
+1208,Diamond Princess,Canada,0.0,0.0,2020-11-19,0,1,0,-1
+1209,Grand Princess,Canada,0.0,0.0,2020-11-19,13,0,0,13
+1210, ,Diamond Princess,0.0,0.0,2020-11-19,712,13,659,40
+1211, ,MS Zaandam,0.0,0.0,2020-11-19,9,2,0,7
+1212,Diamond Princess,Canada,0.0,0.0,2020-11-20,0,1,0,-1
+1213,Grand Princess,Canada,0.0,0.0,2020-11-20,13,0,0,13
+1214, ,Diamond Princess,0.0,0.0,2020-11-20,712,13,659,40
+1215, ,MS Zaandam,0.0,0.0,2020-11-20,9,2,0,7
+1216,Diamond Princess,Canada,0.0,0.0,2020-11-21,0,1,0,-1
+1217,Grand Princess,Canada,0.0,0.0,2020-11-21,13,0,0,13
+1218, ,Diamond Princess,0.0,0.0,2020-11-21,712,13,659,40
+1219, ,MS Zaandam,0.0,0.0,2020-11-21,9,2,0,7
+1220,Diamond Princess,Canada,0.0,0.0,2020-11-22,0,1,0,-1
+1221,Grand Princess,Canada,0.0,0.0,2020-11-22,13,0,0,13
+1222, ,Diamond Princess,0.0,0.0,2020-11-22,712,13,659,40
+1223, ,MS Zaandam,0.0,0.0,2020-11-22,9,2,0,7
+1224,Diamond Princess,Canada,0.0,0.0,2020-11-23,0,1,0,-1
+1225,Grand Princess,Canada,0.0,0.0,2020-11-23,13,0,0,13
+1226, ,Diamond Princess,0.0,0.0,2020-11-23,712,13,659,40
+1227, ,MS Zaandam,0.0,0.0,2020-11-23,9,2,0,7
+1228,Diamond Princess,Canada,0.0,0.0,2020-11-24,0,1,0,-1
+1229,Grand Princess,Canada,0.0,0.0,2020-11-24,13,0,0,13
+1230, ,Diamond Princess,0.0,0.0,2020-11-24,712,13,659,40
+1231, ,MS Zaandam,0.0,0.0,2020-11-24,9,2,0,7
+1232,Diamond Princess,Canada,0.0,0.0,2020-11-25,0,1,0,-1
+1233,Grand Princess,Canada,0.0,0.0,2020-11-25,13,0,0,13
+1234, ,Diamond Princess,0.0,0.0,2020-11-25,712,13,659,40
+1235, ,MS Zaandam,0.0,0.0,2020-11-25,9,2,0,7
+1236,Diamond Princess,Canada,0.0,0.0,2020-11-26,0,1,0,-1
+1237,Grand Princess,Canada,0.0,0.0,2020-11-26,13,0,0,13
+1238, ,Diamond Princess,0.0,0.0,2020-11-26,712,13,659,40
+1239, ,MS Zaandam,0.0,0.0,2020-11-26,9,2,0,7
+1240,Diamond Princess,Canada,0.0,0.0,2020-11-27,0,1,0,-1
+1241,Grand Princess,Canada,0.0,0.0,2020-11-27,13,0,0,13
+1242, ,Diamond Princess,0.0,0.0,2020-11-27,712,13,659,40
+1243, ,MS Zaandam,0.0,0.0,2020-11-27,9,2,0,7
+1244,Diamond Princess,Canada,0.0,0.0,2020-11-28,0,1,0,-1
+1245,Grand Princess,Canada,0.0,0.0,2020-11-28,13,0,0,13
+1246, ,Diamond Princess,0.0,0.0,2020-11-28,712,13,659,40
+1247, ,MS Zaandam,0.0,0.0,2020-11-28,9,2,0,7
+1248,Diamond Princess,Canada,0.0,0.0,2020-11-29,0,1,0,-1
+1249,Grand Princess,Canada,0.0,0.0,2020-11-29,13,0,0,13
+1250, ,Diamond Princess,0.0,0.0,2020-11-29,712,13,659,40
+1251, ,MS Zaandam,0.0,0.0,2020-11-29,9,2,0,7
+1252,Diamond Princess,Canada,0.0,0.0,2020-11-30,0,1,0,-1
+1253,Grand Princess,Canada,0.0,0.0,2020-11-30,13,0,0,13
+1254, ,Diamond Princess,0.0,0.0,2020-11-30,712,13,659,40
+1255, ,MS Zaandam,0.0,0.0,2020-11-30,9,2,0,7
+1256,Diamond Princess,Canada,0.0,0.0,2020-12-01,0,1,0,-1
+1257,Grand Princess,Canada,0.0,0.0,2020-12-01,13,0,0,13
+1258, ,Diamond Princess,0.0,0.0,2020-12-01,712,13,659,40
+1259, ,MS Zaandam,0.0,0.0,2020-12-01,9,2,0,7
+1260,Diamond Princess,Canada,0.0,0.0,2020-12-02,0,1,0,-1
+1261,Grand Princess,Canada,0.0,0.0,2020-12-02,13,0,0,13
+1262, ,Diamond Princess,0.0,0.0,2020-12-02,712,13,659,40
+1263, ,MS Zaandam,0.0,0.0,2020-12-02,9,2,0,7
+1264,Diamond Princess,Canada,0.0,0.0,2020-12-03,0,1,0,-1
+1265,Grand Princess,Canada,0.0,0.0,2020-12-03,13,0,0,13
+1266, ,Diamond Princess,0.0,0.0,2020-12-03,712,13,699,0
+1267, ,MS Zaandam,0.0,0.0,2020-12-03,9,2,7,0
+1268,Diamond Princess,Canada,0.0,0.0,2020-12-04,0,1,0,-1
+1269,Grand Princess,Canada,0.0,0.0,2020-12-04,13,0,0,13
+1270, ,Diamond Princess,0.0,0.0,2020-12-04,712,13,699,0
+1271, ,MS Zaandam,0.0,0.0,2020-12-04,9,2,7,0
+1272,Diamond Princess,Canada,0.0,0.0,2020-12-05,0,1,0,-1
+1273,Grand Princess,Canada,0.0,0.0,2020-12-05,13,0,0,13
+1274, ,Diamond Princess,0.0,0.0,2020-12-05,712,13,699,0
+1275, ,MS Zaandam,0.0,0.0,2020-12-05,9,2,7,0
+1276,Diamond Princess,Canada,0.0,0.0,2020-12-06,0,1,0,-1
+1277,Grand Princess,Canada,0.0,0.0,2020-12-06,13,0,0,13
+1278, ,Diamond Princess,0.0,0.0,2020-12-06,712,13,699,0
+1279, ,MS Zaandam,0.0,0.0,2020-12-06,9,2,7,0
+1280,Diamond Princess,Canada,0.0,0.0,2020-12-07,0,1,0,-1
+1281,Grand Princess,Canada,0.0,0.0,2020-12-07,13,0,0,13
+1282, ,Diamond Princess,0.0,0.0,2020-12-07,712,13,699,0
+1283, ,MS Zaandam,0.0,0.0,2020-12-07,9,2,7,0
+1284,Diamond Princess,Canada,0.0,0.0,2020-12-08,0,1,0,-1
+1285,Grand Princess,Canada,0.0,0.0,2020-12-08,13,0,0,13
+1286, ,Diamond Princess,0.0,0.0,2020-12-08,712,13,699,0
+1287, ,MS Zaandam,0.0,0.0,2020-12-08,9,2,7,0
+1288,Diamond Princess,Canada,0.0,0.0,2020-12-09,0,1,0,-1
+1289,Grand Princess,Canada,0.0,0.0,2020-12-09,13,0,0,13
+1290, ,Diamond Princess,0.0,0.0,2020-12-09,712,13,699,0
+1291, ,MS Zaandam,0.0,0.0,2020-12-09,9,2,7,0
+1292,Diamond Princess,Canada,0.0,0.0,2020-12-10,0,1,0,-1
+1293,Grand Princess,Canada,0.0,0.0,2020-12-10,13,0,0,13
+1294, ,Diamond Princess,0.0,0.0,2020-12-10,712,13,699,0
+1295, ,MS Zaandam,0.0,0.0,2020-12-10,9,2,7,0
+1296,Diamond Princess,Canada,0.0,0.0,2020-12-11,0,1,0,-1
+1297,Grand Princess,Canada,0.0,0.0,2020-12-11,13,0,0,13
+1298, ,Diamond Princess,0.0,0.0,2020-12-11,712,13,699,0
+1299, ,MS Zaandam,0.0,0.0,2020-12-11,9,2,7,0
+1300,Diamond Princess,Canada,0.0,0.0,2020-12-12,0,1,0,-1
+1301,Grand Princess,Canada,0.0,0.0,2020-12-12,13,0,0,13
+1302, ,Diamond Princess,0.0,0.0,2020-12-12,712,13,699,0
+1303, ,MS Zaandam,0.0,0.0,2020-12-12,9,2,7,0
+1304,Diamond Princess,Canada,0.0,0.0,2020-12-13,0,1,0,-1
+1305,Grand Princess,Canada,0.0,0.0,2020-12-13,13,0,0,13
+1306, ,Diamond Princess,0.0,0.0,2020-12-13,712,13,699,0
+1307, ,MS Zaandam,0.0,0.0,2020-12-13,9,2,7,0
+1308,Diamond Princess,Canada,0.0,0.0,2020-12-14,0,1,0,-1
+1309,Grand Princess,Canada,0.0,0.0,2020-12-14,13,0,0,13
+1310, ,Diamond Princess,0.0,0.0,2020-12-14,712,13,699,0
+1311, ,MS Zaandam,0.0,0.0,2020-12-14,9,2,7,0
+1312,Diamond Princess,Canada,0.0,0.0,2020-12-15,0,1,0,-1
+1313,Grand Princess,Canada,0.0,0.0,2020-12-15,13,0,0,13
+1314, ,Diamond Princess,0.0,0.0,2020-12-15,712,13,699,0
+1315, ,MS Zaandam,0.0,0.0,2020-12-15,9,2,7,0
+1316,Diamond Princess,Canada,0.0,0.0,2020-12-16,0,1,0,-1
+1317,Grand Princess,Canada,0.0,0.0,2020-12-16,13,0,0,13
+1318, ,Diamond Princess,0.0,0.0,2020-12-16,712,13,699,0
+1319, ,MS Zaandam,0.0,0.0,2020-12-16,9,2,7,0
+1320,Diamond Princess,Canada,0.0,0.0,2020-12-17,0,1,0,-1
+1321,Grand Princess,Canada,0.0,0.0,2020-12-17,13,0,0,13
+1322, ,Diamond Princess,0.0,0.0,2020-12-17,712,13,699,0
+1323, ,MS Zaandam,0.0,0.0,2020-12-17,9,2,7,0
+1324,Diamond Princess,Canada,0.0,0.0,2020-12-18,0,1,0,-1
+1325,Grand Princess,Canada,0.0,0.0,2020-12-18,13,0,0,13
+1326, ,Diamond Princess,0.0,0.0,2020-12-18,712,13,699,0
+1327, ,MS Zaandam,0.0,0.0,2020-12-18,9,2,7,0
+1328,Diamond Princess,Canada,0.0,0.0,2020-12-19,0,1,0,-1
+1329,Grand Princess,Canada,0.0,0.0,2020-12-19,13,0,0,13
+1330, ,Diamond Princess,0.0,0.0,2020-12-19,712,13,699,0
+1331, ,MS Zaandam,0.0,0.0,2020-12-19,9,2,7,0
+1332,Diamond Princess,Canada,0.0,0.0,2020-12-20,0,1,0,-1
+1333,Grand Princess,Canada,0.0,0.0,2020-12-20,13,0,0,13
+1334, ,Diamond Princess,0.0,0.0,2020-12-20,712,13,699,0
+1335, ,MS Zaandam,0.0,0.0,2020-12-20,9,2,7,0
+1336,Diamond Princess,Canada,0.0,0.0,2020-12-21,0,1,0,-1
+1337,Grand Princess,Canada,0.0,0.0,2020-12-21,13,0,0,13
+1338, ,Diamond Princess,0.0,0.0,2020-12-21,712,13,699,0
+1339, ,MS Zaandam,0.0,0.0,2020-12-21,9,2,7,0
+1340,Diamond Princess,Canada,0.0,0.0,2020-12-22,0,1,0,-1
+1341,Grand Princess,Canada,0.0,0.0,2020-12-22,13,0,0,13
+1342, ,Diamond Princess,0.0,0.0,2020-12-22,712,13,699,0
+1343, ,MS Zaandam,0.0,0.0,2020-12-22,9,2,7,0
+1344,Diamond Princess,Canada,0.0,0.0,2020-12-23,0,1,0,-1
+1345,Grand Princess,Canada,0.0,0.0,2020-12-23,13,0,0,13
+1346, ,Diamond Princess,0.0,0.0,2020-12-23,712,13,699,0
+1347, ,MS Zaandam,0.0,0.0,2020-12-23,9,2,7,0
+1348,Diamond Princess,Canada,0.0,0.0,2020-12-24,0,1,0,-1
+1349,Grand Princess,Canada,0.0,0.0,2020-12-24,13,0,0,13
+1350, ,Diamond Princess,0.0,0.0,2020-12-24,712,13,699,0
+1351, ,MS Zaandam,0.0,0.0,2020-12-24,9,2,7,0
+1352,Diamond Princess,Canada,0.0,0.0,2020-12-25,0,1,0,-1
+1353,Grand Princess,Canada,0.0,0.0,2020-12-25,13,0,0,13
+1354, ,Diamond Princess,0.0,0.0,2020-12-25,712,13,699,0
+1355, ,MS Zaandam,0.0,0.0,2020-12-25,9,2,7,0
+1356,Diamond Princess,Canada,0.0,0.0,2020-12-26,0,1,0,-1
+1357,Grand Princess,Canada,0.0,0.0,2020-12-26,13,0,0,13
+1358, ,Diamond Princess,0.0,0.0,2020-12-26,712,13,699,0
+1359, ,MS Zaandam,0.0,0.0,2020-12-26,9,2,7,0
+1360,Diamond Princess,Canada,0.0,0.0,2020-12-27,0,1,0,-1
+1361,Grand Princess,Canada,0.0,0.0,2020-12-27,13,0,0,13
+1362, ,Diamond Princess,0.0,0.0,2020-12-27,712,13,699,0
+1363, ,MS Zaandam,0.0,0.0,2020-12-27,9,2,7,0
+1364,Diamond Princess,Canada,0.0,0.0,2020-12-28,0,1,0,-1
+1365,Grand Princess,Canada,0.0,0.0,2020-12-28,13,0,0,13
+1366, ,Diamond Princess,0.0,0.0,2020-12-28,712,13,699,0
+1367, ,MS Zaandam,0.0,0.0,2020-12-28,9,2,7,0
+1368,Diamond Princess,Canada,0.0,0.0,2020-12-29,0,1,0,-1
+1369,Grand Princess,Canada,0.0,0.0,2020-12-29,13,0,0,13
+1370, ,Diamond Princess,0.0,0.0,2020-12-29,712,13,699,0
+1371, ,MS Zaandam,0.0,0.0,2020-12-29,9,2,7,0
+1372,Diamond Princess,Canada,0.0,0.0,2020-12-30,0,1,0,-1
+1373,Grand Princess,Canada,0.0,0.0,2020-12-30,13,0,0,13
+1374, ,Diamond Princess,0.0,0.0,2020-12-30,712,13,699,0
+1375, ,MS Zaandam,0.0,0.0,2020-12-30,9,2,7,0
+1376,Diamond Princess,Canada,0.0,0.0,2020-12-31,0,1,0,-1
+1377,Grand Princess,Canada,0.0,0.0,2020-12-31,13,0,0,13
+1378, ,Diamond Princess,0.0,0.0,2020-12-31,712,13,699,0
+1379, ,MS Zaandam,0.0,0.0,2020-12-31,9,2,7,0
+1380,Diamond Princess,Canada,0.0,0.0,2021-01-01,0,1,0,-1
+1381,Grand Princess,Canada,0.0,0.0,2021-01-01,13,0,0,13
+1382, ,Diamond Princess,0.0,0.0,2021-01-01,712,13,699,0
+1383, ,MS Zaandam,0.0,0.0,2021-01-01,9,2,7,0
+1384,Diamond Princess,Canada,0.0,0.0,2021-01-02,0,1,0,-1
+1385,Grand Princess,Canada,0.0,0.0,2021-01-02,13,0,0,13
+1386, ,Diamond Princess,0.0,0.0,2021-01-02,712,13,699,0
+1387, ,MS Zaandam,0.0,0.0,2021-01-02,9,2,7,0
+1388,Diamond Princess,Canada,0.0,0.0,2021-01-03,0,1,0,-1
+1389,Grand Princess,Canada,0.0,0.0,2021-01-03,13,0,0,13
+1390, ,Diamond Princess,0.0,0.0,2021-01-03,712,13,699,0
+1391, ,MS Zaandam,0.0,0.0,2021-01-03,9,2,7,0
+1392,Diamond Princess,Canada,0.0,0.0,2021-01-04,0,1,0,-1
+1393,Grand Princess,Canada,0.0,0.0,2021-01-04,13,0,0,13
+1394, ,Diamond Princess,0.0,0.0,2021-01-04,712,13,699,0
+1395, ,MS Zaandam,0.0,0.0,2021-01-04,9,2,7,0
+1396,Diamond Princess,Canada,0.0,0.0,2021-01-05,0,1,0,-1
+1397,Grand Princess,Canada,0.0,0.0,2021-01-05,13,0,0,13
+1398, ,Diamond Princess,0.0,0.0,2021-01-05,712,13,699,0
+1399, ,MS Zaandam,0.0,0.0,2021-01-05,9,2,7,0
+1400,Diamond Princess,Canada,0.0,0.0,2021-01-06,0,1,0,-1
+1401,Grand Princess,Canada,0.0,0.0,2021-01-06,13,0,0,13
+1402, ,Diamond Princess,0.0,0.0,2021-01-06,712,13,699,0
+1403, ,MS Zaandam,0.0,0.0,2021-01-06,9,2,7,0
+1404,Diamond Princess,Canada,0.0,0.0,2021-01-07,0,1,0,-1
+1405,Grand Princess,Canada,0.0,0.0,2021-01-07,13,0,0,13
+1406, ,Diamond Princess,0.0,0.0,2021-01-07,712,13,699,0
+1407, ,MS Zaandam,0.0,0.0,2021-01-07,9,2,7,0
+1408,Diamond Princess,Canada,0.0,0.0,2021-01-08,0,1,0,-1
+1409,Grand Princess,Canada,0.0,0.0,2021-01-08,13,0,0,13
+1410, ,Diamond Princess,0.0,0.0,2021-01-08,712,13,699,0
+1411, ,MS Zaandam,0.0,0.0,2021-01-08,9,2,7,0
+1412,Diamond Princess,Canada,0.0,0.0,2021-01-09,0,1,0,-1
+1413,Grand Princess,Canada,0.0,0.0,2021-01-09,13,0,0,13
+1414, ,Diamond Princess,0.0,0.0,2021-01-09,712,13,699,0
+1415, ,MS Zaandam,0.0,0.0,2021-01-09,9,2,7,0
+1416,Diamond Princess,Canada,0.0,0.0,2021-01-10,0,1,0,-1
+1417,Grand Princess,Canada,0.0,0.0,2021-01-10,13,0,0,13
+1418, ,Diamond Princess,0.0,0.0,2021-01-10,712,13,699,0
+1419, ,MS Zaandam,0.0,0.0,2021-01-10,9,2,7,0
+1420,Diamond Princess,Canada,0.0,0.0,2021-01-11,0,1,0,-1
+1421,Grand Princess,Canada,0.0,0.0,2021-01-11,13,0,0,13
+1422, ,Diamond Princess,0.0,0.0,2021-01-11,712,13,699,0
+1423, ,MS Zaandam,0.0,0.0,2021-01-11,9,2,7,0
+1424,Diamond Princess,Canada,0.0,0.0,2021-01-12,0,1,0,-1
+1425,Grand Princess,Canada,0.0,0.0,2021-01-12,13,0,0,13
+1426, ,Diamond Princess,0.0,0.0,2021-01-12,712,13,699,0
+1427, ,MS Zaandam,0.0,0.0,2021-01-12,9,2,7,0
+1428,Diamond Princess,Canada,0.0,0.0,2021-01-13,0,1,0,-1
+1429,Grand Princess,Canada,0.0,0.0,2021-01-13,13,0,0,13
+1430, ,Diamond Princess,0.0,0.0,2021-01-13,712,13,699,0
+1431, ,MS Zaandam,0.0,0.0,2021-01-13,9,2,7,0
+1432,Diamond Princess,Canada,0.0,0.0,2021-01-14,0,1,0,-1
+1433,Grand Princess,Canada,0.0,0.0,2021-01-14,13,0,0,13
+1434, ,Diamond Princess,0.0,0.0,2021-01-14,712,13,699,0
+1435, ,MS Zaandam,0.0,0.0,2021-01-14,9,2,7,0
+1436,Diamond Princess,Canada,0.0,0.0,2021-01-15,0,1,0,-1
+1437,Grand Princess,Canada,0.0,0.0,2021-01-15,13,0,0,13
+1438, ,Diamond Princess,0.0,0.0,2021-01-15,712,13,699,0
+1439, ,MS Zaandam,0.0,0.0,2021-01-15,9,2,7,0
+1440,Diamond Princess,Canada,0.0,0.0,2021-01-16,0,1,0,-1
+1441,Grand Princess,Canada,0.0,0.0,2021-01-16,13,0,0,13
+1442, ,Diamond Princess,0.0,0.0,2021-01-16,712,13,699,0
+1443, ,MS Zaandam,0.0,0.0,2021-01-16,9,2,7,0
+1444,Diamond Princess,Canada,0.0,0.0,2021-01-17,0,1,0,-1
+1445,Grand Princess,Canada,0.0,0.0,2021-01-17,13,0,0,13
+1446, ,Diamond Princess,0.0,0.0,2021-01-17,712,13,699,0
+1447, ,MS Zaandam,0.0,0.0,2021-01-17,9,2,7,0
+1448,Diamond Princess,Canada,0.0,0.0,2021-01-18,0,1,0,-1
+1449,Grand Princess,Canada,0.0,0.0,2021-01-18,13,0,0,13
+1450, ,Diamond Princess,0.0,0.0,2021-01-18,712,13,699,0
+1451, ,MS Zaandam,0.0,0.0,2021-01-18,9,2,7,0
+1452,Diamond Princess,Canada,0.0,0.0,2021-01-19,0,1,0,-1
+1453,Grand Princess,Canada,0.0,0.0,2021-01-19,13,0,0,13
+1454, ,Diamond Princess,0.0,0.0,2021-01-19,712,13,699,0
+1455, ,MS Zaandam,0.0,0.0,2021-01-19,9,2,7,0
+1456,Diamond Princess,Canada,0.0,0.0,2021-01-20,0,1,0,-1
+1457,Grand Princess,Canada,0.0,0.0,2021-01-20,13,0,0,13
+1458, ,Diamond Princess,0.0,0.0,2021-01-20,712,13,699,0
+1459, ,MS Zaandam,0.0,0.0,2021-01-20,9,2,7,0
+1460,Diamond Princess,Canada,0.0,0.0,2021-01-21,0,1,0,-1
+1461,Grand Princess,Canada,0.0,0.0,2021-01-21,13,0,0,13
+1462, ,Diamond Princess,0.0,0.0,2021-01-21,712,13,699,0
+1463, ,MS Zaandam,0.0,0.0,2021-01-21,9,2,7,0
+1464,Diamond Princess,Canada,0.0,0.0,2021-01-22,0,1,0,-1
+1465,Grand Princess,Canada,0.0,0.0,2021-01-22,13,0,0,13
+1466, ,Diamond Princess,0.0,0.0,2021-01-22,712,13,699,0
+1467, ,MS Zaandam,0.0,0.0,2021-01-22,9,2,7,0
+1468,Diamond Princess,Canada,0.0,0.0,2021-01-23,0,1,0,-1
+1469,Grand Princess,Canada,0.0,0.0,2021-01-23,13,0,0,13
+1470, ,Diamond Princess,0.0,0.0,2021-01-23,712,13,699,0
+1471, ,MS Zaandam,0.0,0.0,2021-01-23,9,2,7,0
+1472,Diamond Princess,Canada,0.0,0.0,2021-01-24,0,1,0,-1
+1473,Grand Princess,Canada,0.0,0.0,2021-01-24,13,0,0,13
+1474, ,Diamond Princess,0.0,0.0,2021-01-24,712,13,699,0
+1475, ,MS Zaandam,0.0,0.0,2021-01-24,9,2,7,0
+1476,Diamond Princess,Canada,0.0,0.0,2021-01-25,0,1,0,-1
+1477,Grand Princess,Canada,0.0,0.0,2021-01-25,13,0,0,13
+1478, ,Diamond Princess,0.0,0.0,2021-01-25,712,13,699,0
+1479, ,MS Zaandam,0.0,0.0,2021-01-25,9,2,7,0
+1480,Diamond Princess,Canada,0.0,0.0,2021-01-26,0,1,0,-1
+1481,Grand Princess,Canada,0.0,0.0,2021-01-26,13,0,0,13
+1482, ,Diamond Princess,0.0,0.0,2021-01-26,712,13,699,0
+1483, ,MS Zaandam,0.0,0.0,2021-01-26,9,2,7,0
+1484,Diamond Princess,Canada,0.0,0.0,2021-01-27,0,1,0,-1
+1485,Grand Princess,Canada,0.0,0.0,2021-01-27,13,0,0,13
+1486, ,Diamond Princess,0.0,0.0,2021-01-27,712,13,699,0
+1487, ,MS Zaandam,0.0,0.0,2021-01-27,9,2,7,0
+1488,Diamond Princess,Canada,0.0,0.0,2021-01-28,0,1,0,-1
+1489,Grand Princess,Canada,0.0,0.0,2021-01-28,13,0,0,13
+1490, ,Diamond Princess,0.0,0.0,2021-01-28,712,13,699,0
+1491, ,MS Zaandam,0.0,0.0,2021-01-28,9,2,7,0
+1492,Diamond Princess,Canada,0.0,0.0,2021-01-29,0,1,0,-1
+1493,Grand Princess,Canada,0.0,0.0,2021-01-29,13,0,0,13
+1494, ,Diamond Princess,0.0,0.0,2021-01-29,712,13,699,0
+1495, ,MS Zaandam,0.0,0.0,2021-01-29,9,2,7,0
+1496,Diamond Princess,Canada,0.0,0.0,2021-01-30,0,1,0,-1
+1497,Grand Princess,Canada,0.0,0.0,2021-01-30,13,0,0,13
+1498, ,Diamond Princess,0.0,0.0,2021-01-30,712,13,699,0
+1499, ,MS Zaandam,0.0,0.0,2021-01-30,9,2,7,0
+1500,Diamond Princess,Canada,0.0,0.0,2021-01-31,0,1,0,-1
+1501,Grand Princess,Canada,0.0,0.0,2021-01-31,13,0,0,13
+1502, ,Diamond Princess,0.0,0.0,2021-01-31,712,13,699,0
+1503, ,MS Zaandam,0.0,0.0,2021-01-31,9,2,7,0
+1504,Diamond Princess,Canada,0.0,0.0,2021-02-01,0,1,0,-1
+1505,Grand Princess,Canada,0.0,0.0,2021-02-01,13,0,0,13
+1506, ,Diamond Princess,0.0,0.0,2021-02-01,712,13,699,0
+1507, ,MS Zaandam,0.0,0.0,2021-02-01,9,2,7,0
+1508,Diamond Princess,Canada,0.0,0.0,2021-02-02,0,1,0,-1
+1509,Grand Princess,Canada,0.0,0.0,2021-02-02,13,0,0,13
+1510, ,Diamond Princess,0.0,0.0,2021-02-02,712,13,699,0
+1511, ,MS Zaandam,0.0,0.0,2021-02-02,9,2,7,0
+1512,Diamond Princess,Canada,0.0,0.0,2021-02-03,0,1,0,-1
+1513,Grand Princess,Canada,0.0,0.0,2021-02-03,13,0,0,13
+1514, ,Diamond Princess,0.0,0.0,2021-02-03,712,13,699,0
+1515, ,MS Zaandam,0.0,0.0,2021-02-03,9,2,7,0
+1516,Diamond Princess,Canada,0.0,0.0,2021-02-04,0,1,0,-1
+1517,Grand Princess,Canada,0.0,0.0,2021-02-04,13,0,0,13
+1518, ,Diamond Princess,0.0,0.0,2021-02-04,712,13,699,0
+1519, ,MS Zaandam,0.0,0.0,2021-02-04,9,2,7,0
+1520,Diamond Princess,Canada,0.0,0.0,2021-02-05,0,1,0,-1
+1521,Grand Princess,Canada,0.0,0.0,2021-02-05,13,0,0,13
+1522, ,Diamond Princess,0.0,0.0,2021-02-05,712,13,699,0
+1523, ,MS Zaandam,0.0,0.0,2021-02-05,9,2,7,0
+1524,Diamond Princess,Canada,0.0,0.0,2021-02-06,0,1,0,-1
+1525,Grand Princess,Canada,0.0,0.0,2021-02-06,13,0,0,13
+1526, ,Diamond Princess,0.0,0.0,2021-02-06,712,13,699,0
+1527, ,MS Zaandam,0.0,0.0,2021-02-06,9,2,7,0
+1528,Diamond Princess,Canada,0.0,0.0,2021-02-07,0,1,0,-1
+1529,Grand Princess,Canada,0.0,0.0,2021-02-07,13,0,0,13
+1530, ,Diamond Princess,0.0,0.0,2021-02-07,712,13,699,0
+1531, ,MS Zaandam,0.0,0.0,2021-02-07,9,2,7,0
+1532,Diamond Princess,Canada,0.0,0.0,2021-02-08,0,1,0,-1
+1533,Grand Princess,Canada,0.0,0.0,2021-02-08,13,0,0,13
+1534, ,Diamond Princess,0.0,0.0,2021-02-08,712,13,699,0
+1535, ,MS Zaandam,0.0,0.0,2021-02-08,9,2,7,0
+1536,Diamond Princess,Canada,0.0,0.0,2021-02-09,0,1,0,-1
+1537,Grand Princess,Canada,0.0,0.0,2021-02-09,13,0,0,13
+1538, ,Diamond Princess,0.0,0.0,2021-02-09,712,13,699,0
+1539, ,MS Zaandam,0.0,0.0,2021-02-09,9,2,7,0
+1540,Diamond Princess,Canada,0.0,0.0,2021-02-10,0,1,0,-1
+1541,Grand Princess,Canada,0.0,0.0,2021-02-10,13,0,0,13
+1542, ,Diamond Princess,0.0,0.0,2021-02-10,712,13,699,0
+1543, ,MS Zaandam,0.0,0.0,2021-02-10,9,2,7,0
+1544,Diamond Princess,Canada,0.0,0.0,2021-02-11,0,1,0,-1
+1545,Grand Princess,Canada,0.0,0.0,2021-02-11,13,0,0,13
+1546, ,Diamond Princess,0.0,0.0,2021-02-11,712,13,699,0
+1547, ,MS Zaandam,0.0,0.0,2021-02-11,9,2,7,0
+1548,Diamond Princess,Canada,0.0,0.0,2021-02-12,0,1,0,-1
+1549,Grand Princess,Canada,0.0,0.0,2021-02-12,13,0,0,13
+1550, ,Diamond Princess,0.0,0.0,2021-02-12,712,13,699,0
+1551, ,MS Zaandam,0.0,0.0,2021-02-12,9,2,7,0
+1552,Diamond Princess,Canada,0.0,0.0,2021-02-13,0,1,0,-1
+1553,Grand Princess,Canada,0.0,0.0,2021-02-13,13,0,0,13
+1554, ,Diamond Princess,0.0,0.0,2021-02-13,712,13,699,0
+1555, ,MS Zaandam,0.0,0.0,2021-02-13,9,2,7,0
+1556,Diamond Princess,Canada,0.0,0.0,2021-02-14,0,1,0,-1
+1557,Grand Princess,Canada,0.0,0.0,2021-02-14,13,0,0,13
+1558, ,Diamond Princess,0.0,0.0,2021-02-14,712,13,699,0
+1559, ,MS Zaandam,0.0,0.0,2021-02-14,9,2,7,0
+1560,Diamond Princess,Canada,0.0,0.0,2021-02-15,0,1,0,-1
+1561,Grand Princess,Canada,0.0,0.0,2021-02-15,13,0,0,13
+1562, ,Diamond Princess,0.0,0.0,2021-02-15,712,13,699,0
+1563, ,MS Zaandam,0.0,0.0,2021-02-15,9,2,7,0
+1564,Diamond Princess,Canada,0.0,0.0,2021-02-16,0,1,0,-1
+1565,Grand Princess,Canada,0.0,0.0,2021-02-16,13,0,0,13
+1566, ,Diamond Princess,0.0,0.0,2021-02-16,712,13,699,0
+1567, ,MS Zaandam,0.0,0.0,2021-02-16,9,2,7,0
+1568,Diamond Princess,Canada,0.0,0.0,2021-02-17,0,1,0,-1
+1569,Grand Princess,Canada,0.0,0.0,2021-02-17,13,0,0,13
+1570, ,Diamond Princess,0.0,0.0,2021-02-17,712,13,699,0
+1571, ,MS Zaandam,0.0,0.0,2021-02-17,9,2,7,0
+1572,Diamond Princess,Canada,0.0,0.0,2021-02-18,0,1,0,-1
+1573,Grand Princess,Canada,0.0,0.0,2021-02-18,13,0,0,13
+1574, ,Diamond Princess,0.0,0.0,2021-02-18,712,13,699,0
+1575, ,MS Zaandam,0.0,0.0,2021-02-18,9,2,7,0
+1576,Diamond Princess,Canada,0.0,0.0,2021-02-19,0,1,0,-1
+1577,Grand Princess,Canada,0.0,0.0,2021-02-19,13,0,0,13
+1578, ,Diamond Princess,0.0,0.0,2021-02-19,712,13,699,0
+1579, ,MS Zaandam,0.0,0.0,2021-02-19,9,2,7,0
+1580,Diamond Princess,Canada,0.0,0.0,2021-02-20,0,1,0,-1
+1581,Grand Princess,Canada,0.0,0.0,2021-02-20,13,0,0,13
+1582, ,Diamond Princess,0.0,0.0,2021-02-20,712,13,699,0
+1583, ,MS Zaandam,0.0,0.0,2021-02-20,9,2,7,0
+1584,Diamond Princess,Canada,0.0,0.0,2021-02-21,0,1,0,-1
+1585,Grand Princess,Canada,0.0,0.0,2021-02-21,13,0,0,13
+1586, ,Diamond Princess,0.0,0.0,2021-02-21,712,13,699,0
+1587, ,MS Zaandam,0.0,0.0,2021-02-21,9,2,7,0
+1588,Diamond Princess,Canada,0.0,0.0,2021-02-22,0,1,0,-1
+1589,Grand Princess,Canada,0.0,0.0,2021-02-22,13,0,0,13
+1590, ,Diamond Princess,0.0,0.0,2021-02-22,712,13,699,0
+1591, ,MS Zaandam,0.0,0.0,2021-02-22,9,2,7,0
+1592,Diamond Princess,Canada,0.0,0.0,2021-02-23,0,1,0,-1
+1593,Grand Princess,Canada,0.0,0.0,2021-02-23,13,0,0,13
+1594, ,Diamond Princess,0.0,0.0,2021-02-23,712,13,699,0
+1595, ,MS Zaandam,0.0,0.0,2021-02-23,9,2,7,0
+1596,Diamond Princess,Canada,0.0,0.0,2021-02-24,0,1,0,-1
+1597,Grand Princess,Canada,0.0,0.0,2021-02-24,13,0,0,13
+1598, ,Diamond Princess,0.0,0.0,2021-02-24,712,13,699,0
+1599, ,MS Zaandam,0.0,0.0,2021-02-24,9,2,7,0
+1600,Diamond Princess,Canada,0.0,0.0,2021-02-25,0,1,0,-1
+1601,Grand Princess,Canada,0.0,0.0,2021-02-25,13,0,0,13
+1602, ,Diamond Princess,0.0,0.0,2021-02-25,712,13,699,0
+1603, ,MS Zaandam,0.0,0.0,2021-02-25,9,2,7,0
+1604,Diamond Princess,Canada,0.0,0.0,2021-02-26,0,1,0,-1
+1605,Grand Princess,Canada,0.0,0.0,2021-02-26,13,0,0,13
+1606, ,Diamond Princess,0.0,0.0,2021-02-26,712,13,699,0
+1607, ,MS Zaandam,0.0,0.0,2021-02-26,9,2,7,0
+1608,Diamond Princess,Canada,0.0,0.0,2021-02-27,0,1,0,-1
+1609,Grand Princess,Canada,0.0,0.0,2021-02-27,13,0,0,13
+1610, ,Diamond Princess,0.0,0.0,2021-02-27,712,13,699,0
+1611, ,MS Zaandam,0.0,0.0,2021-02-27,9,2,7,0
+1612,Diamond Princess,Canada,0.0,0.0,2021-02-28,0,1,0,-1
+1613,Grand Princess,Canada,0.0,0.0,2021-02-28,13,0,0,13
+1614, ,Diamond Princess,0.0,0.0,2021-02-28,712,13,699,0
+1615, ,MS Zaandam,0.0,0.0,2021-02-28,9,2,7,0
+1616,Diamond Princess,Canada,0.0,0.0,2021-03-01,0,1,0,-1
+1617,Grand Princess,Canada,0.0,0.0,2021-03-01,13,0,0,13
+1618, ,Diamond Princess,0.0,0.0,2021-03-01,712,13,699,0
+1619, ,MS Zaandam,0.0,0.0,2021-03-01,9,2,7,0
+1620,Diamond Princess,Canada,0.0,0.0,2021-03-02,0,1,0,-1
+1621,Grand Princess,Canada,0.0,0.0,2021-03-02,13,0,0,13
+1622, ,Diamond Princess,0.0,0.0,2021-03-02,712,13,699,0
+1623, ,MS Zaandam,0.0,0.0,2021-03-02,9,2,7,0
+1624,Diamond Princess,Canada,0.0,0.0,2021-03-03,0,1,0,-1
+1625,Grand Princess,Canada,0.0,0.0,2021-03-03,13,0,0,13
+1626, ,Diamond Princess,0.0,0.0,2021-03-03,712,13,699,0
+1627, ,MS Zaandam,0.0,0.0,2021-03-03,9,2,7,0
+1628,Diamond Princess,Canada,0.0,0.0,2021-03-04,0,1,0,-1
+1629,Grand Princess,Canada,0.0,0.0,2021-03-04,13,0,0,13
+1630, ,Diamond Princess,0.0,0.0,2021-03-04,712,13,699,0
+1631, ,MS Zaandam,0.0,0.0,2021-03-04,9,2,7,0
+1632,Diamond Princess,Canada,0.0,0.0,2021-03-05,0,1,0,-1
+1633,Grand Princess,Canada,0.0,0.0,2021-03-05,13,0,0,13
+1634, ,Diamond Princess,0.0,0.0,2021-03-05,712,13,699,0
+1635, ,MS Zaandam,0.0,0.0,2021-03-05,9,2,7,0
+1636,Diamond Princess,Canada,0.0,0.0,2021-03-06,0,1,0,-1
+1637,Grand Princess,Canada,0.0,0.0,2021-03-06,13,0,0,13
+1638, ,Diamond Princess,0.0,0.0,2021-03-06,712,13,699,0
+1639, ,MS Zaandam,0.0,0.0,2021-03-06,9,2,7,0
+1640,Diamond Princess,Canada,0.0,0.0,2021-03-07,0,1,0,-1
+1641,Grand Princess,Canada,0.0,0.0,2021-03-07,13,0,0,13
+1642, ,Diamond Princess,0.0,0.0,2021-03-07,712,13,699,0
+1643, ,MS Zaandam,0.0,0.0,2021-03-07,9,2,7,0
+1644,Diamond Princess,Canada,0.0,0.0,2021-03-08,0,1,0,-1
+1645,Grand Princess,Canada,0.0,0.0,2021-03-08,13,0,0,13
+1646, ,Diamond Princess,0.0,0.0,2021-03-08,712,13,699,0
+1647, ,MS Zaandam,0.0,0.0,2021-03-08,9,2,7,0
+1648,Diamond Princess,Canada,0.0,0.0,2021-03-09,0,1,0,-1
+1649,Grand Princess,Canada,0.0,0.0,2021-03-09,13,0,0,13
+1650, ,Diamond Princess,0.0,0.0,2021-03-09,712,13,699,0
+1651, ,MS Zaandam,0.0,0.0,2021-03-09,9,2,7,0
+1652,Diamond Princess,Canada,0.0,0.0,2021-03-10,0,1,0,-1
+1653,Grand Princess,Canada,0.0,0.0,2021-03-10,13,0,0,13
+1654, ,Diamond Princess,0.0,0.0,2021-03-10,712,13,699,0
+1655, ,MS Zaandam,0.0,0.0,2021-03-10,9,2,7,0
+1656,Diamond Princess,Canada,0.0,0.0,2021-03-11,0,1,0,-1
+1657,Grand Princess,Canada,0.0,0.0,2021-03-11,13,0,0,13
+1658, ,Diamond Princess,0.0,0.0,2021-03-11,712,13,699,0
+1659, ,MS Zaandam,0.0,0.0,2021-03-11,9,2,7,0
+1660,Diamond Princess,Canada,0.0,0.0,2021-03-12,0,1,0,-1
+1661,Grand Princess,Canada,0.0,0.0,2021-03-12,13,0,0,13
+1662, ,Diamond Princess,0.0,0.0,2021-03-12,712,13,699,0
+1663, ,MS Zaandam,0.0,0.0,2021-03-12,9,2,7,0
+1664,Diamond Princess,Canada,0.0,0.0,2021-03-13,0,1,0,-1
+1665,Grand Princess,Canada,0.0,0.0,2021-03-13,13,0,0,13
+1666, ,Diamond Princess,0.0,0.0,2021-03-13,712,13,699,0
+1667, ,MS Zaandam,0.0,0.0,2021-03-13,9,2,7,0
+1668,Diamond Princess,Canada,0.0,0.0,2021-03-14,0,1,0,-1
+1669,Grand Princess,Canada,0.0,0.0,2021-03-14,13,0,0,13
+1670, ,Diamond Princess,0.0,0.0,2021-03-14,712,13,699,0
+1671, ,MS Zaandam,0.0,0.0,2021-03-14,9,2,7,0
+1672,Diamond Princess,Canada,0.0,0.0,2021-03-15,0,1,0,-1
+1673,Grand Princess,Canada,0.0,0.0,2021-03-15,13,0,0,13
+1674, ,Diamond Princess,0.0,0.0,2021-03-15,712,13,699,0
+1675, ,MS Zaandam,0.0,0.0,2021-03-15,9,2,7,0
+1676,Diamond Princess,Canada,0.0,0.0,2021-03-16,0,1,0,-1
+1677,Grand Princess,Canada,0.0,0.0,2021-03-16,13,0,0,13
+1678, ,Diamond Princess,0.0,0.0,2021-03-16,712,13,699,0
+1679, ,MS Zaandam,0.0,0.0,2021-03-16,9,2,7,0
+1680,Diamond Princess,Canada,0.0,0.0,2021-03-17,0,1,0,-1
+1681,Grand Princess,Canada,0.0,0.0,2021-03-17,13,0,0,13
+1682, ,Diamond Princess,0.0,0.0,2021-03-17,712,13,699,0
+1683, ,MS Zaandam,0.0,0.0,2021-03-17,9,2,7,0
+1684,Diamond Princess,Canada,0.0,0.0,2021-03-18,0,1,0,-1
+1685,Grand Princess,Canada,0.0,0.0,2021-03-18,13,0,0,13
+1686, ,Diamond Princess,0.0,0.0,2021-03-18,712,13,699,0
+1687, ,MS Zaandam,0.0,0.0,2021-03-18,9,2,7,0
+1688,Diamond Princess,Canada,0.0,0.0,2021-03-19,0,1,0,-1
+1689,Grand Princess,Canada,0.0,0.0,2021-03-19,13,0,0,13
+1690, ,Diamond Princess,0.0,0.0,2021-03-19,712,13,699,0
+1691, ,MS Zaandam,0.0,0.0,2021-03-19,9,2,7,0
+1692,Diamond Princess,Canada,0.0,0.0,2021-03-20,0,1,0,-1
+1693,Grand Princess,Canada,0.0,0.0,2021-03-20,13,0,0,13
+1694, ,Diamond Princess,0.0,0.0,2021-03-20,712,13,699,0
+1695, ,MS Zaandam,0.0,0.0,2021-03-20,9,2,7,0
+1696,Diamond Princess,Canada,0.0,0.0,2021-03-21,0,1,0,-1
+1697,Grand Princess,Canada,0.0,0.0,2021-03-21,13,0,0,13
+1698, ,Diamond Princess,0.0,0.0,2021-03-21,712,13,699,0
+1699, ,MS Zaandam,0.0,0.0,2021-03-21,9,2,7,0
+1700,Diamond Princess,Canada,0.0,0.0,2021-03-22,0,1,0,-1
+1701,Grand Princess,Canada,0.0,0.0,2021-03-22,13,0,0,13
+1702, ,Diamond Princess,0.0,0.0,2021-03-22,712,13,699,0
+1703, ,MS Zaandam,0.0,0.0,2021-03-22,9,2,7,0
+1704,Diamond Princess,Canada,0.0,0.0,2021-03-23,0,1,0,-1
+1705,Grand Princess,Canada,0.0,0.0,2021-03-23,13,0,0,13
+1706, ,Diamond Princess,0.0,0.0,2021-03-23,712,13,699,0
+1707, ,MS Zaandam,0.0,0.0,2021-03-23,9,2,7,0
+1708,Diamond Princess,Canada,0.0,0.0,2021-03-24,0,1,0,-1
+1709,Grand Princess,Canada,0.0,0.0,2021-03-24,13,0,0,13
+1710, ,Diamond Princess,0.0,0.0,2021-03-24,712,13,699,0
+1711, ,MS Zaandam,0.0,0.0,2021-03-24,9,2,7,0
+1712,Diamond Princess,Canada,0.0,0.0,2021-03-25,0,1,0,-1
+1713,Grand Princess,Canada,0.0,0.0,2021-03-25,13,0,0,13
+1714, ,Diamond Princess,0.0,0.0,2021-03-25,712,13,699,0
+1715, ,MS Zaandam,0.0,0.0,2021-03-25,9,2,7,0
+1716,Diamond Princess,Canada,0.0,0.0,2021-03-26,0,1,0,-1
+1717,Grand Princess,Canada,0.0,0.0,2021-03-26,13,0,0,13
+1718, ,Diamond Princess,0.0,0.0,2021-03-26,712,13,699,0
+1719, ,MS Zaandam,0.0,0.0,2021-03-26,9,2,7,0
+1720,Diamond Princess,Canada,0.0,0.0,2021-03-27,0,1,0,-1
+1721,Grand Princess,Canada,0.0,0.0,2021-03-27,13,0,0,13
+1722, ,Diamond Princess,0.0,0.0,2021-03-27,712,13,699,0
+1723, ,MS Zaandam,0.0,0.0,2021-03-27,9,2,7,0
+1724,Diamond Princess,Canada,0.0,0.0,2021-03-28,0,1,0,-1
+1725,Grand Princess,Canada,0.0,0.0,2021-03-28,13,0,0,13
+1726, ,Diamond Princess,0.0,0.0,2021-03-28,712,13,699,0
+1727, ,MS Zaandam,0.0,0.0,2021-03-28,9,2,7,0
+1728,Diamond Princess,Canada,0.0,0.0,2021-03-29,0,1,0,-1
+1729,Grand Princess,Canada,0.0,0.0,2021-03-29,13,0,0,13
+1730, ,Diamond Princess,0.0,0.0,2021-03-29,712,13,699,0
+1731, ,MS Zaandam,0.0,0.0,2021-03-29,9,2,7,0
+1732,Diamond Princess,Canada,0.0,0.0,2021-03-30,0,1,0,-1
+1733,Grand Princess,Canada,0.0,0.0,2021-03-30,13,0,0,13
+1734, ,Diamond Princess,0.0,0.0,2021-03-30,712,13,699,0
+1735, ,MS Zaandam,0.0,0.0,2021-03-30,9,2,7,0
+1736,Diamond Princess,Canada,0.0,0.0,2021-03-31,0,1,0,-1
+1737,Grand Princess,Canada,0.0,0.0,2021-03-31,13,0,0,13
+1738, ,Diamond Princess,0.0,0.0,2021-03-31,712,13,699,0
+1739, ,MS Zaandam,0.0,0.0,2021-03-31,9,2,7,0
+1740,Diamond Princess,Canada,0.0,0.0,2021-04-01,0,1,0,-1
+1741,Grand Princess,Canada,0.0,0.0,2021-04-01,13,0,0,13
+1742, ,Diamond Princess,0.0,0.0,2021-04-01,712,13,699,0
+1743, ,MS Zaandam,0.0,0.0,2021-04-01,9,2,7,0
+1744,Diamond Princess,Canada,0.0,0.0,2021-04-02,0,1,0,-1
+1745,Grand Princess,Canada,0.0,0.0,2021-04-02,13,0,0,13
+1746, ,Diamond Princess,0.0,0.0,2021-04-02,712,13,699,0
+1747, ,MS Zaandam,0.0,0.0,2021-04-02,9,2,7,0
+1748,Diamond Princess,Canada,0.0,0.0,2021-04-03,0,1,0,-1
+1749,Grand Princess,Canada,0.0,0.0,2021-04-03,13,0,0,13
+1750, ,Diamond Princess,0.0,0.0,2021-04-03,712,13,699,0
+1751, ,MS Zaandam,0.0,0.0,2021-04-03,9,2,7,0
+1752,Diamond Princess,Canada,0.0,0.0,2021-04-04,0,1,0,-1
+1753,Grand Princess,Canada,0.0,0.0,2021-04-04,13,0,0,13
+1754, ,Diamond Princess,0.0,0.0,2021-04-04,712,13,699,0
+1755, ,MS Zaandam,0.0,0.0,2021-04-04,9,2,7,0
+1756,Diamond Princess,Canada,0.0,0.0,2021-04-05,0,1,0,-1
+1757,Grand Princess,Canada,0.0,0.0,2021-04-05,13,0,0,13
+1758, ,Diamond Princess,0.0,0.0,2021-04-05,712,13,699,0
+1759, ,MS Zaandam,0.0,0.0,2021-04-05,9,2,7,0
+1760,Diamond Princess,Canada,0.0,0.0,2021-04-06,0,1,0,-1
+1761,Grand Princess,Canada,0.0,0.0,2021-04-06,13,0,0,13
+1762, ,Diamond Princess,0.0,0.0,2021-04-06,712,13,699,0
+1763, ,MS Zaandam,0.0,0.0,2021-04-06,9,2,7,0
+1764,Diamond Princess,Canada,0.0,0.0,2021-04-07,0,1,0,-1
+1765,Grand Princess,Canada,0.0,0.0,2021-04-07,13,0,0,13
+1766, ,Diamond Princess,0.0,0.0,2021-04-07,712,13,699,0
+1767, ,MS Zaandam,0.0,0.0,2021-04-07,9,2,7,0
+1768,Diamond Princess,Canada,0.0,0.0,2021-04-08,0,1,0,-1
+1769,Grand Princess,Canada,0.0,0.0,2021-04-08,13,0,0,13
+1770, ,Diamond Princess,0.0,0.0,2021-04-08,712,13,699,0
+1771, ,MS Zaandam,0.0,0.0,2021-04-08,9,2,7,0
+1772,Diamond Princess,Canada,0.0,0.0,2021-04-09,0,1,0,-1
+1773,Grand Princess,Canada,0.0,0.0,2021-04-09,13,0,0,13
+1774, ,Diamond Princess,0.0,0.0,2021-04-09,712,13,699,0
+1775, ,MS Zaandam,0.0,0.0,2021-04-09,9,2,7,0
+1776,Diamond Princess,Canada,0.0,0.0,2021-04-10,0,1,0,-1
+1777,Grand Princess,Canada,0.0,0.0,2021-04-10,13,0,0,13
+1778, ,Diamond Princess,0.0,0.0,2021-04-10,712,13,699,0
+1779, ,MS Zaandam,0.0,0.0,2021-04-10,9,2,7,0
+1780,Diamond Princess,Canada,0.0,0.0,2021-04-11,0,1,0,-1
+1781,Grand Princess,Canada,0.0,0.0,2021-04-11,13,0,0,13
+1782, ,Diamond Princess,0.0,0.0,2021-04-11,712,13,699,0
+1783, ,MS Zaandam,0.0,0.0,2021-04-11,9,2,7,0
+1784,Diamond Princess,Canada,0.0,0.0,2021-04-12,0,1,0,-1
+1785,Grand Princess,Canada,0.0,0.0,2021-04-12,13,0,0,13
+1786, ,Diamond Princess,0.0,0.0,2021-04-12,712,13,699,0
+1787, ,MS Zaandam,0.0,0.0,2021-04-12,9,2,7,0
+1788,Diamond Princess,Canada,0.0,0.0,2021-04-13,0,1,0,-1
+1789,Grand Princess,Canada,0.0,0.0,2021-04-13,13,0,0,13
+1790, ,Diamond Princess,0.0,0.0,2021-04-13,712,13,699,0
+1791, ,MS Zaandam,0.0,0.0,2021-04-13,9,2,7,0
+1792,Diamond Princess,Canada,0.0,0.0,2021-04-14,0,1,0,-1
+1793,Grand Princess,Canada,0.0,0.0,2021-04-14,13,0,0,13
+1794, ,Diamond Princess,0.0,0.0,2021-04-14,712,13,699,0
+1795, ,MS Zaandam,0.0,0.0,2021-04-14,9,2,7,0
+1796,Diamond Princess,Canada,0.0,0.0,2021-04-15,0,1,0,-1
+1797,Grand Princess,Canada,0.0,0.0,2021-04-15,13,0,0,13
+1798, ,Diamond Princess,0.0,0.0,2021-04-15,712,13,699,0
+1799, ,MS Zaandam,0.0,0.0,2021-04-15,9,2,7,0
+1800,Diamond Princess,Canada,0.0,0.0,2021-04-16,0,1,0,-1
+1801,Grand Princess,Canada,0.0,0.0,2021-04-16,13,0,0,13
+1802, ,Diamond Princess,0.0,0.0,2021-04-16,712,13,699,0
+1803, ,MS Zaandam,0.0,0.0,2021-04-16,9,2,7,0
+1804,Diamond Princess,Canada,0.0,0.0,2021-04-17,0,1,0,-1
+1805,Grand Princess,Canada,0.0,0.0,2021-04-17,13,0,0,13
+1806, ,Diamond Princess,0.0,0.0,2021-04-17,712,13,699,0
+1807, ,MS Zaandam,0.0,0.0,2021-04-17,9,2,7,0
+1808,Diamond Princess,Canada,0.0,0.0,2021-04-18,0,1,0,-1
+1809,Grand Princess,Canada,0.0,0.0,2021-04-18,13,0,0,13
+1810, ,Diamond Princess,0.0,0.0,2021-04-18,712,13,699,0
+1811, ,MS Zaandam,0.0,0.0,2021-04-18,9,2,7,0
+1812,Diamond Princess,Canada,0.0,0.0,2021-04-19,0,1,0,-1
+1813,Grand Princess,Canada,0.0,0.0,2021-04-19,13,0,0,13
+1814, ,Diamond Princess,0.0,0.0,2021-04-19,712,13,699,0
+1815, ,MS Zaandam,0.0,0.0,2021-04-19,9,2,7,0
+1816,Diamond Princess,Canada,0.0,0.0,2021-04-20,0,1,0,-1
+1817,Grand Princess,Canada,0.0,0.0,2021-04-20,13,0,0,13
+1818, ,Diamond Princess,0.0,0.0,2021-04-20,712,13,699,0
+1819, ,MS Zaandam,0.0,0.0,2021-04-20,9,2,7,0
+1820,Diamond Princess,Canada,0.0,0.0,2021-04-21,0,1,0,-1
+1821,Grand Princess,Canada,0.0,0.0,2021-04-21,13,0,0,13
+1822, ,Diamond Princess,0.0,0.0,2021-04-21,712,13,699,0
+1823, ,MS Zaandam,0.0,0.0,2021-04-21,9,2,7,0
+1824,Diamond Princess,Canada,0.0,0.0,2021-04-22,0,1,0,-1
+1825,Grand Princess,Canada,0.0,0.0,2021-04-22,13,0,0,13
+1826, ,Diamond Princess,0.0,0.0,2021-04-22,712,13,699,0
+1827, ,MS Zaandam,0.0,0.0,2021-04-22,9,2,7,0
+1828,Diamond Princess,Canada,0.0,0.0,2021-04-23,0,1,0,-1
+1829,Grand Princess,Canada,0.0,0.0,2021-04-23,13,0,0,13
+1830, ,Diamond Princess,0.0,0.0,2021-04-23,712,13,699,0
+1831, ,MS Zaandam,0.0,0.0,2021-04-23,9,2,7,0
+1832,Diamond Princess,Canada,0.0,0.0,2021-04-24,0,1,0,-1
+1833,Grand Princess,Canada,0.0,0.0,2021-04-24,13,0,0,13
+1834, ,Diamond Princess,0.0,0.0,2021-04-24,712,13,699,0
+1835, ,MS Zaandam,0.0,0.0,2021-04-24,9,2,7,0
+1836,Diamond Princess,Canada,0.0,0.0,2021-04-25,0,1,0,-1
+1837,Grand Princess,Canada,0.0,0.0,2021-04-25,13,0,0,13
+1838, ,Diamond Princess,0.0,0.0,2021-04-25,712,13,699,0
+1839, ,MS Zaandam,0.0,0.0,2021-04-25,9,2,7,0
+1840,Diamond Princess,Canada,0.0,0.0,2021-04-26,0,1,0,-1
+1841,Grand Princess,Canada,0.0,0.0,2021-04-26,13,0,0,13
+1842, ,Diamond Princess,0.0,0.0,2021-04-26,712,13,699,0
+1843, ,MS Zaandam,0.0,0.0,2021-04-26,9,2,7,0
+1844,Diamond Princess,Canada,0.0,0.0,2021-04-27,0,1,0,-1
+1845,Grand Princess,Canada,0.0,0.0,2021-04-27,13,0,0,13
+1846, ,Diamond Princess,0.0,0.0,2021-04-27,712,13,699,0
+1847, ,MS Zaandam,0.0,0.0,2021-04-27,9,2,7,0
+1848,Diamond Princess,Canada,0.0,0.0,2021-04-28,0,1,0,-1
+1849,Grand Princess,Canada,0.0,0.0,2021-04-28,13,0,0,13
+1850, ,Diamond Princess,0.0,0.0,2021-04-28,712,13,699,0
+1851, ,MS Zaandam,0.0,0.0,2021-04-28,9,2,7,0
+1852,Diamond Princess,Canada,0.0,0.0,2021-04-29,0,1,0,-1
+1853,Grand Princess,Canada,0.0,0.0,2021-04-29,13,0,0,13
+1854, ,Diamond Princess,0.0,0.0,2021-04-29,712,13,699,0
+1855, ,MS Zaandam,0.0,0.0,2021-04-29,9,2,7,0
+1856,Diamond Princess,Canada,0.0,0.0,2021-04-30,0,1,0,-1
+1857,Grand Princess,Canada,0.0,0.0,2021-04-30,13,0,0,13
+1858, ,Diamond Princess,0.0,0.0,2021-04-30,712,13,699,0
+1859, ,MS Zaandam,0.0,0.0,2021-04-30,9,2,7,0
+1860,Diamond Princess,Canada,0.0,0.0,2021-05-01,0,1,0,-1
+1861,Grand Princess,Canada,0.0,0.0,2021-05-01,13,0,0,13
+1862, ,Diamond Princess,0.0,0.0,2021-05-01,712,13,699,0
+1863, ,MS Zaandam,0.0,0.0,2021-05-01,9,2,7,0
+1864,Diamond Princess,Canada,0.0,0.0,2021-05-02,0,1,0,-1
+1865,Grand Princess,Canada,0.0,0.0,2021-05-02,13,0,0,13
+1866, ,Diamond Princess,0.0,0.0,2021-05-02,712,13,699,0
+1867, ,MS Zaandam,0.0,0.0,2021-05-02,9,2,7,0
+1868,Diamond Princess,Canada,0.0,0.0,2021-05-03,0,1,0,-1
+1869,Grand Princess,Canada,0.0,0.0,2021-05-03,13,0,0,13
+1870, ,Diamond Princess,0.0,0.0,2021-05-03,712,13,699,0
+1871, ,MS Zaandam,0.0,0.0,2021-05-03,9,2,7,0
+1872,Diamond Princess,Canada,0.0,0.0,2021-05-04,0,1,0,-1
+1873,Grand Princess,Canada,0.0,0.0,2021-05-04,13,0,0,13
+1874, ,Diamond Princess,0.0,0.0,2021-05-04,712,13,699,0
+1875, ,MS Zaandam,0.0,0.0,2021-05-04,9,2,7,0
+1876,Diamond Princess,Canada,0.0,0.0,2021-05-05,0,1,0,-1
+1877,Grand Princess,Canada,0.0,0.0,2021-05-05,13,0,0,13
+1878, ,Diamond Princess,0.0,0.0,2021-05-05,712,13,699,0
+1879, ,MS Zaandam,0.0,0.0,2021-05-05,9,2,7,0
+1880,Diamond Princess,Canada,0.0,0.0,2021-05-06,0,1,0,-1
+1881,Grand Princess,Canada,0.0,0.0,2021-05-06,13,0,0,13
+1882, ,Diamond Princess,0.0,0.0,2021-05-06,712,13,699,0
+1883, ,MS Zaandam,0.0,0.0,2021-05-06,9,2,7,0
+1884,Diamond Princess,Canada,0.0,0.0,2021-05-07,0,1,0,-1
+1885,Grand Princess,Canada,0.0,0.0,2021-05-07,13,0,0,13
+1886, ,Diamond Princess,0.0,0.0,2021-05-07,712,13,699,0
+1887, ,MS Zaandam,0.0,0.0,2021-05-07,9,2,7,0
+1888,Diamond Princess,Canada,0.0,0.0,2021-05-08,0,1,0,-1
+1889,Grand Princess,Canada,0.0,0.0,2021-05-08,13,0,0,13
+1890, ,Diamond Princess,0.0,0.0,2021-05-08,712,13,699,0
+1891, ,MS Zaandam,0.0,0.0,2021-05-08,9,2,7,0
+1892,Diamond Princess,Canada,0.0,0.0,2021-05-09,0,1,0,-1
+1893,Grand Princess,Canada,0.0,0.0,2021-05-09,13,0,0,13
+1894, ,Diamond Princess,0.0,0.0,2021-05-09,712,13,699,0
+1895, ,MS Zaandam,0.0,0.0,2021-05-09,9,2,7,0
+1896,Diamond Princess,Canada,0.0,0.0,2021-05-10,0,1,0,-1
+1897,Grand Princess,Canada,0.0,0.0,2021-05-10,13,0,0,13
+1898, ,Diamond Princess,0.0,0.0,2021-05-10,712,13,699,0
+1899, ,MS Zaandam,0.0,0.0,2021-05-10,9,2,7,0
+1900,Diamond Princess,Canada,0.0,0.0,2021-05-11,0,1,0,-1
+1901,Grand Princess,Canada,0.0,0.0,2021-05-11,13,0,0,13
+1902, ,Diamond Princess,0.0,0.0,2021-05-11,712,13,699,0
+1903, ,MS Zaandam,0.0,0.0,2021-05-11,9,2,7,0
+1904,Diamond Princess,Canada,0.0,0.0,2021-05-12,0,1,0,-1
+1905,Grand Princess,Canada,0.0,0.0,2021-05-12,13,0,0,13
+1906, ,Diamond Princess,0.0,0.0,2021-05-12,712,13,699,0
+1907, ,MS Zaandam,0.0,0.0,2021-05-12,9,2,7,0
+1908,Diamond Princess,Canada,0.0,0.0,2021-05-13,0,1,0,-1
+1909,Grand Princess,Canada,0.0,0.0,2021-05-13,13,0,0,13
+1910, ,Diamond Princess,0.0,0.0,2021-05-13,712,13,699,0
+1911, ,MS Zaandam,0.0,0.0,2021-05-13,9,2,7,0
+1912,Diamond Princess,Canada,0.0,0.0,2021-05-14,0,1,0,-1
+1913,Grand Princess,Canada,0.0,0.0,2021-05-14,13,0,0,13
+1914, ,Diamond Princess,0.0,0.0,2021-05-14,712,13,699,0
+1915, ,MS Zaandam,0.0,0.0,2021-05-14,9,2,7,0
+1916,Diamond Princess,Canada,0.0,0.0,2021-05-15,0,1,0,-1
+1917,Grand Princess,Canada,0.0,0.0,2021-05-15,13,0,0,13
+1918, ,Diamond Princess,0.0,0.0,2021-05-15,712,13,699,0
+1919, ,MS Zaandam,0.0,0.0,2021-05-15,9,2,7,0
+1920,Diamond Princess,Canada,0.0,0.0,2021-05-16,0,1,0,-1
+1921,Grand Princess,Canada,0.0,0.0,2021-05-16,13,0,0,13
+1922, ,Diamond Princess,0.0,0.0,2021-05-16,712,13,699,0
+1923, ,MS Zaandam,0.0,0.0,2021-05-16,9,2,7,0
+1924,Diamond Princess,Canada,0.0,0.0,2021-05-17,0,1,0,-1
+1925,Grand Princess,Canada,0.0,0.0,2021-05-17,13,0,0,13
+1926, ,Diamond Princess,0.0,0.0,2021-05-17,712,13,699,0
+1927, ,MS Zaandam,0.0,0.0,2021-05-17,9,2,7,0
+1928,Diamond Princess,Canada,0.0,0.0,2021-05-18,0,1,0,-1
+1929,Grand Princess,Canada,0.0,0.0,2021-05-18,13,0,0,13
+1930, ,Diamond Princess,0.0,0.0,2021-05-18,712,13,699,0
+1931, ,MS Zaandam,0.0,0.0,2021-05-18,9,2,7,0
+1932,Diamond Princess,Canada,0.0,0.0,2021-05-19,0,1,0,-1
+1933,Grand Princess,Canada,0.0,0.0,2021-05-19,13,0,0,13
+1934, ,Diamond Princess,0.0,0.0,2021-05-19,712,13,699,0
+1935, ,MS Zaandam,0.0,0.0,2021-05-19,9,2,7,0
+1936,Diamond Princess,Canada,0.0,0.0,2021-05-20,0,1,0,-1
+1937,Grand Princess,Canada,0.0,0.0,2021-05-20,13,0,0,13
+1938, ,Diamond Princess,0.0,0.0,2021-05-20,712,13,699,0
+1939, ,MS Zaandam,0.0,0.0,2021-05-20,9,2,7,0
+1940,Diamond Princess,Canada,0.0,0.0,2021-05-21,0,1,0,-1
+1941,Grand Princess,Canada,0.0,0.0,2021-05-21,13,0,0,13
+1942, ,Diamond Princess,0.0,0.0,2021-05-21,712,13,699,0
+1943, ,MS Zaandam,0.0,0.0,2021-05-21,9,2,7,0
+1944,Diamond Princess,Canada,0.0,0.0,2021-05-22,0,1,0,-1
+1945,Grand Princess,Canada,0.0,0.0,2021-05-22,13,0,0,13
+1946, ,Diamond Princess,0.0,0.0,2021-05-22,712,13,699,0
+1947, ,MS Zaandam,0.0,0.0,2021-05-22,9,2,7,0
+1948,Diamond Princess,Canada,0.0,0.0,2021-05-23,0,1,0,-1
+1949,Grand Princess,Canada,0.0,0.0,2021-05-23,13,0,0,13
+1950, ,Diamond Princess,0.0,0.0,2021-05-23,712,13,699,0
+1951, ,MS Zaandam,0.0,0.0,2021-05-23,9,2,7,0
+1952,Diamond Princess,Canada,0.0,0.0,2021-05-24,0,1,0,-1
+1953,Grand Princess,Canada,0.0,0.0,2021-05-24,13,0,0,13
+1954, ,Diamond Princess,0.0,0.0,2021-05-24,712,13,699,0
+1955, ,MS Zaandam,0.0,0.0,2021-05-24,9,2,7,0
+1956,Diamond Princess,Canada,0.0,0.0,2021-05-25,0,1,0,-1
+1957,Grand Princess,Canada,0.0,0.0,2021-05-25,13,0,0,13
+1958, ,Diamond Princess,0.0,0.0,2021-05-25,712,13,699,0
+1959, ,MS Zaandam,0.0,0.0,2021-05-25,9,2,7,0
+1960,Diamond Princess,Canada,0.0,0.0,2021-05-26,0,1,0,-1
+1961,Grand Princess,Canada,0.0,0.0,2021-05-26,13,0,0,13
+1962, ,Diamond Princess,0.0,0.0,2021-05-26,712,13,699,0
+1963, ,MS Zaandam,0.0,0.0,2021-05-26,9,2,7,0
+1964,Diamond Princess,Canada,0.0,0.0,2021-05-27,0,1,0,-1
+1965,Grand Princess,Canada,0.0,0.0,2021-05-27,13,0,0,13
+1966, ,Diamond Princess,0.0,0.0,2021-05-27,712,13,699,0
+1967, ,MS Zaandam,0.0,0.0,2021-05-27,9,2,7,0
+1968,Diamond Princess,Canada,0.0,0.0,2021-05-28,0,1,0,-1
+1969,Grand Princess,Canada,0.0,0.0,2021-05-28,13,0,0,13
+1970, ,Diamond Princess,0.0,0.0,2021-05-28,712,13,699,0
+1971, ,MS Zaandam,0.0,0.0,2021-05-28,9,2,7,0
+1972,Diamond Princess,Canada,0.0,0.0,2021-05-29,0,1,0,-1
+1973,Grand Princess,Canada,0.0,0.0,2021-05-29,13,0,0,13
+1974, ,Diamond Princess,0.0,0.0,2021-05-29,712,13,699,0
+1975, ,MS Zaandam,0.0,0.0,2021-05-29,9,2,7,0
+1976,Diamond Princess,Canada,0.0,0.0,2021-05-30,0,1,0,-1
+1977,Grand Princess,Canada,0.0,0.0,2021-05-30,13,0,0,13
+1978, ,Diamond Princess,0.0,0.0,2021-05-30,712,13,699,0
+1979, ,MS Zaandam,0.0,0.0,2021-05-30,9,2,7,0
+1980,Diamond Princess,Canada,0.0,0.0,2021-05-31,0,1,0,-1
+1981,Grand Princess,Canada,0.0,0.0,2021-05-31,13,0,0,13
+1982, ,Diamond Princess,0.0,0.0,2021-05-31,712,13,699,0
+1983, ,MS Zaandam,0.0,0.0,2021-05-31,9,2,7,0
+1984,Diamond Princess,Canada,0.0,0.0,2021-06-01,0,1,0,-1
+1985,Grand Princess,Canada,0.0,0.0,2021-06-01,13,0,0,13
+1986, ,Diamond Princess,0.0,0.0,2021-06-01,712,13,699,0
+1987, ,MS Zaandam,0.0,0.0,2021-06-01,9,2,7,0
