@@ -16,16 +16,17 @@ from lib.genericCountryX import genericCountryX
 from lib import datasources
 import debugpy 
 import os, sys
-
+import logging
+logging.basicConfig(stream=sys.stdout, level=print)
 # df_full = datasources.fixtures(
 #     datasources.fulldb()[0]
 #     )
 
 def main():
     if os.environ.get('DEBUG_APP', 'false') == "true":
-        debugpy.listen('localhost', 5678)
+        debugpy.listen(('127.0.0.1', 5678))
         debugpy.wait_for_client()
-    print("executing main function...")
+    print("Starting main function...")
     r = genericCountryX()
     #r.countries()
 
@@ -40,7 +41,7 @@ def main():
         layout
         #r.panel().servable()
     )
-    print("you should have a web page rendered....got a page?")
+    print("page rendering complete, please validate results")
 
 
 
