@@ -4,6 +4,11 @@
   "version": "2.0.0",
   "tasks": [
     {
+      "label": "Bokeh: Start Chrome Debugging Instance",
+      "type": "shell",
+      "command": "open -n -b com.google.Chrome --args --no-first-run --no-default-browser-check --new-window --user-data-dir=${env:HOME}/.chrome-developer --remote-debugging-port=9222"
+    },
+    {
       "label": "Bokeh: Run This Workspace",
 
       "type": "shell",
