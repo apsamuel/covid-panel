@@ -1,5 +1,6 @@
-#.ipynb_checkpoints 
+#Pycache files
 lib/__pycache__
+__pycache__
 # Ignore shape files
 data/*.shp 
 data/*.dbf 
