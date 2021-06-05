@@ -4,6 +4,12 @@ warnings.filterwarnings('ignore')
 
 out_dir = './data'
 
+def getmap():
+    return {
+        "full": datasources.fulldb
+    }
+
+
 def main():
     #initialize dbs
     #df_worldometers = datasources.worldometersdb()
@@ -41,6 +47,9 @@ def main():
     df_full.to_csv(
         os.path.join(out_dir, 'fulldb.csv')
     )
+    df_ship.to_csv(
+        os.path.join(out_dir, 'shipdb.csv')
+    )
     df_grouped.to_csv(
         os.path.join(out_dir, 'groupdb.csv') 
     )
@@ -51,5 +60,5 @@ def main():
         os.path.join(out_dir, 'countrywisedb.csv')
     )
 
-
+#print(getmap())
 main()
