@@ -3,10 +3,10 @@ html {
 }
 body {
     margin: auto;
-    background-color: rgba(78, 103, 105, 0.918);
+    background-color: rgba(7, 7, 7, 0.918);
 }
 h1 {
-    margin: 2em 0 0 0;
+    margin: 1em 1em 1em 1em;
     color: #2e484c;
     font-family: 'Julius Sans One', sans-serif;
     font-size: 1.8em;
@@ -51,10 +51,12 @@ p {
     padding: 5px;
 }
 .header {
+    display: flex;
+    justify-content: center;
     flex-grow: 1;
     flex-shrink: 1;
 
-    border: 2px solid darkgray;
+    border: 2px solid rgb(243, 240, 240);
     border-radius: 15px;
     align-self: center;
     align-items: center;
@@ -66,11 +68,11 @@ p {
     /* width: 40vh;
     height: 10vh; */
     /* position: relative; */
-    background-color: #0d8ba1;
+    background-color: #74b0bbee;
     /* float: left;  */
-    /* top: 50%; 
+    top: 50%; 
     left: 50%; 
-    transform: translate(-50%, -50%); */
+    /* transform: translate(-50%, -50%); */
 
 
 }
@@ -86,15 +88,52 @@ p {
 
 }
 .table {
+    display: flex;
+    flex-direction: column;
     flex-grow: 1;
     flex-shrink: 1;
-
     margin: 10px;
-    background-color: burlywood;
+    background-color: #74b0bbee;
+    border: 2px solid rgb(243, 240, 240);
+    border-radius: 15px;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    vertical-align: middle
+}
+/* .table .bk-root div {
+       flex-grow: 1;
+       flex-shrink: 1;
+       margin: 10px;
+       background-color: #3d4344ee;
+       border: 2px solid rgb(243, 240, 240);
+       border-radius: 15px;
+       align-items: center;
+       align-content: center;
+       text-align: center;
+       vertical-align: middle
+} */
+.table_data {
+    flex-grow: 1;
+    flex-shrink: 1;
+    margin: 5px;
+    background-color: #3d4344ee;
+    border: 10px solid rgb(12, 12, 12);
+    border-radius: 15px;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    vertical-align: middle
 }
 .test {
     flex-grow: 1;
     flex-shrink: 1;
     margin: 10px;
-    background-color: darkolivegreen;
+    background-color: #74b0bbee;
+    border: 2px solid rgb(243, 240, 240);
+    border-radius: 15px;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    vertical-align: middle
 }
