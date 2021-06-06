@@ -2,9 +2,8 @@ html {
     width: 100%;
 }
 body {
-    min-width: 80vw;
-    max-width: 80vw;
     margin: auto;
+    background-color: rgba(78, 103, 105, 0.918);
 }
 h1 {
     margin: 2em 0 0 0;
@@ -12,6 +11,7 @@ h1 {
     font-family: 'Julius Sans One', sans-serif;
     font-size: 1.8em;
     text-transform: uppercase;
+    text-rendering: geometricPrecision;
 }
 
 a:link {
@@ -38,4 +38,63 @@ p {
     font-size: 1.2em;
     text-align: justify;
     text-justify: inter-word;
+}
+
+.root {
+    display: flex; 
+    flex-flow: column nowrap;
+    justify-content: space-between safe;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    margin: auto;
+    padding: 5px;
+}
+.header {
+    flex-grow: 1;
+    flex-shrink: 1;
+
+    border: 2px solid darkgray;
+    border-radius: 15px;
+    align-self: center;
+    align-items: center;
+    text-align: center;
+    white-space: nowrap;
+    margin: 10px;
+    padding: 5px;
+    vertical-align: middle;
+    /* width: 40vh;
+    height: 10vh; */
+    /* position: relative; */
+    background-color: #0d8ba1;
+    /* float: left;  */
+    /* top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); */
+
+
+}
+.header_content {
+    flex-grow: inherit;
+    flex-shrink: inherit;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    vertical-align: middle;
+    white-space: inherit;
+    background-color: #9685BA;
+
+}
+.table {
+    flex-grow: 1;
+    flex-shrink: 1;
+
+    margin: 10px;
+    background-color: burlywood;
+}
+.test {
+    flex-grow: 1;
+    flex-shrink: 1;
+    margin: 10px;
+    background-color: darkolivegreen;
 }

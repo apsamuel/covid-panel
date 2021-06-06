@@ -20,15 +20,22 @@
 
 
   <div
-    style="display:flex"
+    class="root"
   >
-    <div>
-      <h1>Covid 19 Dashboard</h1>
+    <div 
+      class="header"
+    >
+
+            <h1>Covid 19 Dashboard</h1>
+
+   
     </div>
 
     <!-- Data Table -->
     <div 
+      class="table"
     > 
+      
       {{ embed(roots.home) }} 
       
 
@@ -36,6 +43,7 @@
 
     <!--  TEST Plot-->
     <div
+      class="test"
     >
       {{ embed(roots.simpleplot)}} 
     </div>
