@@ -3,7 +3,7 @@
 # from lib import genericCountry as genericCountry
 # from lib import datasources as datasources
 
-
+import bokeh
 from operator import ge
 from bokeh.plotting import figure, curdoc
 from bokeh.themes import built_in_themes
@@ -18,6 +18,7 @@ import debugpy
 import os, sys
 import logging
 logging.basicConfig(stream=sys.stdout, level=print)
+bokeh_version=bokeh.__version__
 # df_full = datasources.fixtures(
 #     datasources.fulldb()[0]
 #     )
