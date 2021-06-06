@@ -7,7 +7,7 @@ ___
   - [:building_construction: Setup](#building_construction-setup)
   - [:books: Citations](#books-citations)
 
-This is a [bokeh application](http://docs.bokeh.org/en/1.3.2/docs/user_guide/server.html#userguide-server-applications)
+This is a single page [bokeh application](http://docs.bokeh.org/en/1.3.2/docs/user_guide/server.html#userguide-server-applications) which provides a birds eye visual representation of Covid-19 pandemic statistics from the formal beginning of record keeping to the present time.
 
 ## :checkered_flag: Prerequisites
 

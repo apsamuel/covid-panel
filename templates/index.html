@@ -1,32 +1,46 @@
-
-<head>
-
-  <title>Hello World</title>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/threejs/r84/three.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="style.css" media="screen"/>
-</head>
-
-
-
-
 {% extends base %}
+
+<!-- HEAD -->
+{% block preamble %}
+<title>Covid 19 Bokeh Dashboard</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/threejs/r84/three.min.js"></script>
+{{ bokeh_css }}
+{{ bokeh_js }}
+<style>
+  {% include 'css/style.css' %}
+</style>
+{% endblock %}
+
+
+<!-- CONTENTS -->
 {% block contents %}
 
-<h1>Hello World From Bokeh</h1>
 
+  <div
+    style="display:flex"
+  >
+    <div>
+      <h1>Covid 19 Dashboard</h1>
+    </div>
 
-  <!-- Data Table -->
-  <div 
-    style="display:flex;flex-direction:"
-  > 
-    {{ embed(roots.home) }} 
-    
+    <!-- Data Table -->
+    <div 
+    > 
+      {{ embed(roots.home) }} 
+      
 
+    </div>
+
+    <!--  TEST Plot-->
+    <div
+    >
+      {{ embed(roots.simpleplot)}} 
+    </div>
   </div>
 
- <div>{{ embed(roots.simpleplot)}} </div>
+
 {% endblock %}
 
