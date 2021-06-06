@@ -12,7 +12,7 @@ from bokeh.layouts import widgetbox, layout, column, row
 from bokeh.models import LinearColorMapper, LogColorMapper
 from bokeh.models import ColumnDataSource, GeoJSONDataSource, TableColumn, DataTable
 from bokeh.models import CustomJS, Spinner
-from bokeh.models import DateFormatter, DatetimeTickFormatter, NumeralTickFormatter, MonthsTicker, YearsTicker
+from bokeh.models import DateFormatter, HTMLTemplateFormatter, DatetimeTickFormatter, NumeralTickFormatter, MonthsTicker, YearsTicker
 from bokeh.plotting import figure
 
 from bokeh.models.widgets import Panel, Tabs, TableColumn
@@ -71,14 +71,54 @@ class genericCountryX():
         #print(cols)
         #src = self.source
         #original = copy(self.source)
+        date_format = DateFormatter(format='RFC-1123')
+        count_format = HTMLTemplateFormatter(template="""
+        <div 
+            style="background:<%=
+            (function setBackground(){
+                if(value >= 0 && value <= 2500) {
+                    return("green");
+                }; 
+                if(value >= 2500 && value <= 50000) {
+                    return("yellow");
+                }
+                if(value >=50001) {
+                    return("red");
+                }
+            }()) 
+            %>;
+            color: black">
+            <%= value %>
+        </div>
+        """)
+        #cols = []
+        # Try using formatters...
+        cols = [
+            TableColumn(field='Province/State', name='Province/State'),
+            TableColumn(field='Country/Region', name='Country/Region'), 
+            TableColumn(field='Lat', name='Lat'),
+            TableColumn(field='Long', name='Long'),
+            TableColumn(field='Date', name='Date', formatter=date_format),
+            TableColumn(field='Confirmed', name='Confirmed', formatter=count_format),
+            TableColumn(field='Deaths', name='Deaths', formatter=count_format),
+            TableColumn(field='Recovered', name='Recovered'),
+            TableColumn(field='Active', name='Active', formatter=count_format),
+            TableColumn(field='WHO Region', name='WHO Region')
+        ]
+        
         data_table = DataTable(
             name="data",
             autosize_mode="fit_viewport",
-            columns=self.columns,
+            #columns=self.columns,
+            columns=cols,
             source=self.source,
-            index_header="Index",
-            sizing_mode="scale_both",
+            index_header="Record No.",
+            sizing_mode="stretch_both",
+            #fit_columns=True,
             sortable=True,
+            css_classes=[
+                'table_data'
+            ]
             #columns=list( db.columns ),
 
         )
