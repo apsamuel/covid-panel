@@ -10,9 +10,9 @@ from bokeh.themes import Theme, built_in_themes
 #import lib.datasources as datasources
 #import lib.genericCountry as genericCountry
 # sys.path.append("./lib")
-from lib.genericCountry import genericCountry 
-from lib.genericCountryX import genericCountryX
-
+#from lib.genericCountry import genericCountry 
+from lib.FullDataTable import FullDataTable
+from lib.DataOverview import DataOverview
 from lib import datasources
 import debugpy 
 import os, sys
@@ -32,24 +32,29 @@ def main():
 
     x = [1, 2, 3, 4, 5]
     y = [6, 7, 6, 4, 5]
-    p = figure(title='contrast', name='simpleplot',plot_width=300, plot_height=300)
+    p = figure(title='contrast', name='simpleplot',sizing_mode='scale_both')
     p.line(x, y)
-    r = genericCountryX()
+    p.css_classes = [
+        'plot'
+    ]
+    full_table = FullDataTable()
+    overview = DataOverview()
+    overview_layout = overview.layout(title='overview')
     #r.countries()
 
     #r = genericCountry(dataset=df_full, )
 
-    layout = r.layout()
+    table_layout = full_table.layout()
     #print(type(layout))
     #print(layout)
-    curdoc().template_variables["page_layout"] = layout
+    curdoc().template_variables["page_layout"] = table_layout
     curdoc().theme = Theme(filename='./theme.yaml')
     curdoc().add_root(
-        layout
+        table_layout
         #r.panel().servable()
     )
     curdoc().add_root(
-        p
+        overview_layout
     )
     print("page rendering complete, please validate results")
 

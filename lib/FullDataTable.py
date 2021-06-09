@@ -1,5 +1,3 @@
-
-from re import I
 from . import datasources
 from datetime import date, datetime, timedelta
 from bokeh.tile_providers import get_provider, WIKIMEDIA, CARTODBPOSITRON, STAMEN_TERRAIN, STAMEN_TONER, ESRI_IMAGERY, OSM
@@ -27,7 +25,7 @@ from copy import copy
 
 sys.path.append(".")
 
-class genericCountryX():
+class FullDataTable():
     def __init__(self):
         # initialize full data frame
         self.db = datasources.fixtures(
