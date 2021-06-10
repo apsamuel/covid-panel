@@ -13,6 +13,7 @@ from bokeh.themes import Theme, built_in_themes
 #from lib.genericCountry import genericCountry 
 from lib.FullDataTable import FullDataTable
 from lib.DataOverview import DataOverview
+from lib.ChloropethMap import ChloropethMap
 from lib import datasources
 import debugpy 
 import os, sys
@@ -40,6 +41,8 @@ def main():
     full_table = FullDataTable()
     overview = DataOverview()
     overview_layout = overview.layout(title='overview')
+    # chloro = ChloropethMap()
+    # chloro_layout = chloro.layout()
     #r.countries()
 
     #r = genericCountry(dataset=df_full, )
@@ -56,6 +59,9 @@ def main():
     curdoc().add_root(
         overview_layout
     )
+    # curdoc().add_root(
+    #     chloro_layout
+    # )
     print("page rendering complete, please validate results")
 
 

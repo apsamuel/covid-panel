@@ -67,23 +67,13 @@ class DataOverview():
         # awkward workaround https://github.com/bokeh/bokeh/issues/6895
         mask = (df['Date'] > datetime.fromtimestamp(start_date/1000) ) & (df['Date'] <= datetime.fromtimestamp(end_date/1000) )
         df = df.loc[mask]
-        #reprocess the data frame
-        # df = df[['Date', 'Deaths', 'Recovered', 'Active']] \
-        #     .tail(self.dayrange) \
-        #     .melt(id_vars='Date', value_vars=['Active', 'Deaths', 'Recovered']) \
-        #     .groupby(['variable']) \
-        #     .sum() \
-        #     .reset_index()
-        # df['angle'] =  df['value'] / df['value'].sum() * 2*pi
-        # df['color'] = Category20c[len(df)]
         db = df 
         describe = db.describe().reset_index()
         self.source = ColumnDataSource(describe)
         self.data_table.source = ColumnDataSource(describe)
-        #self.updatecolumn_names = self.db.columns
         print('ok, made it to the end with no error')
         print(self.source.data['Deaths'])
-        #now 
+
 
     def layout(self, title):
         print(self.source.data)
@@ -104,9 +94,27 @@ class DataOverview():
             format="%Y %m %d"
         )
 
+        def make_div():
+            data = self.original
+            print('making initial DIV')
+            return Div(
+                text=f"""
+                Global Covid-19 Stats for all time
+                """
+            )
+
+        def update_div(attr, old, new):
+            print('making DIV')
+            div = Div(
+                text=f"""
+                Global Covid-19 Stats between {datetime.fromtimestamp(new[0]/1000)} and {datetime.fromtimestamp(new[1]/1000)}
+                """
+            )
+            self.layout.children[0].children[1] = div
+
+
         def make_plot():
             print("render initial plot..")
-            #print(f"updating plot due to change in {attr} from old vals {old} to new vals {new}")
             db = self.original.copy(deep=True)
             mask = (db['Date'] > datetime.fromtimestamp(slider.value[0]/1000)
                     ) & (db['Date'] <= datetime.fromtimestamp(slider.value[1]/1000))
@@ -121,15 +129,11 @@ class DataOverview():
             db['color'] = Category20c[len(db)]
 
             plot = figure(
-                # sizing_mode='scale_both',
                 name='overview_plot',
                 title=title,
                 toolbar_location=None,
                 tools="hover",
                 tooltips=f"@variable: @value",
-                # css_classes=[
-                #     'plot'
-                # ]
             )
             plot.annular_wedge(
                 x=0,
@@ -165,15 +169,11 @@ class DataOverview():
             db['color'] = Category20c[len(db)]
 
             plot = figure(
-                # sizing_mode='scale_both',
                 name='overview_plot',
                 title=title,
                 toolbar_location=None,
                 tools="hover",
                 tooltips=f"@variable: @value",
-                # css_classes=[
-                #     'plot'
-                # ]
             )
             plot.annular_wedge(
                 x=0,
@@ -231,6 +231,7 @@ class DataOverview():
         }
         """))
         slider.on_change("value", update_plot)
+        slider.on_change("value", update_div)
         #data_table.source.on_change('data')
         
 
@@ -244,7 +245,7 @@ class DataOverview():
             #     'table'
             # ],
             children=[
-                [make_plot(), div, slider],
+                [make_plot(), make_div(), slider],
                 [data_table,],
             ]
         )
