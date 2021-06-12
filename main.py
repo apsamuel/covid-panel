@@ -13,7 +13,7 @@ from bokeh.themes import Theme, built_in_themes
 #from lib.genericCountry import genericCountry 
 from lib.FullDataTable import FullDataTable
 from lib.DataOverview import DataOverview
-from lib.ChloropethMap import ChloropethMap
+from lib.ChoroplethMap import ChoroplethMap
 from lib import datasources
 import debugpy 
 import os, sys
@@ -24,32 +24,51 @@ bokeh_version=bokeh.__version__
 #     datasources.fulldb()[0]
 #     )
 #originally using 2.2.3 version of bokeh. 
+
+
 def main():
+
+    full_db = datasources.fixtures(
+                datasources.fulldb()[0]
+                )
+    daywise_db = datasources.daywisedb(
+        datasources.groupdb(
+            datasources.fixtures(
+                datasources.fulldb()[0]
+            )
+        )
+    )
+    geo_db = datasources.geodb(
+        datasources.groupdb(
+            datasources.fixtures(
+                datasources.fulldb()[0]
+            )
+        ),
+        datasources.shapesdb(),
+        datasources.codedb()
+    )
+
+    # start debugging session
     if os.environ.get('DEBUG_APP', 'false') == "true":
         debugpy.listen(('127.0.0.1', 5678))
         debugpy.wait_for_client()
     print("Starting main function...")
 
 
-    x = [1, 2, 3, 4, 5]
-    y = [6, 7, 6, 4, 5]
-    p = figure(title='contrast', name='simpleplot',sizing_mode='scale_both')
-    p.line(x, y)
-    p.css_classes = [
-        'plot'
-    ]
-    full_table = FullDataTable()
-    overview = DataOverview()
+    # x = [1, 2, 3, 4, 5]
+    # y = [6, 7, 6, 4, 5]
+    # p = figure(title='contrast', name='simpleplot',sizing_mode='scale_both')
+    # p.line(x, y)
+    # p.css_classes = [
+    #     'plot'
+    # ]
+    full_table = FullDataTable(db=full_db)
+    overview = DataOverview(db=daywise_db)
     overview_layout = overview.layout(title='overview')
-    # chloro = ChloropethMap()
-    # chloro_layout = chloro.layout()
-    #r.countries()
-
-    #r = genericCountry(dataset=df_full, )
-
+    choro = ChoroplethMap(db=geo_db)
+    choro_layout = choro.layout()
     table_layout = full_table.layout()
-    #print(type(layout))
-    #print(layout)
+
     curdoc().template_variables["page_layout"] = table_layout
     curdoc().theme = Theme(filename='./theme.yaml')
     curdoc().add_root(
@@ -59,11 +78,9 @@ def main():
     curdoc().add_root(
         overview_layout
     )
-    # curdoc().add_root(
-    #     chloro_layout
-    # )
+    curdoc().add_root(
+        choro_layout
+    )
     print("page rendering complete, please validate results")
-
-
 
 main()
