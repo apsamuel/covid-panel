@@ -29,20 +29,21 @@ from operator import ge
 import sys, os
 from copy import copy
 from datetime import datetime
-
+import pandas as pd 
 
 sys.path.append(".")
 
 class DataOverview():
-    def __init__(self):
+    def __init__(self, db: pd.core.frame.DataFrame):
         self.dayrange = 100
-        self.db = datasources.daywisedb(
-            datasources.groupdb(
-                datasources.fixtures(
-                    datasources.fulldb()[0]
-                )
-            )   
-        )
+        self.db = db
+        # self.db = datasources.daywisedb(
+        #     datasources.groupdb(
+        #         datasources.fixtures(
+        #             datasources.fulldb()[0]
+        #         )
+        #     )   
+        # )
         self.describe = self.db.describe().reset_index()
         self.source = ColumnDataSource(self.describe)
         self.original = self.db.copy(deep=True)
@@ -236,7 +237,7 @@ class DataOverview():
         
 
         page_layout = layout(
-            name="overview_layout",
+            name="overview_panel",
             spacing=10,
             sizing_mode='scale_both',
             background='#1E2C2EEE',

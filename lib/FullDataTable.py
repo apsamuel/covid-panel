@@ -21,32 +21,22 @@ warnings.filterwarnings('ignore')
 from operator import ge
 import sys, os
 from copy import copy
-
+import pandas as pd 
 
 sys.path.append(".")
 
 class FullDataTable():
-    def __init__(self):
-        # initialize full data frame
-        self.db = datasources.fixtures(
-            datasources.fulldb()[0]
-            )
+    def __init__(self, db: pd.core.frame.DataFrame):
+        self.db = db
         self.numrows = 100
         self.source = ColumnDataSource(self.db)
         self.original = ColumnDataSource(self.db)
         self.countries = list(self.db['Country/Region'].unique()) + ["all"]
         self.columns = [ TableColumn(field=i, name=i) for i in list(self.db.columns) ]
 
-    # def countries(self):
-    #     # get list of countries
-    #     self.countries = list(self.db['Country/Region'].unique())
-    #     return self.countries
     
     def update_source(self, attr, prev, val):
         print(f"updating column data source to reflect change in {attr} previous: {prev} current: {val}")
-        #db = self.db 
-        #db = db[db['Country/Region']==val]
-        #self.source.stream(ColumnDataSource(db))
 
     def refresh_source(self, attr, prev, val):
         print(f"refreshing sources after change in {attr} previous: {prev} current: {val}")
@@ -63,12 +53,6 @@ class FullDataTable():
             print("Attribute: " + attr)
             print("Previous label: " + old)
             print("Updated label: " + new)
-        # setup layout 
-        #db = self.db 
-        #cols = list(db.columns)
-        #print(cols)
-        #src = self.source
-        #original = copy(self.source)
         date_format = DateFormatter(format='RFC-1123')
         count_format = HTMLTemplateFormatter(template="""
         <div 
@@ -89,8 +73,6 @@ class FullDataTable():
             <%= value %>
         </div>
         """)
-        #cols = []
-        # Try using formatters...
         cols = [
             TableColumn(field='Province/State', name='Province/State'),
             TableColumn(field='Country/Region', name='Country/Region'), 
@@ -105,39 +87,27 @@ class FullDataTable():
         ]
         
         data_table = DataTable(
-            name="data",
+            name="full_table_data",
             autosize_mode="fit_viewport",
-            #columns=self.columns,
             columns=cols,
             source=self.source,
             index_header="Record No.",
             sizing_mode="stretch_both",
-            #fit_columns=True,
             sortable=True,
             css_classes=[
                 'table_data'
             ]
-            #columns=list( db.columns ),
 
         )
         self.data_table = data_table
-        #print(type(db))
-        #print(type(src))
-        #print(type(data_table))
-        #panel = Panel()
-        # uses tabs 
-
         #select drop down for countries
         select = Select(
-            name="select",
+            name="full_table_select",
             title="Select Country:",
             value="Cuba",
             options=self.countries
         )
 
-        #source_copy = copy(self.source)
-
-        #play with values on change in console log
         select.js_on_change("value", CustomJS(args=dict(source=self.source, test='hello world', orig = self.original,obj=self.data_table),code="""
         var data = source.data;
         var idx = data['index'].length;
@@ -207,7 +177,7 @@ class FullDataTable():
                 [data_table, ],
             ],
             #sizing_mode='scale_both',
-            name='home',
+            name='full_table',
 
         )
         #select = "Testing"
