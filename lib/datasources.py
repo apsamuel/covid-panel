@@ -246,7 +246,13 @@ def shapesdb():
     open(os.path.basename(r.url), 'wb').write(r.content)
 
     with zipfile.ZipFile(os.path.basename(r.url), "r") as zf:
-        zf.extractall(path='data')
+        #zf.extractall(path='data')
+        # only extract the needed file into data dir
+        zf.extract('ne_110m_admin_0_countries.shp', path='./data')
+        zf.extract('ne_110m_admin_0_countries.shx', path='./data')
+        zf.extract('ne_110m_admin_0_countries.prj', path='./data')
+        zf.extract('ne_110m_admin_0_countries.cpg', path='./data')
+        zf.extract('ne_110m_admin_0_countries.dbf', path='./data')
 
     if os.path.exists(os.path.basename(r.url)):
         os.remove(os.path.basename(r.url))
@@ -261,7 +267,7 @@ def shapesdb():
         'ADMIN': 'Official Name',
         'ADM0_A3': 'alpha_3'
     })
-    gdf = gdf.to_crs(3857)
+    #gdf = gdf.to_crs(3857)
     return gdf
 
 

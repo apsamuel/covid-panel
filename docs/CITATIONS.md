@@ -12,3 +12,6 @@
   - > **Author:** The Oxford COVID-19 Government Response Tracker
     - > [source](https://www.bsg.ox.ac.uk/research/research-projects/coronavirus-government-response-tracker#data)
     - > [details](https://github.com/OxCGRT/covid-policy-tracker/blob/master/documentation/codebook.md)
+- > Mapping Data used in Chloropeth maps and etc.
+  - > **Author:** Natural Earth
+    - > [source](https://www.naturalearthdata.com/downloads/110m-cultural-vectors/)
