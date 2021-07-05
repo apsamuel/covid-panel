@@ -15,3 +15,7 @@
 - > Mapping Data used in Chloropeth maps and etc.
   - > **Author:** Natural Earth
     - > [source](https://www.naturalearthdata.com/downloads/110m-cultural-vectors/)
+- > Data Scraping & Plot Concepts referenced & inspired by
+  - > **Author:** Devakumar kp
+    - > [source](https://www.kaggle.com/imdevskp)
+    - > [project](https://www.kaggle.com/imdevskp/covid-19-analysis-visualization-comparisons)
