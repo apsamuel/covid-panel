@@ -9,6 +9,17 @@
       "command": "open -n -b com.google.Chrome --args --no-first-run --no-default-browser-check --new-window --user-data-dir=${env:HOME}/.chrome-developer --remote-debugging-port=9222"
     },
     {
+      "label": "Bokeh: Curl Application",
+
+      "type": "shell",
+      "command": "curl http://localhost:5006/covid-panel",
+      "group": "build",
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      }
+    },
+    {
       "label": "Bokeh: Run This Workspace",
 
       "type": "shell",
@@ -20,15 +31,37 @@
       }
     },
     {
-      "label": "Bokeh: Run This Workspace (debug)",
+      "label": "Bokeh: Run This Workspace (debug intenal)",
 
       "type": "shell",
-      "command": "DEBUG_APP=true /Users/photon/Anaconda/anaconda3/envs/pyviz2/bin/bokeh serve --log-level debug --dev --show ${workspaceFolder}",
+      "command": "DEBUG_APP=true /Users/photon/Anaconda/anaconda3/envs/pyviz2/bin/bokeh serve --websocket-max-message-size 5767168000 --log-level debug --dev --show ${workspaceFolder}",
       "group": "build",
       "presentation": {
         "reveal": "always",
         "panel": "new"
       }
-    }
+    },
+    {
+      "label": "Bokeh: Run This Workspace (debug external)",
+      "type": "shell",
+      "command": "DEBUG_APP=false /Users/photon/Anaconda/anaconda3/envs/pyviz2/bin/bokeh serve --websocket-max-message-size 5767168000 --log-level debug --dev --show ${workspaceFolder}",
+      "group": "build",
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      }
+    },
+    {
+      "label": "Bokeh: Chrome Debug (pyattach)",
+      "type": "shell",
+      "command": "/Users/photon/Anaconda/anaconda3/envs/pyviz2/bin/python  -m debugpy --listen 5678 /Users/photon/Anaconda/anaconda3/envs/pyviz2/bin/bokeh serve --websocket-max-message-size 5767168000 --log-level debug ${workspaceFolder}",
+      "group": "build",
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated"
+
+      }
+    },
+  
   ]
 }

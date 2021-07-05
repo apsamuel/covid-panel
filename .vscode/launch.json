@@ -1,13 +1,23 @@
 {
   "version": "0.1.0",
   "configurations": [
-
+    
     {
-      "name": "Bokeh Launch Application",
-      "type": "chrome",
+      "name": "Python: Current File",
+      "type": "python",
       "request": "launch",
-      "url": "http://localhost:5006/covid-panel",
-      "webRoot": "${workspaceFolder}/static"
+      "program": "${file}",
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Python: Attach using Process Id",
+      "type": "python",
+      "request": "attach",
+      "processId": "${command:pickProcess}",
+      "connect": {
+        "host":"127.0.0.1",
+        "port": 5678
+      }
     },
     {
       "name": "Bokeh: Chrome Debug (attach)",
@@ -18,19 +28,46 @@
       "webRoot": "${workspaceFolder}/"
     },
     {
-      "name": "Bokeh: Python Debug (attach)",
+      "name": "Bokeh (launch deep debugger)",
       "type": "python",
-      "request": "attach",
-      "port": 5678,
-      "host": "127.0.0.1",
-      "justMyCode": false,
-      "redirectOutput": true,
-      "pathMappings": [
-        {
-          "localRoot": "${workspaceFolder}",
-          "remoteRoot": "."
-        }
-      ]
-    }
+      "request": "launch",
+      "program": "/Users/photon/Anaconda/anaconda3/envs/pyviz2/bin/bokeh",
+      "gevent": false,
+      "subProcess": true,
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "args": [
+        "serve",
+        "--websocket-max-message-size",
+        "5767168000",
+        "--log-level",
+        "debug",
+        "${workspaceFolder}"
+      ],
+      "env": {
+        "DEBUG_APP": "true"
+      }
+    },
+    {
+      "name": "Bokeh (launch)",
+      "type": "python",
+      "request": "launch",
+      "program": "/Users/photon/Anaconda/anaconda3/envs/pyviz2/bin/bokeh",
+      "gevent": false,
+      "subProcess": true,
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "args": [
+        "serve",
+        "--websocket-max-message-size",
+        "5767168000",
+        "--log-level",
+        "debug",
+        "${workspaceFolder}"
+      ],
+      "env": {
+        "DEBUG_APP": "false"
+      }
+    },
   ]
 }

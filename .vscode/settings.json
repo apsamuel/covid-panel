@@ -8,5 +8,6 @@
     "python.testing.pytestEnabled": true,
     "terminal.integated.env.osx": {
         "PYTHONPATH": "${env:PYTHONPATH}:./lib:./src"
-    }
+    },
+    "python.pythonPath": "/Users/photon/Anaconda/anaconda3/envs/pyviz2/bin/python"
 }
