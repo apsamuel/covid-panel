@@ -42,7 +42,36 @@ def srcbase() -> dict:
         'base': "https://countrycode.org/"
     },
     'countryshapes': {
-        'base': 'https://naciscdn.org/naturalearth/110m/cultural/ne_110m_admin_0_countries.zip'
+        'base': 'https://naciscdn.org/naturalearth/110m/cultural/ne_110m_admin_0_countries.zip',
+        'admin_0': {
+                'countries': {
+                    10: 'https://naciscdn.org/naturalearth/10m/cultural/ne_10m_admin_0_countries.zip',
+                    50: 'https://naciscdn.org/naturalearth/50m/cultural/ne_50m_admin_0_countries.zip',
+                    110: 'https://naciscdn.org/naturalearth/110m/cultural/ne_110m_admin_0_countries.zip'
+                },
+                'sovereignty': {
+                    10: 'https://naciscdn.org/naturalearth/10m/cultural/ne_10m_admin_0_sovereignty.zip',
+                    50: 'https://naciscdn.org/naturalearth/10m/cultural/ne_50m_admin_0_sovereignty.zip',
+                    110: 'https://naciscdn.org/naturalearth/10m/cultural/ne_110m_admin_0_sovereignty.zip',
+                },
+                'boundary_lines_land': {
+                    10: 'https://naciscdn.org/naturalearth/10m/cultural/ne_10m_admin_0_boundary_lines_land.zip',
+                    50: 'https://naciscdn.org/naturalearth/10m/cultural/ne_50m_admin_0_boundary_lines_land.zip',
+                    110: 'https://naciscdn.org/naturalearth/10m/cultural/ne_110m_admin_0_boundary_lines_land.zip',
+                },
+        },
+        'admin_1': {
+                'states_provinces': {
+                    10: 'https://naciscdn.org/naturalearth/10m/cultural/ne_10m_admin_1_states_provinces.zip',
+                    50: 'https://naciscdn.org/naturalearth/50m/cultural/ne_50m_admin_1_states_provinces.zip',
+                    110: 'https://naciscdn.org/naturalearth/110m/cultural/ne_110m_admin_1_states_provinces.zip'
+                },
+            },
+        'none': {
+                'populated_places': {
+                    110: 'https://naciscdn.org/naturalearth/110m/cultural/ne_110m_populated_places.zip'
+                }
+        }     
     },
     'timeseries': {
         'base': 'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/',
@@ -271,6 +300,37 @@ def shapesdb():
     return gdf
 
 
+def shapesdbv2(shape_key,shape_type,scale):
+    #url = 'https://naciscdn.org/naturalearth/110m/cultural/ne_110m_admin_0_countries.zip'
+    r = curl.get(srcbase['countryshapes'][shape_key][shape_type][scale], allow_redirects=True)
+    open(os.path.basename(r.url), 'wb').write(r.content)
+
+    with zipfile.ZipFile(os.path.basename(r.url), "r") as zf:
+        #zf.extractall(path='data')
+        # only extract the needed file into data dir
+        zf.extract(f"ne_{scale}m_{shape_key}_{shape_type}.shp", path='./data')
+        zf.extract(f"ne_{scale}m_{shape_key}_{shape_type}.shx", path='./data')
+        zf.extract(f"ne_{scale}m_{shape_key}_{shape_type}.prj", path='./data')
+        zf.extract(f"ne_{scale}m_{shape_key}_{shape_type}.cpg", path='./data')
+        zf.extract(f"ne_{scale}m_{shape_key}_{shape_type}.dbf", path='./data')
+
+    if os.path.exists(os.path.basename(r.url)):
+        os.remove(os.path.basename(r.url))
+
+    gdf = gpd.read_file(
+        os.path.join(
+            f"data",
+            f"ne_{scale}m_{shape_key}_{shape_type}.shp"
+        )
+    )
+    gdf = gdf.rename(columns={
+        'ADMIN': 'Official Name',
+        'ADM0_A3': 'alpha_3'
+    })
+    #gdf = gdf.to_crs(3857)
+    return gdf
+
+
 # generate full database from latest upload
 def fulldb():
     df_global_confirmed = dfget_timeseries(
@@ -473,6 +533,12 @@ def fixtures(df):
     df.loc[df['Country/Region'] == "West Bank and Gaza",
            'Country/Region'] = 'Palestine'
     df['Country/Region'] = df['Country/Region'].replace('Taiwan*', 'Taiwan')
+    return df
+
+def attachmercatorcols(df, latcol, loncol):
+    k = 6378137 
+    df['x'] = df[loncol] *   (k * np.pi/180.0)
+    df['y'] = np.log(np.tan((90 + df[latcol]) * np.pi/360.0)) * k
     return df
 
 
