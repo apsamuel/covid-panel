@@ -2,13 +2,16 @@
 lib/__pycache__
 __pycache__
 *.pyc
-# Ignore shape files
+# Ignore shape and binary files
 data/*.shp 
 data/*.dbf 
 data/*.prj
 data/*.shx
 data/*.txt
 data/*.html
+data/*.cpg
+data/*.zip
+*.zip
 
 # Local & development files which may be ignored
 .DS_Store
