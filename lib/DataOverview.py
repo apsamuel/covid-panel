@@ -31,19 +31,20 @@ from copy import copy
 from datetime import datetime
 import pandas as pd 
 
+from lib.loginator import Loginator
+log = logging.getLogger(__name__)
+logger = Loginator(
+    logger=log,
+    lvl='DEBUG'
+).logger
+
+
 sys.path.append(".")
 
 class DataOverview():
     def __init__(self, db: pd.core.frame.DataFrame):
         self.dayrange = 100
         self.db = db
-        # self.db = datasources.daywisedb(
-        #     datasources.groupdb(
-        #         datasources.fixtures(
-        #             datasources.fulldb()[0]
-        #         )
-        #     )   
-        # )
         self.describe = self.db.describe().reset_index()
         self.source = ColumnDataSource(self.describe)
         self.original = self.db.copy(deep=True)
@@ -57,13 +58,13 @@ class DataOverview():
         self.db['color'] = Category20c[len(self.db)]
         self.numrows = 100
         self.column_names = self.db.columns
+        logger.debug("[DataOverview] Initialized an instance..")
 
     def update(self, attr, prev, val):
-        print(
-            f"received update request from {attr} from {datetime.fromtimestamp(prev[0]/1000)} and {datetime.fromtimestamp(prev[1]/1000)} to {datetime.fromtimestamp(val[0]/1000)} and {datetime.fromtimestamp(val[1]/1000)}")
+        logger.debug(
+            f"[DataOverview] slider update request from {attr} from {datetime.fromtimestamp(prev[0]/1000)} and {datetime.fromtimestamp(prev[1]/1000)} to {datetime.fromtimestamp(val[0]/1000)} and {datetime.fromtimestamp(val[1]/1000)}")
         df = self.original.copy(deep=True)
         start_date, end_date = val
-        print(f"debug values: {start_date} {end_date}")
         #update df based on dates 
         # awkward workaround https://github.com/bokeh/bokeh/issues/6895
         mask = (df['Date'] > datetime.fromtimestamp(start_date/1000) ) & (df['Date'] <= datetime.fromtimestamp(end_date/1000) )
@@ -72,12 +73,13 @@ class DataOverview():
         describe = db.describe().reset_index()
         self.source = ColumnDataSource(describe)
         self.data_table.source = ColumnDataSource(describe)
-        print('ok, made it to the end with no error')
-        print(self.source.data['Deaths'])
+        logger.debug(
+            "[DataOverview] data overview slider update request complete")
 
 
     def layout(self, title):
-        print(self.source.data)
+        logger.debug(
+            "[DataOverview] generating DataOveview layout")
         div = Div(
             text="""
             <h1>This can be a dynamic value, but it is it properly aligned?</h1>
@@ -97,7 +99,6 @@ class DataOverview():
 
         def make_div():
             data = self.original
-            print('making initial DIV')
             return Div(
                 text=f"""
                 Global Covid-19 Stats for all time
@@ -105,7 +106,6 @@ class DataOverview():
             )
 
         def update_div(attr, old, new):
-            print('making DIV')
             div = Div(
                 text=f"""
                 Global Covid-19 Stats between {datetime.fromtimestamp(new[0]/1000)} and {datetime.fromtimestamp(new[1]/1000)}
@@ -115,7 +115,8 @@ class DataOverview():
 
 
         def make_plot():
-            print("render initial plot..")
+            logger.debug(
+                "[DataOverview] configuring DataOverview plot")
             db = self.original.copy(deep=True)
             mask = (db['Date'] > datetime.fromtimestamp(slider.value[0]/1000)
                     ) & (db['Date'] <= datetime.fromtimestamp(slider.value[1]/1000))
@@ -152,10 +153,12 @@ class DataOverview():
                 legend='variable',
                 source=db
             )
+            logger.debug("overview plot configured")
             return plot 
 
         def update_plot(attr, old, new):
-            print(f"updating plot due to change in {attr} from old vals {old} to new vals {new}")
+            logger.debug(
+                f"[DataOverview] updating overview plot due to change in {attr} from old vals {old} to new vals {new}")
             db = self.original.copy(deep=True)
             mask = (db['Date'] > datetime.fromtimestamp(new[0]/1000)
                     ) & (db['Date'] <= datetime.fromtimestamp(new[1]/1000))
@@ -219,7 +222,7 @@ class DataOverview():
 
 
         self.data_table = data_table 
-        print(type(self.source))
+        logger.debug(type(self.source))
         slider.on_change("value", self.update)
         slider.js_on_change("value", CustomJS( args=dict(source=self.source, data_table=self.data_table) , code="""
         var data = source.data;

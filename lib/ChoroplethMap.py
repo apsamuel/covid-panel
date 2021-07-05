@@ -1,3 +1,4 @@
+from lib.loginator import Loginator
 from math import pi
 import os
 import sys
@@ -34,6 +35,13 @@ from copy import copy
 from datetime import datetime
 import pandas as pd
 import bokeh 
+
+log = logging.getLogger(__name__)
+logger = Loginator(
+    logger=log,
+    lvl='DEBUG'
+).logger
+
 sys.path.append(".")
 
 
