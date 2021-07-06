@@ -1,5 +1,5 @@
 """The datasources module provides methods for acquiring statistical & geometric data 
-pertaining to the COVID-19 pandemic
+pertaining to the COVID-19 pandemiFunctionsi
 """
 #import sys
 import os
@@ -43,7 +43,7 @@ class PandasTimeStampEncoder(json.JSONEncoder):
 #@pytest.fixture
 def srcbase() -> dict:
     """Creates dict object containing Host and URLs for data acquisition referenced directly by data acquisition methods
-    
+
     Parameters
     ----------
     None
@@ -783,13 +783,40 @@ def worldometersdb():
     data_frame = pd.DataFrame(body_rows[:len(body_rows)-6], columns=head_rows[0])
     data_frame = data_frame.iloc[8:, :-3].reset_index(drop=True)
     data_frame = data_frame.drop('#', axis=1)
-    data_frame.columns = ['Country/Region', 'TotalCases', 'NewCases', 'TotalDeaths', 'NewDeaths',
-                  'TotalRecovered', 'NewRecovered', 'ActiveCases', 'Serious,Critical',
-                  'Tot Cases/1M pop', 'Deaths/1M pop', 'TotalTests', 'Tests/1M pop',
-                  'Population', 'Continent']
-    data_frame = data_frame[['Country/Region', 'Continent', 'Population', 'TotalCases', 'NewCases', 'TotalDeaths', 'NewDeaths',
-             'TotalRecovered', 'NewRecovered', 'ActiveCases', 'Serious,Critical',
-             'Tot Cases/1M pop', 'Deaths/1M pop', 'TotalTests', 'Tests/1M pop']]
+    data_frame.columns = [
+        'Country/Region',
+        'TotalCases',
+        'NewCases',
+        'TotalDeaths',
+        'NewDeaths',
+        'TotalRecovered',
+        'NewRecovered',
+        'ActiveCases',
+        'Serious,Critical',
+        'Tot Cases/1M pop',
+        'Deaths/1M pop',
+        'TotalTests',
+        'Tests/1M pop',
+        'Population',
+        'Continent',
+    ]
+    data_frame = data_frame[[
+        'Country/Region',
+        'Continent',
+        'Population',
+        'TotalCases',
+        'NewCases',
+        'TotalDeaths',
+        'NewDeaths',
+        'TotalRecovered',
+        'NewRecovered',
+        'ActiveCases',
+        'Serious,Critical',
+        'Tot Cases/1M pop',
+        'Deaths/1M pop',
+        'TotalTests',
+        'Tests/1M pop',
+    ]]
 
     data_frame['WHO Region'] = data_frame['Country/Region'].map(whomembers(variation=True))
 
@@ -803,16 +830,36 @@ def worldometersdb():
     return data_frame
 
 
-def geodb(df_any, df_shapes, df_codes):
+def geodb(df_grouped: pd.core.frame.DataFrame,
+          df_shapes: gpd.geodataframe.GeoDataFrame,
+          df_codes: pd.core.frame.DataFrame) -> gpd.geodataframe.GeoDataFrame:
+    """Creates GeoPandas DataFrame from a grouped DataFram
+    This is accomplished by:
+        - merging the codedb on 'Country/Region' Column
+        - merging the shapesdb on 'alpha_3' Column
+
+    Parameters
+    -----------
+    df_grouped: pd.core.frame.DataFrame
+        A Grouped DataFrame
+    df_shapes: gpd.geodataframe.GeoDataFrame
+        A GeoPandas shape dataframe
+    df_codes: pd.core.frame.DataFrame
+        The country codes DataFrame, containing a column 'alpha_3' with ISO codes for countries
+
+    Returns
+    -----------
+    pd.DataFrame = a pandas DataFrame
     """
-    Placeholder
-    """
-    df = pd.merge(df_any, df_codes, how='left', on=['Country/Region'])
-    df['alpha_3'] = df['alpha_3'].astype('str')
-    df['alpha_2'] = df['alpha_2'].astype('str')
-    df['alpha_3'] = df.alpha_3.str.strip()
-    df['alpha_2'] = df.alpha_2.str.strip()
-    df['alpha_2'] = df.alpha_2.str.lower()
-    gdf = df_shapes.merge(df, left_on='alpha_3',
-                          right_on='alpha_3', how='left')
-    return gdf
+    tmp = pd.merge(df_grouped, df_codes, how='left', on=['Country/Region'])
+    tmp['alpha_3'] = tmp['alpha_3'].astype('str')
+    tmp['alpha_2'] = tmp['alpha_2'].astype('str')
+    tmp['alpha_3'] = tmp.alpha_3.str.strip()
+    tmp['alpha_2'] = tmp.alpha_2.str.strip()
+    tmp['alpha_2'] = tmp.alpha_2.str.lower()
+    geo_data_frame = df_shapes.merge(tmp,
+
+                          left_on='alpha_3',
+                          right_on='alpha_3',
+                          how='left')
+    return geo_data_frame
