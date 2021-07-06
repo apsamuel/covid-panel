@@ -1,4 +1,4 @@
-"""The datasources module provides methods for acquiring statistical & geometric data 
+"""The datasources module provides methods for acquiring statistical & geometric data
 pertaining to the COVID-19 pandemiFunctionsi
 """
 #import sys
@@ -42,7 +42,7 @@ class PandasTimeStampEncoder(json.JSONEncoder):
 
 #@pytest.fixture
 def srcbase() -> dict:
-    """Creates dict object containing Host and URLs for data acquisition referenced directly by data acquisition methods
+    """Creates dict object containing Host & URLs for data acquisition
 
     Parameters
     ----------
@@ -50,7 +50,7 @@ def srcbase() -> dict:
 
     Returns
     ----------
-    dict - A dictionary containing Base URLs and full URIs for various data sources used throughout the application
+    dict - A dict containing data source Base URLs & full URIs
     """
     shape_base_url = 'https://naciscdn.org/naturalearth'
     jhu_base_url = 'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master'
@@ -220,7 +220,7 @@ def dfelongate(data_frame: pd.core.frame.DataFrame,
         the name to provide the Date column values are melted into
     value: str
         the column name to melt on
- 
+
     Returns
     ----------
     pd.DataFrame - A pandas DataFrame
@@ -264,7 +264,7 @@ def dfmerge(left=None, right=None, how='left', on_columns=None):
 
 def codedb():
     """Shamelessly scrapes the countrycodes base source website to generate
-    a pandas DataFrame. This is unwise and may break but is used to 
+    a pandas DataFrame. This is unwise and may break but is used to
     map Countries to their official ISO codes! =)
 
     Parameters
@@ -346,7 +346,17 @@ def shapesdb():
 
 
 def shapesdbv2(shape_key,shape_type,scale):
-    """
+    """Fetch respective binary shape files from natural earth
+
+    Parameters
+    -----------
+    shape_key: str
+        - admin_0: administrative level 0 detail
+        - admin_1: administrative level 1 detail
+    shape_type: str
+        - countries: Country Level Boundaries
+        - sovereignty: Sovereign level Boundaries
+        - boundary_lines_land: Land line Boundaryies
     Placeholder
     """
     #url = 'https://naciscdn.org/naturalearth/110m/cultural/ne_110m_admin_0_countries.zip'
@@ -544,7 +554,7 @@ def daywisedb(df_full: pd.core.frame.DataFrame) -> pd.core.frame.DataFrame:
     - resets index
     - adds following columns:
         - Deaths / 100 Cases
-        - Recovered / 100 Cases 
+        - Recovered / 100 Cases
         - Deaths / 100 Recovered
     - adds column for 'No. of Countries'
     - calculates and adds columns for
