@@ -1,0 +1,3 @@
+[Master]
+init-hook="sys.path.append('.')"
+extension-pkg-whitelist=numpy,pandas,geopandas
