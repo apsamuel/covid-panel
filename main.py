@@ -1,22 +1,32 @@
-#from lib import datasources
-# lib directory such that other libs can use each other
-# from lib import genericCountry as genericCountry
-# from lib import datasources as datasources
+"""
+Main
+----
 
-import bokeh
-import pandas as pd
-from operator import ge
-import debugpy
+* Main module is executed when the CLI argument "bokeh serve <appDir>" is called.
+* Primary function is to instantiate the:
+    - `main` data source objects
+    - content class objects added to the DOM within the jinja
+* These objects produce the original "View" the user sees when visiting the dashboard
+"""
+
+#from operator import ge
 import os
 import sys
 import logging
-from bokeh.plotting import figure, curdoc
-from bokeh.themes import Theme, built_in_themes
+import bokeh
+import pandas as pd
+import debugpy
+from bokeh.plotting import (
+    curdoc,
+)
+from bokeh.themes import (
+    Theme,
+)
 from lib.FullDataTable import FullDataTable
 from lib.DataOverview import DataOverview
 from lib.ChoroplethMap import ChoroplethMap
 from lib import datasources
-import lib.loginator 
+import lib.loginator
 log = logging.getLogger(__name__)
 logger = lib.loginator.Loginator(
     logger=log,
@@ -27,14 +37,18 @@ logger = lib.loginator.Loginator(
 
 
 def main():
+    """
+    Main application module
+    """
+    #debugpy.debug_this_thread()
+    sys_version = sys.version
     bokeh_version = bokeh.__version__
     pandas_version = pd.__version__
-    #debugpy.breakpoint()
     logger.debug("[main] starting main steps")
     logger.debug(f"[main] Pandas Version: {pandas_version}")
     logger.debug(f"[main] Bokeh Version: {bokeh_version}")
-
-    # data records
+    logger.debug(f"[main] Python Version: {sys_version}")
+    # generate data records
     logger.debug("[main] beginning full_db data source init")
     full_db = datasources.fixtures(
                 datasources.fulldb()[0]
@@ -46,7 +60,6 @@ def main():
             )
         )
     )
-    #debugpy.breakpoint()
     geo_db = datasources.geodb(
         datasources.groupdb(
             datasources.fixtures(
@@ -56,20 +69,9 @@ def main():
         datasources.shapesdb(),
         datasources.codedb()
     )
-    #debugpy.breakpoint()
+
     logger.debug("[main] data init complete")
-
-    # optionally start debugging session
-    # if os.environ.get('DEBUG_APP', 'false') == "true":
-    #     logger.debug("debug mode has been enabled, please connect a client to port 5678")
-    #     debugpy.listen(('127.0.0.1', 5678))
-    #     debugpy.wait_for_client()
-
-
-    # add main content to DOM
     logger.debug("[main] generating page layout objects")
-
-    #debugpy.debug_this_thread()
     full_table = FullDataTable(db=full_db)
     overview = DataOverview(db=daywise_db)
     overview_layout = overview.layout(title='overview')
@@ -91,15 +93,15 @@ def main():
         choro_layout
     )
 
-    # fin... 
+    # fin...
     logger.debug("[main] page has been rendered, please do validate the results in a browser")
     logger.debug('[main] starting debugging')
     #debugpy.listen(('127.0.0.1', 5678))  # testing a breakpoint
-    
+
     if os.environ.get('DEBUG_APP', False) == 'true':
+        logger.debug("[main] debugging value is {os.environ.get('DEBUG_APP', False)}")
         logger.debug("[main] entering breakpoint")
         debugpy.breakpoint()
-    logger.debug("[main] completed breakpoint")
+        logger.debug("[main] completed breakpoint")
 
 main()
-
