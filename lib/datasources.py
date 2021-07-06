@@ -1,34 +1,51 @@
-# for web requests
-import requests as curl
-from urllib.parse import urlparse, urljoin
-from bs4 import BeautifulSoup
-# for file io, system & os functions
-import sys
+"""
+lib/datasources abstracts functions related to acquiring and reshaping/restructuring data sets
+
+Usage:
+```
+import lib.datasources as datasources
+full_db, ship_db = datasources.fulldb()
+```
+"""
+#import sys
 import os
 import io
-import glob
+#import glob
 import zipfile
 import warnings
-import re
-from random import randint
-# for handling json
 import json
-# for handling iterables
-import itertools
-# for math and datascience
-from math import pi
+#import itertools
+#from math import pi
+from urllib.parse import (
+    #urlparse,
+    urljoin)
+from datetime import (
+    #date,
+    #datetime,
+    timedelta)
+import requests as curl
+from bs4 import BeautifulSoup
 import numpy as np
 import pandas as pd
 import geopandas as gpd
-import pycountry as country
-from pyproj import Proj, transform
+from .who import (
+    whomembers
+)
+#import pycountry as country
+#from pyproj import (
+#    Proj,
+#    transform)
 # for date and time functions
-from datetime import date, datetime, timedelta
-import pytest
+
+#import pytest
+#import timeit
 
 warnings.filterwarnings('ignore')
 
 class PandasTimeStampEncoder(json.JSONEncoder):
+    """
+    Used when calling "to_json" on dataframes to properly convert the datetime type column(s)
+    """
     def default(self, o):
         if isinstance(o, pd._libs.tslibs.timestamps.Timestamp):
             return o.strftime('%Y-%m-%d')
@@ -36,137 +53,167 @@ class PandasTimeStampEncoder(json.JSONEncoder):
 
 #@pytest.fixture
 def srcbase() -> dict:
-    srcbase = {
-    'base': 'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/',
-    'countrycodes': {
-        'base': "https://countrycode.org/"
-    },
-    'countryshapes': {
-        'base': 'https://naciscdn.org/naturalearth/110m/cultural/ne_110m_admin_0_countries.zip',
-        'admin_0': {
+    """
+    Contains source URLs to datasources used in visualizations
+    Returns dictionary
+    """
+    shape_base_url = 'https://naciscdn.org/naturalearth'
+    jhu_base_url = 'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master'
+
+    s_base = {
+        'base': f'{jhu_base_url}/csse_covid_19_data/',
+        'countrycodes': {
+            'base': "https://countrycode.org/"
+        },
+        'countryshapes': {
+            'base':
+            'https://naciscdn.org/naturalearth/110m/cultural/ne_110m_admin_0_countries.zip',
+            'admin_0': {
                 'countries': {
-                    10: 'https://naciscdn.org/naturalearth/10m/cultural/ne_10m_admin_0_countries.zip',
-                    50: 'https://naciscdn.org/naturalearth/50m/cultural/ne_50m_admin_0_countries.zip',
-                    110: 'https://naciscdn.org/naturalearth/110m/cultural/ne_110m_admin_0_countries.zip'
+                    10:
+                    f'{shape_base_url}/10m/cultural/ne_10m_admin_0_countries.zip',
+                    50:
+                    f'{shape_base_url}/50m/cultural/ne_50m_admin_0_countries.zip',
+                    110:
+                    f'{shape_base_url}/110m/cultural/ne_110m_admin_0_countries.zip'
                 },
                 'sovereignty': {
-                    10: 'https://naciscdn.org/naturalearth/10m/cultural/ne_10m_admin_0_sovereignty.zip',
-                    50: 'https://naciscdn.org/naturalearth/10m/cultural/ne_50m_admin_0_sovereignty.zip',
-                    110: 'https://naciscdn.org/naturalearth/10m/cultural/ne_110m_admin_0_sovereignty.zip',
+                    10:
+                    f'{shape_base_url}/10m/cultural/ne_10m_admin_0_sovereignty.zip',
+                    50:
+                    f'{shape_base_url}/10m/cultural/ne_50m_admin_0_sovereignty.zip',
+                    110:
+                    f'{shape_base_url}/10m/cultural/ne_110m_admin_0_sovereignty.zip',
                 },
                 'boundary_lines_land': {
-                    10: 'https://naciscdn.org/naturalearth/10m/cultural/ne_10m_admin_0_boundary_lines_land.zip',
-                    50: 'https://naciscdn.org/naturalearth/10m/cultural/ne_50m_admin_0_boundary_lines_land.zip',
-                    110: 'https://naciscdn.org/naturalearth/10m/cultural/ne_110m_admin_0_boundary_lines_land.zip',
-                },
-        },
-        'admin_1': {
-                'states_provinces': {
-                    10: 'https://naciscdn.org/naturalearth/10m/cultural/ne_10m_admin_1_states_provinces.zip',
-                    50: 'https://naciscdn.org/naturalearth/50m/cultural/ne_50m_admin_1_states_provinces.zip',
-                    110: 'https://naciscdn.org/naturalearth/110m/cultural/ne_110m_admin_1_states_provinces.zip'
+                    10:
+                    f'{shape_base_url}/10m/cultural/ne_10m_admin_0_boundary_lines_land.zip',
+                    50:
+                    f'{shape_base_url}/10m/cultural/ne_50m_admin_0_boundary_lines_land.zip',
+                    110:
+                    f'{shape_base_url}/10m/cultural/ne_110m_admin_0_boundary_lines_land.zip',
                 },
             },
-        'none': {
+            'admin_1': {
+                'states_provinces': {
+                    10:
+                    f'{shape_base_url}/10m/cultural/ne_10m_admin_1_states_provinces.zip',
+                    50:
+                    f'{shape_base_url}/50m/cultural/ne_50m_admin_1_states_provinces.zip',
+                    110:
+                    f'{shape_base_url}/110m/cultural/ne_110m_admin_1_states_provinces.zip'
+                },
+            },
+            'none': {
                 'populated_places': {
-                    110: 'https://naciscdn.org/naturalearth/110m/cultural/ne_110m_populated_places.zip'
+                    110:
+                    f'{shape_base_url}/110m/cultural/ne_110m_populated_places.zip'
                 }
-        }     
-    },
-    'timeseries': {
-        'base': 'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/',
-        'global_confirmed': 'csse_covid_19_time_series/time_series_covid19_confirmed_global.csv',
-        'global_deaths': 'csse_covid_19_time_series/time_series_covid19_deaths_global.csv',
-        'global_recovered': 'csse_covid_19_time_series/time_series_covid19_recovered_global.csv',
-        'us_confirmed': 'csse_covid_19_time_series/time_series_covid19_confirmed_US.csv',
-        'us_deaths': 'csse_covid_19_time_series/time_series_covid19_deaths_US.csv'
-    },
-    'stringency': {
-        'base': 'https://raw.githubusercontent.com/OxCGRT/',
-        'data': 'covid-policy-tracker/master/data/OxCGRT_latest.csv'
+            }
+        },
+        'timeseries': {
+            'base':
+            f'{jhu_base_url}/csse_covid_19_data/',
+            'global_confirmed':
+            'csse_covid_19_time_series/time_series_covid19_confirmed_global.csv',
+            'global_deaths':
+            'csse_covid_19_time_series/time_series_covid19_deaths_global.csv',
+            'global_recovered':
+            'csse_covid_19_time_series/time_series_covid19_recovered_global.csv',
+            'us_confirmed':
+            'csse_covid_19_time_series/time_series_covid19_confirmed_US.csv',
+            'us_deaths':
+            'csse_covid_19_time_series/time_series_covid19_deaths_US.csv'
+        },
+        'stringency': {
+            'base': 'https://raw.githubusercontent.com/OxCGRT/',
+            'data': 'covid-policy-tracker/master/data/OxCGRT_latest.csv'
+        }
     }
-}
-    return srcbase
+    return s_base
 
 srcbase = srcbase()
 
 # def test_base(srcbase):
 #     assert type(srcbase)==dict
 
-def who(variation: bool = False) -> dict:
-    who_region = {}
-    if variation:
-        afro = "Algeria, Angola, Cabo Verde, Congo, DRC, Eswatini, Sao Tome and Principe, Benin, South Sudan, Western Sahara, Congo (Brazzaville), Congo (Kinshasa), Cote d'Ivoire, Botswana, Burkina Faso, Burundi, Cameroon, Cape Verde, Central African Republic, Chad, Comoros, Ivory Coast, Democratic Republic of the Congo, Equatorial Guinea, Eritrea, Ethiopia, Gabon, Gambia, Ghana, Guinea, Guinea-Bissau, Kenya, Lesotho, Liberia, Madagascar, Malawi, Mali, Mauritania, Mauritius, Mozambique, Namibia, Niger, Nigeria, Republic of the Congo, Rwanda, São Tomé and Príncipe, Senegal, Seychelles, Sierra Leone, Somalia, South Africa, Swaziland, Togo, Uganda, Tanzania, Zambia, Zimbabwe"
-        afro = [i.strip() for i in afro.split(',')]
-        for i in afro:
-            who_region[i] = 'Africa'
+# def who(variation: bool = False) -> dict:
+#     """
+#     Placeholder
+#     """
+#     who_region = {}
+#     if variation is False:
+#         afro = "Algeria, Angola, Cabo Verde, Congo, DRC, Eswatini, Sao Tome and Principe, Benin, South Sudan, Western Sahara, Congo (Brazzaville), Congo (Kinshasa), Cote d'Ivoire, Botswana, Burkina Faso, Burundi, Cameroon, Cape Verde, Central African Republic, Chad, Comoros, Ivory Coast, Democratic Republic of the Congo, Equatorial Guinea, Eritrea, Ethiopia, Gabon, Gambia, Ghana, Guinea, Guinea-Bissau, Kenya, Lesotho, Liberia, Madagascar, Malawi, Mali, Mauritania, Mauritius, Mozambique, Namibia, Niger, Nigeria, Republic of the Congo, Rwanda, São Tomé and Príncipe, Senegal, Seychelles, Sierra Leone, Somalia, South Africa, Swaziland, Togo, Uganda, Tanzania, Zambia, Zimbabwe"
+#         afro = [i.strip() for i in afro.split(',')]
+#         for i in afro:
+#             who_region[i] = 'Africa'
 
-        # Region of the Americas PAHO
-        paho = 'Antigua and Barbuda, Argentina, Bahamas, Barbados, Belize, Bermuda, Bolivia, Brazil, Canada, Chile, Colombia, Costa Rica, Cuba, Dominica, Dominican Republic, Ecuador, El Salvador, Grenada, Guatemala, Guyana, Haiti, Honduras, Jamaica, Mexico, Nicaragua, Panama, Paraguay, Peru, Saint Kitts and Nevis, Saint Lucia, Saint Vincent and the Grenadines, Suriname, Trinidad and Tobago, United States, US, USA, Uruguay, Venezuela'
-        paho = [i.strip() for i in paho.split(',')]
-        for i in paho:
-            who_region[i] = 'Americas'
+#         # Region of the Americas PAHO
+#         paho = 'Antigua and Barbuda, Argentina, Bahamas, Barbados, Belize, Bermuda, Bolivia, Brazil, Canada, Chile, Colombia, Costa Rica, Cuba, Dominica, Dominican Republic, Ecuador, El Salvador, Grenada, Guatemala, Guyana, Haiti, Honduras, Jamaica, Mexico, Nicaragua, Panama, Paraguay, Peru, Saint Kitts and Nevis, Saint Lucia, Saint Vincent and the Grenadines, Suriname, Trinidad and Tobago, United States, US, USA, Uruguay, Venezuela'
+#         paho = [i.strip() for i in paho.split(',')]
+#         for i in paho:
+#             who_region[i] = 'Americas'
 
-        # South-East Asia Region SEARO
-        searo = 'Bangladesh, Bhutan, North Korea, India, Indonesia, Maldives, Myanmar, Burma, Nepal, Sri Lanka, Thailand, Timor-Leste'
-        searo = [i.strip() for i in searo.split(',')]
-        for i in searo:
-            who_region[i] = 'South-East Asia'
+#         # South-East Asia Region SEARO
+#         searo = 'Bangladesh, Bhutan, North Korea, India, Indonesia, Maldives, Myanmar, Burma, Nepal, Sri Lanka, Thailand, Timor-Leste'
+#         searo = [i.strip() for i in searo.split(',')]
+#         for i in searo:
+#             who_region[i] = 'South-East Asia'
 
-        # European Region EURO
-        euro = 'Albania, Andorra, Greenland, Kosovo, Holy See, Vatican City, Liechtenstein, Armenia, Czechia, Austria, Azerbaijan, Belarus, Belgium, Bosnia and Herzegovina, Bulgaria, Croatia, Cyprus, Czech Republic, Denmark, Estonia, Finland, France, Georgia, Germany, Greece, Hungary, Iceland, Ireland, Israel, Italy, Kazakhstan, Kyrgyzstan, Latvia, Lithuania, Luxembourg, Malta, Monaco, Montenegro, Netherlands, North Macedonia, Norway, Poland, Portugal, Moldova, Romania, Russia, San Marino, Serbia, Slovakia, Slovenia, Spain, Sweden, Switzerland, Tajikistan, Turkey, Turkmenistan, Ukraine, United Kingdom, UK, Uzbekistan'
-        euro = [i.strip() for i in euro.split(',')]
-        for i in euro:
-            who_region[i] = 'Europe'
+#         # European Region EURO
+#         euro = 'Albania, Andorra, Greenland, Kosovo, Holy See, Vatican City, Liechtenstein, Armenia, Czechia, Austria, Azerbaijan, Belarus, Belgium, Bosnia and Herzegovina, Bulgaria, Croatia, Cyprus, Czech Republic, Denmark, Estonia, Finland, France, Georgia, Germany, Greece, Hungary, Iceland, Ireland, Israel, Italy, Kazakhstan, Kyrgyzstan, Latvia, Lithuania, Luxembourg, Malta, Monaco, Montenegro, Netherlands, North Macedonia, Norway, Poland, Portugal, Moldova, Romania, Russia, San Marino, Serbia, Slovakia, Slovenia, Spain, Sweden, Switzerland, Tajikistan, Turkey, Turkmenistan, Ukraine, United Kingdom, UK, Uzbekistan'
+#         euro = [i.strip() for i in euro.split(',')]
+#         for i in euro:
+#             who_region[i] = 'Europe'
 
-        # Eastern Mediterranean Region EMRO
-        emro = 'Afghanistan, Bahrain, Djibouti, Egypt, Iran, Iraq, Jordan, Kuwait, Lebanon, Libya, Morocco, Oman, Pakistan, Palestine, West Bank and Gaza, Qatar, Saudi Arabia, Somalia, Sudan, Syria, Tunisia, United Arab Emirates, UAE, Yemen'
-        emro = [i.strip() for i in emro.split(',')]
-        for i in emro:
-            who_region[i] = 'Eastern Mediterranean'
+#         # Eastern Mediterranean Region EMRO
+#         emro = 'Afghanistan, Bahrain, Djibouti, Egypt, Iran, Iraq, Jordan, Kuwait, Lebanon, Libya, Morocco, Oman, Pakistan, Palestine, West Bank and Gaza, Qatar, Saudi Arabia, Somalia, Sudan, Syria, Tunisia, United Arab Emirates, UAE, Yemen'
+#         emro = [i.strip() for i in emro.split(',')]
+#         for i in emro:
+#             who_region[i] = 'Eastern Mediterranean'
 
-        # Western Pacific Region WPRO
-        wpro = 'Australia, Brunei, Cambodia, China, Cook Islands, Fiji, Japan, Hong Kong, Kiribati, Laos, Malaysia, Marshall Islands, Micronesia, Mongolia, Nauru, New Zealand, Niue, Palau, Papua New Guinea, Philippines, South Korea, S. Korea, Samoa, Singapore, Solomon Islands, Taiwan, Taiwan*, Tonga, Tuvalu, Vanuatu, Vietnam'
-        wpro = [i.strip() for i in wpro.split(',')]
-        for i in wpro:
-            who_region[i] = 'Western Pacific'
-    else:
-        afro = "Algeria, Angola, Cabo Verde, Eswatini, Sao Tome and Principe, Benin, South Sudan, Western Sahara, Congo (Brazzaville), Congo (Kinshasa), Cote d'Ivoire, Botswana, Burkina Faso, Burundi, Cameroon, Cape Verde, Central African Republic, Chad, Comoros, Ivory Coast, Democratic Republic of the Congo, Equatorial Guinea, Eritrea, Ethiopia, Gabon, Gambia, Ghana, Guinea, Guinea-Bissau, Kenya, Lesotho, Liberia, Madagascar, Malawi, Mali, Mauritania, Mauritius, Mozambique, Namibia, Niger, Nigeria, Republic of the Congo, Rwanda, São Tomé and Príncipe, Senegal, Seychelles, Sierra Leone, Somalia, South Africa, Swaziland, Togo, Uganda, Tanzania, Zambia, Zimbabwe"
-        afro = [i.strip() for i in afro.split(',')]
-        for i in afro:
-            who_region[i] = 'Africa'
+#         # Western Pacific Region WPRO
+#         wpro = 'Australia, Brunei, Cambodia, China, Cook Islands, Fiji, Japan, Hong Kong, Kiribati, Laos, Malaysia, Marshall Islands, Micronesia, Mongolia, Nauru, New Zealand, Niue, Palau, Papua New Guinea, Philippines, South Korea, S. Korea, Samoa, Singapore, Solomon Islands, Taiwan, Taiwan*, Tonga, Tuvalu, Vanuatu, Vietnam'
+#         wpro = [i.strip() for i in wpro.split(',')]
+#         for i in wpro:
+#             who_region[i] = 'Western Pacific'
+#     else:
+#         afro = "Algeria, Angola, Cabo Verde, Eswatini, Sao Tome and Principe, Benin, South Sudan, Western Sahara, Congo (Brazzaville), Congo (Kinshasa), Cote d'Ivoire, Botswana, Burkina Faso, Burundi, Cameroon, Cape Verde, Central African Republic, Chad, Comoros, Ivory Coast, Democratic Republic of the Congo, Equatorial Guinea, Eritrea, Ethiopia, Gabon, Gambia, Ghana, Guinea, Guinea-Bissau, Kenya, Lesotho, Liberia, Madagascar, Malawi, Mali, Mauritania, Mauritius, Mozambique, Namibia, Niger, Nigeria, Republic of the Congo, Rwanda, São Tomé and Príncipe, Senegal, Seychelles, Sierra Leone, Somalia, South Africa, Swaziland, Togo, Uganda, Tanzania, Zambia, Zimbabwe"
+#         afro = [i.strip() for i in afro.split(',')]
+#         for i in afro:
+#             who_region[i] = 'Africa'
 
-        # Region of the Americas PAHO
-        paho = 'Antigua and Barbuda, Argentina, Bahamas, Barbados, Belize, Bolivia, Brazil, Canada, Chile, Colombia, Costa Rica, Cuba, Dominica, Dominican Republic, Ecuador, El Salvador, Grenada, Guatemala, Guyana, Haiti, Honduras, Jamaica, Mexico, Nicaragua, Panama, Paraguay, Peru, Saint Kitts and Nevis, Saint Lucia, Saint Vincent and the Grenadines, Suriname, Trinidad and Tobago, United States, US, Uruguay, Venezuela'
-        paho = [i.strip() for i in paho.split(',')]
-        for i in paho:
-            who_region[i] = 'Americas'
+#         # Region of the Americas PAHO
+#         paho = 'Antigua and Barbuda, Argentina, Bahamas, Barbados, Belize, Bolivia, Brazil, Canada, Chile, Colombia, Costa Rica, Cuba, Dominica, Dominican Republic, Ecuador, El Salvador, Grenada, Guatemala, Guyana, Haiti, Honduras, Jamaica, Mexico, Nicaragua, Panama, Paraguay, Peru, Saint Kitts and Nevis, Saint Lucia, Saint Vincent and the Grenadines, Suriname, Trinidad and Tobago, United States, US, USA, Uruguay, Venezuela'
+#         paho = [i.strip() for i in paho.split(',')]
+#         for i in paho:
+#             who_region[i] = 'Americas'
 
-        # South-East Asia Region SEARO
-        searo = 'Bangladesh, Bhutan, North Korea, India, Indonesia, Maldives, Myanmar, Burma, Nepal, Sri Lanka, Thailand, Timor-Leste'
-        searo = [i.strip() for i in searo.split(',')]
-        for i in searo:
-            who_region[i] = 'South-East Asia'
+#         # South-East Asia Region SEARO
+#         searo = 'Bangladesh, Bhutan, North Korea, India, Indonesia, Maldives, Myanmar, Burma, Nepal, Sri Lanka, Thailand, Timor-Leste'
+#         searo = [i.strip() for i in searo.split(',')]
+#         for i in searo:
+#             who_region[i] = 'South-East Asia'
 
-        # European Region EURO
-        euro = 'Albania, Andorra, Greenland, Kosovo, Holy See, Liechtenstein, Armenia, Czechia, Austria, Azerbaijan, Belarus, Belgium, Bosnia and Herzegovina, Bulgaria, Croatia, Cyprus, Czech Republic, Denmark, Estonia, Finland, France, Georgia, Germany, Greece, Hungary, Iceland, Ireland, Israel, Italy, Kazakhstan, Kyrgyzstan, Latvia, Lithuania, Luxembourg, Malta, Monaco, Montenegro, Netherlands, North Macedonia, Norway, Poland, Portugal, Moldova, Romania, Russia, San Marino, Serbia, Slovakia, Slovenia, Spain, Sweden, Switzerland, Tajikistan, Turkey, Turkmenistan, Ukraine, United Kingdom, Uzbekistan'
-        euro = [i.strip() for i in euro.split(',')]
-        for i in euro:
-            who_region[i] = 'Europe'
+#         # European Region EURO
+#         euro = 'Albania, Andorra, Greenland, Kosovo, Holy See, Liechtenstein, Armenia, Czechia, Austria, Azerbaijan, Belarus, Belgium, Bosnia and Herzegovina, Bulgaria, Croatia, Cyprus, Czech Republic, Denmark, Estonia, Finland, France, Georgia, Germany, Greece, Hungary, Iceland, Ireland, Israel, Italy, Kazakhstan, Kyrgyzstan, Latvia, Lithuania, Luxembourg, Malta, Monaco, Montenegro, Netherlands, North Macedonia, Norway, Poland, Portugal, Moldova, Romania, Russia, San Marino, Serbia, Slovakia, Slovenia, Spain, Sweden, Switzerland, Tajikistan, Turkey, Turkmenistan, Ukraine, United Kingdom, Uzbekistan'
+#         euro = [i.strip() for i in euro.split(',')]
+#         for i in euro:
+#             who_region[i] = 'Europe'
 
-        # Eastern Mediterranean Region EMRO
-        emro = 'Afghanistan, Bahrain, Djibouti, Egypt, Iran, Iraq, Jordan, Kuwait, Lebanon, Libya, Morocco, Oman, Pakistan, Palestine, West Bank and Gaza, Qatar, Saudi Arabia, Somalia, Sudan, Syria, Tunisia, United Arab Emirates, Yemen'
-        emro = [i.strip() for i in emro.split(',')]
-        for i in emro:
-            who_region[i] = 'Eastern Mediterranean'
+#         # Eastern Mediterranean Region EMRO
+#         emro = 'Afghanistan, Bahrain, Djibouti, Egypt, Iran, Iraq, Jordan, Kuwait, Lebanon, Libya, Morocco, Oman, Pakistan, Palestine, West Bank and Gaza, Qatar, Saudi Arabia, Somalia, Sudan, Syria, Tunisia, United Arab Emirates, Yemen'
+#         emro = [i.strip() for i in emro.split(',')]
+#         for i in emro:
+#             who_region[i] = 'Eastern Mediterranean'
 
-        # Western Pacific Region WPRO
-        wpro = 'Australia, Brunei, Cambodia, China, Cook Islands, Fiji, Japan, Kiribati, Laos, Malaysia, Marshall Islands, Micronesia, Mongolia, Nauru, New Zealand, Niue, Palau, Papua New Guinea, Philippines, South Korea, Samoa, Singapore, Solomon Islands, Taiwan, Taiwan*, Tonga, Tuvalu, Vanuatu, Vietnam'
-        wpro = [i.strip() for i in wpro.split(',')]
-        for i in wpro:
-            who_region[i] = 'Western Pacific'
+#         # Western Pacific Region WPRO
+#         wpro = 'Australia, Brunei, Cambodia, China, Cook Islands, Fiji, Japan, Kiribati, Laos, Malaysia, Marshall Islands, Micronesia, Mongolia, Nauru, New Zealand, Niue, Palau, Papua New Guinea, Philippines, South Korea, Samoa, Singapore, Solomon Islands, Taiwan, Taiwan*, Tonga, Tuvalu, Vanuatu, Vietnam'
+#         wpro = [i.strip() for i in wpro.split(',')]
+#         for i in wpro:
+#             who_region[i] = 'Western Pacific'
 
-    return who_region
+#     return who_region
 
 
 def dfget(base: str, uri: str) -> pd.core.frame.DataFrame:
@@ -237,6 +284,9 @@ def dfmerge(l=None, r=None, how='left', on=['Province/State', 'Country/Region', 
 
 
 def codedb():
+    """
+    Placeholder
+    """
     req = curl.get(srcbase['countrycodes']['base'])
     soup = BeautifulSoup(req.content, "html.parser")
     header_raw = soup.table.thead.tr.find_all('th')
@@ -264,12 +314,18 @@ def codedb():
 
 
 def shapedb():
+    """
+    Placeholder
+    """
     gdf = gpd.read_file(gpd.datasets.get_path('naturalearth_lowres'))
     gdf = gdf.to_crs(3857)
     return gdf
 
 
 def shapesdb():
+    """
+    Placeholder
+    """
     #url = 'https://naciscdn.org/naturalearth/110m/cultural/ne_110m_admin_0_countries.zip'
     r = curl.get(srcbase['countryshapes']['base'], allow_redirects=True)
     open(os.path.basename(r.url), 'wb').write(r.content)
@@ -301,6 +357,9 @@ def shapesdb():
 
 
 def shapesdbv2(shape_key,shape_type,scale):
+    """
+    Placeholder
+    """
     #url = 'https://naciscdn.org/naturalearth/110m/cultural/ne_110m_admin_0_countries.zip'
     r = curl.get(srcbase['countryshapes'][shape_key][shape_type][scale], allow_redirects=True)
     open(os.path.basename(r.url), 'wb').write(r.content)
@@ -333,16 +392,19 @@ def shapesdbv2(shape_key,shape_type,scale):
 
 # generate full database from latest upload
 def fulldb():
+    """
+    placeholder
+    """
     df_global_confirmed = dfget_timeseries(
         srcbase['timeseries']['base'], srcbase['timeseries']['global_confirmed'])
     df_global_deaths = dfget_timeseries(
         srcbase['timeseries']['base'], srcbase['timeseries']['global_deaths'])
     df_global_recovered = dfget_timeseries(
         srcbase['base'], srcbase['timeseries']['global_recovered'])
-    df_us_confirmed = dfget_timeseries(
-        srcbase['timeseries']['base'], srcbase['timeseries']['us_confirmed'])
-    df_us_deaths = dfget_timeseries(
-        srcbase['timeseries']['base'], srcbase['timeseries']['us_deaths'])
+    # df_us_confirmed = dfget_timeseries(
+    #     srcbase['timeseries']['base'], srcbase['timeseries']['us_confirmed'])
+    # df_us_deaths = dfget_timeseries(
+    #     srcbase['timeseries']['base'], srcbase['timeseries']['us_deaths'])
     df_deaths_long = dfelongate(df_global_deaths, value='Deaths')
     df_conf_long = dfelongate(df_global_confirmed, value='Confirmed')
     df_recovered_long = dfelongate(df_global_recovered, value='Recovered')
@@ -367,12 +429,17 @@ def fulldb():
     df_full['Country/Region'] = df_full['Country/Region'].replace(
         'Korea, South', 'South Korea')
 
-    # removing canadas recovered values
-    df_full = df_full[df_full['Province/State']
-                      .str.contains('Recovered') != True]
+    # experimental, fills Province/State NaN values with blank strings
+    df_full['Province/State'] = df_full['Province/State'].fillna('')
+    # removing canadas improperly placed "recovered" values
+    # df_full = df_full[df_full['Province/State']
+    #                   .str.contains('Recovered') != True]
+    # use a more classy filter..
+    df_full = df_full[~( df_full['Province/State'].str.contains('Recovered') ) ]
 
     # removing country-wise data to avoid double count
-    df_full = df_full[df_full['Province/State'].str.contains(',') != True]
+    #df_full = df_full[df_full['Province/State'].str.contains(',') != True]
+    df_full = df_full[~( df_full['Province/State'].str.contains(',') )]
     # add 'active' cases column, derived from (confirmed - deaths - recovered)
     df_full['Active'] = df_full['Confirmed'] - \
         df_full['Deaths'] - df_full['Recovered']
@@ -393,24 +460,27 @@ def fulldb():
     df_full = df_full[~(ship_rows)]
 
     # Clean up Bad Data
-    hubeiFixEntry = {'Hubei': 34874}
-
-    def change_val(df, date, ref_col, val_col, dtnry):
+    hubei_fix = {'Hubei': 34874}
+    def change_val(df_in, date, ref_col, val_col, dtnry):
         """
         Shamelessly operates on `df_full`
         """
         for key, val in dtnry.items():
-            df.loc[(df['Date'] == date) & (df[ref_col] == key), val_col] = val
+            df_in.loc[(df_in['Date'] == date) & (df_in[ref_col] == key), val_col] = val
 
     change_val(df_full, '2/12/20', 'Province/State',
-               'Confirmed', hubeiFixEntry)
+               'Confirmed', hubei_fix)
 
-    df_full['WHO Region'] = df_full['Country/Region'].map(who(variation=False))
+    #df_full['WHO Region'] = df_full['Country/Region'].map(who(variation=False))
+    # use whomembers (validate it still works as expected)
+    df_full['WHO Region'] = df_full['Country/Region'].map(whomembers(variation=False))
     return df_full.reset_index(drop=True), df_ship.reset_index(drop=True)
-
 
 # pass in the full db here
 def groupdb(df):
+    """
+    Placeholder
+    """
     # group by Date and Country/Region
     df_grouped = df.groupby(['Date', 'Country/Region'])['Confirmed',
                                                         'Deaths', 'Recovered', 'Active'].sum().reset_index()
@@ -437,13 +507,16 @@ def groupdb(df):
     df_grouped['New cases'] = df_grouped['New cases'].apply(
         lambda x: 0 if x < 0 else x)
     df_grouped['WHO Region'] = df_grouped['Country/Region'].map(
-        who(variation=False))
+        whomembers(variation=False))
     return df_grouped
 
 # pass in the fulldbgrouped() here
 
 
 def daywisedb(df):
+    """
+    Placeholder
+    """
     # day-wise data
     # print(df.columns)
     df_daywise = df.groupby('Date')[
@@ -474,6 +547,9 @@ def daywisedb(df):
 
 
 def countrywisedb(df):
+    """
+    Placeholder
+    """
     country_wise = df[df['Date'] == max(df['Date'])] \
         .reset_index(drop=True) \
         .drop('Date', axis=1)
@@ -506,12 +582,15 @@ def countrywisedb(df):
     country_wise['1 week % increase'] = round(
         t['1 week change']/t['Confirmed last week']*100, 2)
     country_wise['WHO Region'] = country_wise['Country/Region'].map(
-        who(variation=False))
+        whomembers(variation=False))
     country_wise[country_wise['WHO Region'].isna()]['Country/Region'].unique()
     return country_wise
 
 
 def fixtures(df):
+    """
+    Placeholder
+    """
     df.loc[df['Country/Region'] == 'US', 'Country/Region'] = 'United States'
     df.loc[df['Country/Region'] ==
            'Congo (Brazzaville)', 'Country/Region'] = 'Republic of the Congo'
@@ -536,13 +615,19 @@ def fixtures(df):
     return df
 
 def attachmercatorcols(df, latcol, loncol):
-    k = 6378137 
+    """
+    Placeholder
+    """
+    k = 6378137
     df['x'] = df[loncol] *   (k * np.pi/180.0)
     df['y'] = np.log(np.tan((90 + df[latcol]) * np.pi/360.0)) * k
     return df
 
 
 def usdb():
+    """
+    Placeholder
+    """
     df_us_confirmed = dfget_timeseries(
         srcbase['timeseries']['base'], srcbase['timeseries']['us_confirmed'])
     df_us_deaths = dfget_timeseries(
@@ -560,6 +645,9 @@ def usdb():
 
 
 def strigencydb():
+    """
+    Placeholder
+    """
     df = dfget(srcbase['stringency']['base'], srcbase['stringency']['data'])
 
     cols = df.columns[6:]
@@ -570,7 +658,7 @@ def strigencydb():
 
     rgx = r"(?P<year>\d{4})(?P<month>\d{2})(?P<day>\d{2})+"
     def replace(
-        m): return f"{m.group('year')}-{m.group('month')}-{m.group('day')}"
+        m):        return f"{m.group('year')}-{m.group('month')}-{m.group('day')}"
     df['Date'] = df['Date'].astype(str)
     df['Date'] = df['Date'].str.replace(rgx, replace)
     df['Date'] = pd.to_datetime(df['Date'])
@@ -578,6 +666,9 @@ def strigencydb():
 
 
 def worldometersdb():
+    """
+    Placeholder
+    """
     req = curl.get('https://www.worldometers.info/coronavirus/')
     soup = BeautifulSoup(req.content, "html.parser")
     thead = soup.find_all('thead')[-1]
@@ -609,7 +700,7 @@ def worldometersdb():
              'TotalRecovered', 'NewRecovered', 'ActiveCases', 'Serious,Critical',
              'Tot Cases/1M pop', 'Deaths/1M pop', 'TotalTests', 'Tests/1M pop']]
 
-    df['WHO Region'] = df['Country/Region'].map(who(variation=True))
+    df['WHO Region'] = df['Country/Region'].map(whomembers(variation=True))
 
     df[df['WHO Region'].isna()]['Country/Region'].unique()
     for col in df.columns[2:]:
@@ -622,6 +713,9 @@ def worldometersdb():
 
 
 def geodb(df_any, df_shapes, df_codes):
+    """
+    Placeholder
+    """
     df = pd.merge(df_any, df_codes, how='left', on=['Country/Region'])
     df['alpha_3'] = df['alpha_3'].astype('str')
     df['alpha_2'] = df['alpha_2'].astype('str')
