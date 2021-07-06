@@ -1,11 +1,5 @@
-"""
-lib/datasources abstracts functions related to acquiring and reshaping/restructuring data sets
-
-Usage:
-```
-import lib.datasources as datasources
-full_db, ship_db = datasources.fulldb()
-```
+"""The datasources module provides methods for acquiring statistical & geometric data 
+pertaining to the COVID-19 pandemic
 """
 #import sys
 import os
@@ -14,14 +8,9 @@ import io
 import zipfile
 import warnings
 import json
-#import itertools
-#from math import pi
 from urllib.parse import (
-    #urlparse,
     urljoin)
 from datetime import (
-    #date,
-    #datetime,
     timedelta)
 import requests as curl
 from bs4 import BeautifulSoup
@@ -53,9 +42,15 @@ class PandasTimeStampEncoder(json.JSONEncoder):
 
 #@pytest.fixture
 def srcbase() -> dict:
-    """
-    Contains source URLs to datasources used in visualizations
-    Returns dictionary
+    """Creates dict object containing Host and URLs for data acquisition referenced directly by data acquisition methods
+    
+    Parameters
+    ----------
+    None
+
+    Returns
+    ----------
+    dict - A dictionary containing Base URLs and full URIs for various data sources used throughout the application
     """
     shape_base_url = 'https://naciscdn.org/naturalearth'
     jhu_base_url = 'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master'
@@ -134,136 +129,107 @@ def srcbase() -> dict:
 
 srcbase = srcbase()
 
-# def test_base(srcbase):
-#     assert type(srcbase)==dict
-
-# def who(variation: bool = False) -> dict:
-#     """
-#     Placeholder
-#     """
-#     who_region = {}
-#     if variation is False:
-#         afro = "Algeria, Angola, Cabo Verde, Congo, DRC, Eswatini, Sao Tome and Principe, Benin, South Sudan, Western Sahara, Congo (Brazzaville), Congo (Kinshasa), Cote d'Ivoire, Botswana, Burkina Faso, Burundi, Cameroon, Cape Verde, Central African Republic, Chad, Comoros, Ivory Coast, Democratic Republic of the Congo, Equatorial Guinea, Eritrea, Ethiopia, Gabon, Gambia, Ghana, Guinea, Guinea-Bissau, Kenya, Lesotho, Liberia, Madagascar, Malawi, Mali, Mauritania, Mauritius, Mozambique, Namibia, Niger, Nigeria, Republic of the Congo, Rwanda, São Tomé and Príncipe, Senegal, Seychelles, Sierra Leone, Somalia, South Africa, Swaziland, Togo, Uganda, Tanzania, Zambia, Zimbabwe"
-#         afro = [i.strip() for i in afro.split(',')]
-#         for i in afro:
-#             who_region[i] = 'Africa'
-
-#         # Region of the Americas PAHO
-#         paho = 'Antigua and Barbuda, Argentina, Bahamas, Barbados, Belize, Bermuda, Bolivia, Brazil, Canada, Chile, Colombia, Costa Rica, Cuba, Dominica, Dominican Republic, Ecuador, El Salvador, Grenada, Guatemala, Guyana, Haiti, Honduras, Jamaica, Mexico, Nicaragua, Panama, Paraguay, Peru, Saint Kitts and Nevis, Saint Lucia, Saint Vincent and the Grenadines, Suriname, Trinidad and Tobago, United States, US, USA, Uruguay, Venezuela'
-#         paho = [i.strip() for i in paho.split(',')]
-#         for i in paho:
-#             who_region[i] = 'Americas'
-
-#         # South-East Asia Region SEARO
-#         searo = 'Bangladesh, Bhutan, North Korea, India, Indonesia, Maldives, Myanmar, Burma, Nepal, Sri Lanka, Thailand, Timor-Leste'
-#         searo = [i.strip() for i in searo.split(',')]
-#         for i in searo:
-#             who_region[i] = 'South-East Asia'
-
-#         # European Region EURO
-#         euro = 'Albania, Andorra, Greenland, Kosovo, Holy See, Vatican City, Liechtenstein, Armenia, Czechia, Austria, Azerbaijan, Belarus, Belgium, Bosnia and Herzegovina, Bulgaria, Croatia, Cyprus, Czech Republic, Denmark, Estonia, Finland, France, Georgia, Germany, Greece, Hungary, Iceland, Ireland, Israel, Italy, Kazakhstan, Kyrgyzstan, Latvia, Lithuania, Luxembourg, Malta, Monaco, Montenegro, Netherlands, North Macedonia, Norway, Poland, Portugal, Moldova, Romania, Russia, San Marino, Serbia, Slovakia, Slovenia, Spain, Sweden, Switzerland, Tajikistan, Turkey, Turkmenistan, Ukraine, United Kingdom, UK, Uzbekistan'
-#         euro = [i.strip() for i in euro.split(',')]
-#         for i in euro:
-#             who_region[i] = 'Europe'
-
-#         # Eastern Mediterranean Region EMRO
-#         emro = 'Afghanistan, Bahrain, Djibouti, Egypt, Iran, Iraq, Jordan, Kuwait, Lebanon, Libya, Morocco, Oman, Pakistan, Palestine, West Bank and Gaza, Qatar, Saudi Arabia, Somalia, Sudan, Syria, Tunisia, United Arab Emirates, UAE, Yemen'
-#         emro = [i.strip() for i in emro.split(',')]
-#         for i in emro:
-#             who_region[i] = 'Eastern Mediterranean'
-
-#         # Western Pacific Region WPRO
-#         wpro = 'Australia, Brunei, Cambodia, China, Cook Islands, Fiji, Japan, Hong Kong, Kiribati, Laos, Malaysia, Marshall Islands, Micronesia, Mongolia, Nauru, New Zealand, Niue, Palau, Papua New Guinea, Philippines, South Korea, S. Korea, Samoa, Singapore, Solomon Islands, Taiwan, Taiwan*, Tonga, Tuvalu, Vanuatu, Vietnam'
-#         wpro = [i.strip() for i in wpro.split(',')]
-#         for i in wpro:
-#             who_region[i] = 'Western Pacific'
-#     else:
-#         afro = "Algeria, Angola, Cabo Verde, Eswatini, Sao Tome and Principe, Benin, South Sudan, Western Sahara, Congo (Brazzaville), Congo (Kinshasa), Cote d'Ivoire, Botswana, Burkina Faso, Burundi, Cameroon, Cape Verde, Central African Republic, Chad, Comoros, Ivory Coast, Democratic Republic of the Congo, Equatorial Guinea, Eritrea, Ethiopia, Gabon, Gambia, Ghana, Guinea, Guinea-Bissau, Kenya, Lesotho, Liberia, Madagascar, Malawi, Mali, Mauritania, Mauritius, Mozambique, Namibia, Niger, Nigeria, Republic of the Congo, Rwanda, São Tomé and Príncipe, Senegal, Seychelles, Sierra Leone, Somalia, South Africa, Swaziland, Togo, Uganda, Tanzania, Zambia, Zimbabwe"
-#         afro = [i.strip() for i in afro.split(',')]
-#         for i in afro:
-#             who_region[i] = 'Africa'
-
-#         # Region of the Americas PAHO
-#         paho = 'Antigua and Barbuda, Argentina, Bahamas, Barbados, Belize, Bolivia, Brazil, Canada, Chile, Colombia, Costa Rica, Cuba, Dominica, Dominican Republic, Ecuador, El Salvador, Grenada, Guatemala, Guyana, Haiti, Honduras, Jamaica, Mexico, Nicaragua, Panama, Paraguay, Peru, Saint Kitts and Nevis, Saint Lucia, Saint Vincent and the Grenadines, Suriname, Trinidad and Tobago, United States, US, USA, Uruguay, Venezuela'
-#         paho = [i.strip() for i in paho.split(',')]
-#         for i in paho:
-#             who_region[i] = 'Americas'
-
-#         # South-East Asia Region SEARO
-#         searo = 'Bangladesh, Bhutan, North Korea, India, Indonesia, Maldives, Myanmar, Burma, Nepal, Sri Lanka, Thailand, Timor-Leste'
-#         searo = [i.strip() for i in searo.split(',')]
-#         for i in searo:
-#             who_region[i] = 'South-East Asia'
-
-#         # European Region EURO
-#         euro = 'Albania, Andorra, Greenland, Kosovo, Holy See, Liechtenstein, Armenia, Czechia, Austria, Azerbaijan, Belarus, Belgium, Bosnia and Herzegovina, Bulgaria, Croatia, Cyprus, Czech Republic, Denmark, Estonia, Finland, France, Georgia, Germany, Greece, Hungary, Iceland, Ireland, Israel, Italy, Kazakhstan, Kyrgyzstan, Latvia, Lithuania, Luxembourg, Malta, Monaco, Montenegro, Netherlands, North Macedonia, Norway, Poland, Portugal, Moldova, Romania, Russia, San Marino, Serbia, Slovakia, Slovenia, Spain, Sweden, Switzerland, Tajikistan, Turkey, Turkmenistan, Ukraine, United Kingdom, Uzbekistan'
-#         euro = [i.strip() for i in euro.split(',')]
-#         for i in euro:
-#             who_region[i] = 'Europe'
-
-#         # Eastern Mediterranean Region EMRO
-#         emro = 'Afghanistan, Bahrain, Djibouti, Egypt, Iran, Iraq, Jordan, Kuwait, Lebanon, Libya, Morocco, Oman, Pakistan, Palestine, West Bank and Gaza, Qatar, Saudi Arabia, Somalia, Sudan, Syria, Tunisia, United Arab Emirates, Yemen'
-#         emro = [i.strip() for i in emro.split(',')]
-#         for i in emro:
-#             who_region[i] = 'Eastern Mediterranean'
-
-#         # Western Pacific Region WPRO
-#         wpro = 'Australia, Brunei, Cambodia, China, Cook Islands, Fiji, Japan, Kiribati, Laos, Malaysia, Marshall Islands, Micronesia, Mongolia, Nauru, New Zealand, Niue, Palau, Papua New Guinea, Philippines, South Korea, Samoa, Singapore, Solomon Islands, Taiwan, Taiwan*, Tonga, Tuvalu, Vanuatu, Vietnam'
-#         wpro = [i.strip() for i in wpro.split(',')]
-#         for i in wpro:
-#             who_region[i] = 'Western Pacific'
-
-#     return who_region
-
-
 def dfget(base: str, uri: str) -> pd.core.frame.DataFrame:
-    """
-    Fetch a csv format file on the internet, return it as a pandas DataFrame
+    """Fetch a csv format file on the internet, return it as a pandas DataFrame
+
+    Parameters
+    ----------
+    base: str
+        the base URL for the request
+    uri: str
+        the path to the timeseries file
+
+    Returns
+    ----------
+    pd.DataFrame - A pandas DataFrame
     """
     src = urljoin(base, uri)
     data = curl.get(src).content
-    df = pd.read_csv(
+    data_frame = pd.read_csv(
         io.StringIO(
             data.decode('utf-8')
         )
     )
-    return df
+    return data_frame
 
 
 def dfget_csv(base: str, uri: str) -> pd.core.frame.DataFrame:
-    """
-    Fetch a csv format file on the internet, return it as a pandas DataFrame
+    """Fetch a csv format file on the internet, return it as a pandas DataFrame
+
+    Parameters
+    ----------
+    base: str
+        the base URL for the request
+    uri: str
+        the path to the timeseries file
+
+    Returns
+    ----------
+    pd.DataFrame - A pandas DataFrame
     """
     src = urljoin(base, uri)
     data = curl.get(src).content
-    df = pd.read_csv(
+    data_frame = pd.read_csv(
         io.StringIO(
             data.decode('utf-8')
         )
     )
-    return df
+    return data_frame
 
 
 def dfget_timeseries(base: str, uri: str) -> pd.core.frame.DataFrame:
-    """
-    Fetch a csv format file on the internet, return it as a pandas DataFrame
+    """Fetch a csv format file on the internet, return it as a pandas DataFrame
+
+    Parameters
+    ----------
+    base: str
+        the base URL for the request
+    uri: str
+        the path to the timeseries file
+
+    Returns
+    ----------
+    pd.DataFrame - A pandas DataFrame
     """
     src = urljoin(base, uri)
     data = curl.get(src).content
-    df = pd.read_csv(
+    data_frame = pd.read_csv(
         io.StringIO(
             data.decode('utf-8')
         )
     )
-    return df
+    return data_frame
 
 
-def dfelongate(d, dateidx=4, ids=['Province/State', 'Country/Region', 'Lat', 'Long'], name='Date', value='Confirmed'):
-    """ 
-    Changes a `time series` (row) to a long column, eg, elongates
+def dfelongate(data_frame: pd.core.frame.DataFrame,
+               dateidx: int = 4,
+               ids: list = None,
+               name: str = 'Date',
+               value: str = 'Confirmed') -> pd.core.frame.DataFrame:
+    """Unpivot a DataFrame from wide to long format, optionally leaving identifiers set
+
+    Parameters
+    ----------
+    data_frame: DataFrame
+        A Pandas dataframe containing Dates a series of columns with values
+    dateidx: int
+        the column header index where Date columns begin eg. data_frame.columns[idx:]
+    ids: list
+        a list of column names which will be preserved as ID columns
+    name: str
+        the name to provide the Date column values are melted into
+    value: str
+        the column name to melt on
+ 
+    Returns
+    ----------
+    pd.DataFrame - A pandas DataFrame
     """
-    dates = d.columns[dateidx:]
-    return d.melt(
+    if ids is None:
+        ids = ['Province/State', 'Country/Region', 'Lat', 'Long']
+
+    dates = data_frame.columns[dateidx:]
+    return data_frame.melt(
         id_vars=ids,
         value_vars=dates,
         var_name=name,
@@ -271,27 +237,48 @@ def dfelongate(d, dateidx=4, ids=['Province/State', 'Country/Region', 'Lat', 'Lo
     )
 
 
-def dfmerge(l=None, r=None, how='left', on=['Province/State', 'Country/Region', 'Date', 'Lat', 'Long']):
+def dfmerge(left=None, right=None, how='left', on_columns=None):
     """
     Merge two pandas dataframes
+
+    Parameters
+    ----------
+    left: DataFrame
+        Pandas dataframe, left side of merge
+    right: DataFrame
+        Pandas dataframe, right side of merge
+    on_columns: list
+        a list of column names which will be used to compare for merging
+
+    Returns
+    ----------
+    pd.DataFrame - A pandas DataFrame
     """
-    return pd.merge(
-        left=l,
-        right=r,
-        how=how,
-        on=on
-    )
+    if on_columns is None:
+        on_columns = [
+            'Province/State', 'Country/Region', 'Date', 'Lat', 'Long'
+        ]
+
+    return pd.merge(left=left, right=right, how=how, on=on_columns,)
 
 
 def codedb():
-    """
-    Placeholder
+    """Shamelessly scrapes the countrycodes base source website to generate
+    a pandas DataFrame. This is unwise and may break but is used to 
+    map Countries to their official ISO codes! =)
+
+    Parameters
+    -----------
+    None
+
+    Returns
+    -----------
+    pd.DataFrame = a pandas DataFrame
     """
     req = curl.get(srcbase['countrycodes']['base'])
     soup = BeautifulSoup(req.content, "html.parser")
     header_raw = soup.table.thead.tr.find_all('th')
     data_raw = soup.table.tbody.find_all('tr')
-
     header_raw[0].text.strip()
     headers = [i.text.strip() for i in header_raw]
 
@@ -300,15 +287,17 @@ def codedb():
         rows = i.find_all('td')
         dataz.append([i.text.strip() for i in rows])
 
-    df = pd.DataFrame(dataz, columns=headers)
+    data_frame = pd.DataFrame(dataz, columns=headers)
     # country_codes_df['alpha_2'] =
-    df[['alpha_2', 'alpha_3']] = df['ISO CODES'].str.split('/', 1).tolist()
-    df['alpha_3'] = df.alpha_3.str.strip()
-    df['alpha_2'] = df.alpha_2.str.strip()
-    df = df.drop('ISO CODES', axis=1)
-    df = df.rename(columns={'COUNTRY': 'Country/Region'})
+    data_frame[['alpha_2',
+                'alpha_3']] = data_frame['ISO CODES'].str.split('/',
+                                                                1).tolist()
+    data_frame['alpha_3'] = data_frame.alpha_3.str.strip()
+    data_frame['alpha_2'] = data_frame.alpha_2.str.strip()
+    data_frame = data_frame.drop('ISO CODES', axis=1)
+    data_frame = data_frame.rename(columns={'COUNTRY': 'Country/Region'})
     #df_country_codes = country_codes_df
-    return df
+    return data_frame
 
 # deprecated.. use shapesdb
 
@@ -327,10 +316,10 @@ def shapesdb():
     Placeholder
     """
     #url = 'https://naciscdn.org/naturalearth/110m/cultural/ne_110m_admin_0_countries.zip'
-    r = curl.get(srcbase['countryshapes']['base'], allow_redirects=True)
-    open(os.path.basename(r.url), 'wb').write(r.content)
+    req = curl.get(srcbase['countryshapes']['base'], allow_redirects=True)
+    open(os.path.basename(req.url), 'wb').write(req.content)
 
-    with zipfile.ZipFile(os.path.basename(r.url), "r") as zf:
+    with zipfile.ZipFile(os.path.basename(req.url), "r") as zf:
         #zf.extractall(path='data')
         # only extract the needed file into data dir
         zf.extract('ne_110m_admin_0_countries.shp', path='./data')
@@ -339,8 +328,8 @@ def shapesdb():
         zf.extract('ne_110m_admin_0_countries.cpg', path='./data')
         zf.extract('ne_110m_admin_0_countries.dbf', path='./data')
 
-    if os.path.exists(os.path.basename(r.url)):
-        os.remove(os.path.basename(r.url))
+    if os.path.exists(os.path.basename(req.url)):
+        os.remove(os.path.basename(req.url))
 
     gdf = gpd.read_file(
         os.path.join(
@@ -361,24 +350,29 @@ def shapesdbv2(shape_key,shape_type,scale):
     Placeholder
     """
     #url = 'https://naciscdn.org/naturalearth/110m/cultural/ne_110m_admin_0_countries.zip'
-    r = curl.get(srcbase['countryshapes'][shape_key][shape_type][scale], allow_redirects=True)
-    open(os.path.basename(r.url), 'wb').write(r.content)
+    req = curl.get(srcbase['countryshapes'][shape_key][shape_type][scale], allow_redirects=True)
+    open(os.path.basename(req.url), 'wb').write(req.content)
 
-    with zipfile.ZipFile(os.path.basename(r.url), "r") as zf:
+    with zipfile.ZipFile(os.path.basename(req.url), "r") as zip_file:
         #zf.extractall(path='data')
         # only extract the needed file into data dir
-        zf.extract(f"ne_{scale}m_{shape_key}_{shape_type}.shp", path='./data')
-        zf.extract(f"ne_{scale}m_{shape_key}_{shape_type}.shx", path='./data')
-        zf.extract(f"ne_{scale}m_{shape_key}_{shape_type}.prj", path='./data')
-        zf.extract(f"ne_{scale}m_{shape_key}_{shape_type}.cpg", path='./data')
-        zf.extract(f"ne_{scale}m_{shape_key}_{shape_type}.dbf", path='./data')
+        zip_file.extract(f"ne_{scale}m_{shape_key}_{shape_type}.shp",
+                         path='./data')
+        zip_file.extract(f"ne_{scale}m_{shape_key}_{shape_type}.shx",
+                         path='./data')
+        zip_file.extract(f"ne_{scale}m_{shape_key}_{shape_type}.prj",
+                         path='./data')
+        zip_file.extract(f"ne_{scale}m_{shape_key}_{shape_type}.cpg",
+                         path='./data')
+        zip_file.extract(f"ne_{scale}m_{shape_key}_{shape_type}.dbf",
+                         path='./data')
 
-    if os.path.exists(os.path.basename(r.url)):
-        os.remove(os.path.basename(r.url))
+    if os.path.exists(os.path.basename(req.url)):
+        os.remove(os.path.basename(req.url))
 
     gdf = gpd.read_file(
         os.path.join(
-            f"data",
+            "data",
             f"ne_{scale}m_{shape_key}_{shape_type}.shp"
         )
     )
@@ -392,8 +386,16 @@ def shapesdbv2(shape_key,shape_type,scale):
 
 # generate full database from latest upload
 def fulldb():
-    """
-    placeholder
+    """Creates DataFrame from full JHU dataset from GitHub
+    - Confirmed, Deaths, Recovered COVID-19 cases globally
+
+    Parameters
+    -----------
+    None
+
+    Returns
+    -----------
+    pd.DataFrame = a pandas DataFrame
     """
     df_global_confirmed = dfget_timeseries(
         srcbase['timeseries']['base'], srcbase['timeseries']['global_confirmed'])
@@ -408,8 +410,8 @@ def fulldb():
     df_deaths_long = dfelongate(df_global_deaths, value='Deaths')
     df_conf_long = dfelongate(df_global_confirmed, value='Confirmed')
     df_recovered_long = dfelongate(df_global_recovered, value='Recovered')
-    df_tmp = dfmerge(l=df_conf_long, r=df_deaths_long)
-    df_full = dfmerge(l=df_tmp, r=df_recovered_long)
+    df_tmp = dfmerge(left=df_conf_long, right=df_deaths_long)
+    df_full = dfmerge(left=df_tmp, right=df_recovered_long)
     # use datetime type for Date column
     df_full['Date'] = pd.to_datetime(df_full['Date'])
 
@@ -456,7 +458,7 @@ def fulldb():
         df_full['Country/Region'].str.contains('MS Zaandam')
     df_ship = df_full[ship_rows]
 
-    df_ship_latest = df_ship[df_ship['Date'] == max(df_ship['Date'])]
+    #df_ship_latest = df_ship[df_ship['Date'] == max(df_ship['Date'])]
     df_full = df_full[~(ship_rows)]
 
     # Clean up Bad Data
@@ -477,13 +479,29 @@ def fulldb():
     return df_full.reset_index(drop=True), df_ship.reset_index(drop=True)
 
 # pass in the full db here
-def groupdb(df):
-    """
-    Placeholder
+def groupdb(df_full: pd.core.frame.DataFrame) -> pd.core.frame.DataFrame:
+    """Groups full JHU data set by Date & Country/Region
+    - sums Confirmed, Deaths, Recovered, and Active columns
+    - resets index
+    - calculates and adds columns for
+      - 'New Recovered'
+      - 'New deaths'
+      - 'New cases'
+    - adds 'WHO Region' column
+
+    Parameters
+    -----------
+    df_full: pd.core.frame.DataFrame
+        The Full JHU dataframe
+
+    Returns
+    -----------
+    pd.DataFrame = a pandas DataFrame
     """
     # group by Date and Country/Region
-    df_grouped = df.groupby(['Date', 'Country/Region'])['Confirmed',
-                                                        'Deaths', 'Recovered', 'Active'].sum().reset_index()
+    df_grouped = df_full.groupby(['Date', 'Country/Region'
+                                  ])['Confirmed', 'Deaths', 'Recovered',
+                                     'Active'].sum().reset_index()
     tmp = df_grouped.groupby(
         ['Country/Region', 'Date', ])['Confirmed', 'Deaths', 'Recovered']
     tmp = tmp.sum().diff().reset_index()
@@ -513,27 +531,47 @@ def groupdb(df):
 # pass in the fulldbgrouped() here
 
 
-def daywisedb(df):
+def daywisedb(df_full: pd.core.frame.DataFrame) -> pd.core.frame.DataFrame:
+    """Groups full JHU data set by Date
+    - sums the following columns:
+        - Confirmed
+        - Deaths
+        - Recovered
+        - Active
+        - New cases
+        - New deaths
+        - New recovered
+    - resets index
+    - adds following columns:
+        - Deaths / 100 Cases
+        - Recovered / 100 Cases 
+        - Deaths / 100 Recovered
+    - adds column for 'No. of Countries'
+    - calculates and adds columns for
+      - 'New Recovered'
+      - 'New deaths'
+      - 'New cases'
+    - sets numeric values to 0 where NaN
+
+    Parameters
+    -----------
+    df_full: pd.core.frame.DataFrame
+        The Full JHU dataframe acquired from a call to `datasources.fulldb()`
+
+    Returns
+    -----------
+    pd.DataFrame = a pandas DataFrame
     """
-    Placeholder
-    """
-    # day-wise data
-    # print(df.columns)
-    df_daywise = df.groupby('Date')[
-        'Confirmed',
-        'Deaths',
-        'Recovered',
-        'Active',
-        'New cases',
-        'New deaths',
-        'New recovered'].sum().reset_index()
+    df_daywise = df_full.groupby('Date')['Confirmed', 'Deaths', 'Recovered',
+                                         'Active', 'New cases', 'New deaths',
+                                         'New recovered'].sum().reset_index()
     df_daywise['Deaths / 100 Cases'] = round(
         (df_daywise['Deaths']/df_daywise['Confirmed'])*100, 2)
     df_daywise['Recovered / 100 Cases'] = round(
         (df_daywise['Recovered']/df_daywise['Confirmed'])*100, 2)
     df_daywise['Deaths / 100 Recovered'] = round(
         (df_daywise['Deaths']/df_daywise['Recovered'])*100, 2)
-    df_daywise['No. of countries'] = df[df['Confirmed'] != 0] \
+    df_daywise['No. of countries'] = df_full[df_full['Confirmed'] != 0] \
         .groupby('Date')['Country/Region'] \
         .unique() \
         .apply(len)\
@@ -546,11 +584,26 @@ def daywisedb(df):
     #df.to_csv('covid19-daywise.csv', index=False)
 
 
-def countrywisedb(df):
+def countrywisedb(df_full: pd.core.frame.DataFrame) -> pd.core.frame.DataFrame:
+    """Slices JHU full dataset by date
+    - latest - 7 days back
+        - Adds columns
+            - Deaths / 100 Cases (percentage)
+            - Recovered / 100 Cases (percentage)
+            - Deaths / 100 Recovered (percentage)
+    - merges "recent" data into one dataframe
+    - sorts data by Country/Region
+
+    Parameters
+    -----------
+    df_full: pd.core.frame.DataFrame
+        The Full JHU dataframe
+
+    Returns
+    -----------
+    pd.DataFrame = a pandas DataFrame
     """
-    Placeholder
-    """
-    country_wise = df[df['Date'] == max(df['Date'])] \
+    country_wise = df_full[df_full['Date'] == max(df_full['Date'])] \
         .reset_index(drop=True) \
         .drop('Date', axis=1)
     country_wise['Deaths / 100 Cases'] = round(
@@ -565,109 +618,147 @@ def countrywisedb(df):
     country_wise[cols] = country_wise[cols].fillna(0)
     # country_wise
 
-    today = df[df['Date'] == max(df['Date'])] \
+    today = df_full[df_full['Date'] == max(df_full['Date'])] \
         .reset_index(drop=True) \
         .drop('Date', axis=1)[['Country/Region', 'Confirmed']]
 
-    last_week = df[df['Date'] == max(df['Date'])-timedelta(days=7)] \
+    last_week = df_full[df_full['Date'] == max(df_full['Date'])-timedelta(days=7)] \
         .reset_index(drop=True) \
         .drop('Date', axis=1)[['Country/Region', 'Confirmed']]
 
-    t = pd.merge(today, last_week, on='Country/Region',
+    tmp = pd.merge(today, last_week, on='Country/Region',
                  suffixes=(' today', ' last week'))
-    t['1 week change'] = t['Confirmed today'] - t['Confirmed last week']
-    t = t[['Country/Region', 'Confirmed last week', '1 week change']]
+    tmp['1 week change'] = tmp['Confirmed today'] - tmp['Confirmed last week']
+    tmp = tmp[['Country/Region', 'Confirmed last week', '1 week change']]
 
-    country_wise = pd.merge(country_wise, t, on='Country/Region')
+    country_wise = pd.merge(country_wise, tmp, on='Country/Region')
     country_wise['1 week % increase'] = round(
-        t['1 week change']/t['Confirmed last week']*100, 2)
+        tmp['1 week change']/tmp['Confirmed last week']*100, 2)
     country_wise['WHO Region'] = country_wise['Country/Region'].map(
         whomembers(variation=False))
     country_wise[country_wise['WHO Region'].isna()]['Country/Region'].unique()
     return country_wise
 
 
-def fixtures(df):
-    """
-    Placeholder
-    """
-    df.loc[df['Country/Region'] == 'US', 'Country/Region'] = 'United States'
-    df.loc[df['Country/Region'] ==
-           'Congo (Brazzaville)', 'Country/Region'] = 'Republic of the Congo'
-    df.loc[df['Country/Region'] ==
-           'Congo (Kinshasa)', 'Country/Region'] = 'Democratic Republic of the Congo'
-    df.loc[df['Country/Region'] == 'Cabo Verde',
-           'Country/Region'] = 'Cape Verde'
-    df.loc[df['Country/Region'] == 'Czechia',
-           'Country/Region'] = 'Czech Republic'
-    df.loc[df['Country/Region'] == 'Holy See', 'Country/Region'] = 'Vatican'
-    df.loc[df['Country/Region'] == 'North Macedonia',
-           'Country/Region'] = 'Macedonia'
-    df.loc[df['Country/Region'] == 'Timor-Leste',
-           'Country/Region'] = 'East Timor'
-    df.loc[df['Country/Region'] == 'Burma', 'Country/Region'] = 'Myanmar'
-    df.loc[df['Country/Region'] == 'Eswatini', 'Country/Region'] = 'Swaziland'
-    df.loc[df['Country/Region'] == "Cote d'Ivoire",
-           'Country/Region'] = 'Ivory Coast'
-    df.loc[df['Country/Region'] == "West Bank and Gaza",
-           'Country/Region'] = 'Palestine'
-    df['Country/Region'] = df['Country/Region'].replace('Taiwan*', 'Taiwan')
-    return df
+def fixtures(df_full: pd.core.frame.DataFrame) -> pd.core.frame.DataFrame:
+    """Applies several ad-hoc fixes JHU full dataset
 
-def attachmercatorcols(df, latcol, loncol):
+    Parameters
+    -----------
+    df_full: pd.core.frame.DataFrame
+        The Full JHU dataframe
+
+    Returns
+    -----------
+    pd.DataFrame = a pandas DataFrame
     """
-    Placeholder
+    df_full.loc[df_full['Country/Region'] == 'US',
+                'Country/Region'] = 'United States'
+    df_full.loc[df_full['Country/Region'] ==
+           'Congo (Brazzaville)', 'Country/Region'] = 'Republic of the Congo'
+    df_full.loc[df_full['Country/Region'] ==
+           'Congo (Kinshasa)', 'Country/Region'] = 'Democratic Republic of the Congo'
+    df_full.loc[df_full['Country/Region'] == 'Cabo Verde',
+           'Country/Region'] = 'Cape Verde'
+    df_full.loc[df_full['Country/Region'] == 'Czechia',
+           'Country/Region'] = 'Czech Republic'
+    df_full.loc[df_full['Country/Region'] == 'Holy See', 'Country/Region'] = 'Vatican'
+    df_full.loc[df_full['Country/Region'] == 'North Macedonia',
+           'Country/Region'] = 'Macedonia'
+    df_full.loc[df_full['Country/Region'] == 'Timor-Leste',
+           'Country/Region'] = 'East Timor'
+    df_full.loc[df_full['Country/Region'] == 'Burma', 'Country/Region'] = 'Myanmar'
+    df_full.loc[df_full['Country/Region'] == 'Eswatini', 'Country/Region'] = 'Swaziland'
+    df_full.loc[df_full['Country/Region'] == "Cote d'Ivoire",
+           'Country/Region'] = 'Ivory Coast'
+    df_full.loc[df_full['Country/Region'] == "West Bank and Gaza",
+           'Country/Region'] = 'Palestine'
+    df_full['Country/Region'] = df_full['Country/Region'].replace('Taiwan*', 'Taiwan')
+    return df_full
+
+
+def attachmercatorcols(geo_df: gpd.geodataframe.GeoDataFrame,
+                       latitude_col: str,
+                       longitude_col: str) -> gpd.geodataframe.GeoDataFrame:
+    """Converts latitude/longitude cols to mercator values
+    - adds 'x' and 'y' columns respectively
+
+    Parameters
+    -----------
+    geo_df: pd.core.frame.DataFrame
+        The Full JHU dataframe
+    latitude_col: str
+        The latitude column name
+    longitude_col: str
+        The longitude column name
+    Returns
+    -----------
+    pd.DataFrame = a pandas DataFrame
     """
     k = 6378137
-    df['x'] = df[loncol] *   (k * np.pi/180.0)
-    df['y'] = np.log(np.tan((90 + df[latcol]) * np.pi/360.0)) * k
-    return df
-
+    geo_df['x'] = geo_df[longitude_col] * (k * np.pi / 180.0)
+    geo_df['y'] = np.log(np.tan(
+        (90 + geo_df[latitude_col]) * np.pi / 360.0)) * k
+    return geo_df
 
 def usdb():
-    """
-    Placeholder
+    """Parses USA from data sets from JHU dataset
+
+    Parameters
+    -----------
+    None
+
+    Returns
+    -----------
+    pd.DataFrame = a pandas DataFrame
     """
     df_us_confirmed = dfget_timeseries(
         srcbase['timeseries']['base'], srcbase['timeseries']['us_confirmed'])
     df_us_deaths = dfget_timeseries(
         srcbase['timeseries']['base'], srcbase['timeseries']['us_deaths'])
-    ids = df_us_confirmed.columns[0:11]
+    id_vars = df_us_confirmed.columns[0:11]
     us_dates = df_us_confirmed.columns[11:]
     df_us_confirmed_long = df_us_confirmed.melt(
-        id_vars=ids, value_vars=us_dates, var_name='Date', value_name='Confirmed')
+        id_vars=id_vars, value_vars=us_dates, var_name='Date', value_name='Confirmed')
     df_us_deaths_long = df_us_deaths.melt(
-        id_vars=ids, value_vars=us_dates, var_name='Date', value_name='Deaths')
-    df_us_confirmed_long
-    df = pd.concat(
+        id_vars=id_vars, value_vars=us_dates, var_name='Date', value_name='Deaths')
+    #df_us_confirmed_long
+    return pd.concat(
         [df_us_confirmed_long, df_us_deaths_long[['Deaths']]], axis=1)
-    return df
+    #return df
 
 
 def strigencydb():
-    """
-    Placeholder
-    """
-    df = dfget(srcbase['stringency']['base'], srcbase['stringency']['data'])
+    """Creates DataFrame from full Oxford dataset on GitHub
 
-    cols = df.columns[6:]
+    Parameters
+    -----------
+    None
 
-    df[cols] = df[cols].fillna(0)
+    Returns
+    -----------
+    pd.DataFrame = a pandas DataFrame
+    """
+    data_frame = dfget(srcbase['stringency']['base'], srcbase['stringency']['data'])
+    cols = data_frame.columns[6:]
+
+    data_frame[cols] = data_frame[cols].fillna(0)
     cols = ['CountryName', 'CountryCode', 'RegionName', 'RegionCode']
-    df[cols] = df[cols].fillna('')
+    data_frame[cols] = data_frame[cols].fillna('')
 
     rgx = r"(?P<year>\d{4})(?P<month>\d{2})(?P<day>\d{2})+"
-    def replace(
-        m):        return f"{m.group('year')}-{m.group('month')}-{m.group('day')}"
-    df['Date'] = df['Date'].astype(str)
-    df['Date'] = df['Date'].str.replace(rgx, replace)
-    df['Date'] = pd.to_datetime(df['Date'])
-    return df
+    def replace(matcher):
+        return f"{matcher.group('year')}-{matcher.group('month')}-{matcher.group('day')}"
+    # fix date str format and convert to datetime type
+    data_frame['Date'] = data_frame['Date'].astype(str)
+    data_frame['Date'] = data_frame['Date'].str.replace(rgx, replace)
+    data_frame['Date'] = pd.to_datetime(data_frame['Date'])
+    return data_frame
 
 
 def worldometersdb():
-    """
-    Placeholder
+    """Creates DataFrame from full world-o-meters dataset for COVID-19
+    DEFUCT: This function no longer works as expected
     """
     req = curl.get('https://www.worldometers.info/coronavirus/')
     soup = BeautifulSoup(req.content, "html.parser")
@@ -679,37 +770,37 @@ def worldometersdb():
     head_rows = []
     body_rows = []
 
-    for tr in head:
-        td = tr.find_all(['th', 'td'])
-        row = [i.text for i in td]
+    for table_row in head:
+        table_data = table_row.find_all(['th', 'td'])
+        row = [i.text for i in table_data]
         head_rows.append(row)
 
-    for tr in body:
-        td = tr.find_all(['th', 'td'])
-        row = [i.text for i in td]
+    for table_row in body:
+        table_data = table_data.find_all(['th', 'td'])
+        row = [i.text for i in table_data]
         body_rows.append(row)
 
-    df = pd.DataFrame(body_rows[:len(body_rows)-6], columns=head_rows[0])
-    df = df.iloc[8:, :-3].reset_index(drop=True)
-    df = df.drop('#', axis=1)
-    df.columns = ['Country/Region', 'TotalCases', 'NewCases', 'TotalDeaths', 'NewDeaths',
+    data_frame = pd.DataFrame(body_rows[:len(body_rows)-6], columns=head_rows[0])
+    data_frame = data_frame.iloc[8:, :-3].reset_index(drop=True)
+    data_frame = data_frame.drop('#', axis=1)
+    data_frame.columns = ['Country/Region', 'TotalCases', 'NewCases', 'TotalDeaths', 'NewDeaths',
                   'TotalRecovered', 'NewRecovered', 'ActiveCases', 'Serious,Critical',
                   'Tot Cases/1M pop', 'Deaths/1M pop', 'TotalTests', 'Tests/1M pop',
                   'Population', 'Continent']
-    df = df[['Country/Region', 'Continent', 'Population', 'TotalCases', 'NewCases', 'TotalDeaths', 'NewDeaths',
+    data_frame = data_frame[['Country/Region', 'Continent', 'Population', 'TotalCases', 'NewCases', 'TotalDeaths', 'NewDeaths',
              'TotalRecovered', 'NewRecovered', 'ActiveCases', 'Serious,Critical',
              'Tot Cases/1M pop', 'Deaths/1M pop', 'TotalTests', 'Tests/1M pop']]
 
-    df['WHO Region'] = df['Country/Region'].map(whomembers(variation=True))
+    data_frame['WHO Region'] = data_frame['Country/Region'].map(whomembers(variation=True))
 
-    df[df['WHO Region'].isna()]['Country/Region'].unique()
-    for col in df.columns[2:]:
+    data_frame[data_frame['WHO Region'].isna()]['Country/Region'].unique()
+    for col in data_frame.columns[2:]:
         # replace comma with empty string
-        df[col] = df[col].str.replace('[,+ ]', '', regex=True)
+        data_frame[col] = data_frame[col].str.replace('[,+ ]', '', regex=True)
         # replace 'N/A' with empty string
-        df[col] = df[col].str.replace('N/A', '', regex=False)
-    df = df.replace('', np.nan)
-    return df
+        data_frame[col] = data_frame[col].str.replace('N/A', '', regex=False)
+    data_frame = data_frame.replace('', np.nan)
+    return data_frame
 
 
 def geodb(df_any, df_shapes, df_codes):
