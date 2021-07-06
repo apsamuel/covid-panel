@@ -66,7 +66,8 @@ def main():
                 datasources.fulldb()[0]
             )
         ),
-        datasources.shapesdb(),
+        #datasources.shapesdb(),
+        datasources.shapesdbv2('admin_0','countries',110),
         datasources.codedb()
     )
 
