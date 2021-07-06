@@ -47,7 +47,7 @@ class PandasTimeStampEncoder(json.JSONEncoder):
     Used when calling "to_json" on dataframes to properly convert the datetime type column(s)
     """
     def default(self, o):
-        if isinstance(o, pd._libs.tslibs.timestamps.Timestamp):
+        if isinstance(o, pd.Timestamp):
             return o.strftime('%Y-%m-%d')
         return json.JSONEncoder.default(self, o)
 
