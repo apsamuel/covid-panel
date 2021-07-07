@@ -302,50 +302,50 @@ def codedb():
 # deprecated.. use shapesdb
 
 
-def shapedb():
-    """
-    Placeholder
-    """
-    gdf = gpd.read_file(gpd.datasets.get_path('naturalearth_lowres'))
-    gdf = gdf.to_crs(3857)
-    return gdf
+# def shapedb():
+#     """
+#     Placeholder
+#     """
+#     gdf = gpd.read_file(gpd.datasets.get_path('naturalearth_lowres'))
+#     gdf = gdf.to_crs(3857)
+#     return gdf
 
 
-def shapesdb():
-    """
-    Placeholder
-    """
-    #url = 'https://naciscdn.org/naturalearth/110m/cultural/ne_110m_admin_0_countries.zip'
-    req = curl.get(srcbase['countryshapes']['base'], allow_redirects=True)
-    open(os.path.basename(req.url), 'wb').write(req.content)
+# def shapesdb():
+#     """
+#     Placeholder
+#     """
+#     #url = 'https://naciscdn.org/naturalearth/110m/cultural/ne_110m_admin_0_countries.zip'
+#     req = curl.get(srcbase['countryshapes']['base'], allow_redirects=True)
+#     open(os.path.basename(req.url), 'wb').write(req.content)
 
-    with zipfile.ZipFile(os.path.basename(req.url), "r") as zf:
-        #zf.extractall(path='data')
-        # only extract the needed file into data dir
-        zf.extract('ne_110m_admin_0_countries.shp', path='./data')
-        zf.extract('ne_110m_admin_0_countries.shx', path='./data')
-        zf.extract('ne_110m_admin_0_countries.prj', path='./data')
-        zf.extract('ne_110m_admin_0_countries.cpg', path='./data')
-        zf.extract('ne_110m_admin_0_countries.dbf', path='./data')
+#     with zipfile.ZipFile(os.path.basename(req.url), "r") as zf:
+#         #zf.extractall(path='data')
+#         # only extract the needed file into data dir
+#         zf.extract('ne_110m_admin_0_countries.shp', path='./data')
+#         zf.extract('ne_110m_admin_0_countries.shx', path='./data')
+#         zf.extract('ne_110m_admin_0_countries.prj', path='./data')
+#         zf.extract('ne_110m_admin_0_countries.cpg', path='./data')
+#         zf.extract('ne_110m_admin_0_countries.dbf', path='./data')
 
-    if os.path.exists(os.path.basename(req.url)):
-        os.remove(os.path.basename(req.url))
+#     if os.path.exists(os.path.basename(req.url)):
+#         os.remove(os.path.basename(req.url))
 
-    gdf = gpd.read_file(
-        os.path.join(
-            'data',
-            'ne_110m_admin_0_countries.shp'
-        )
-    )
-    gdf = gdf.rename(columns={
-        'ADMIN': 'Official Name',
-        'ADM0_A3': 'alpha_3'
-    })
-    #gdf = gdf.to_crs(3857)
-    return gdf
+#     gdf = gpd.read_file(
+#         os.path.join(
+#             'data',
+#             'ne_110m_admin_0_countries.shp'
+#         )
+#     )
+#     gdf = gdf.rename(columns={
+#         'ADMIN': 'Official Name',
+#         'ADM0_A3': 'alpha_3'
+#     })
+#     #gdf = gdf.to_crs(3857)
+#     return gdf
 
 
-def shapesdbv2(shape_key,shape_type,scale):
+def shapesdb(shape_key,shape_type,scale):
     """Fetch respective binary shape files from natural earth
 
     Parameters
@@ -355,6 +355,7 @@ def shapesdbv2(shape_key,shape_type,scale):
         - admin_1: administrative level 1 detail
     shape_type: str
         - countries: Country Level Boundaries
+        - states_and_provinces: State & Province level Boundaries
         - sovereignty: Sovereign level Boundaries
         - boundary_lines_land: Land line Boundaryies
     Placeholder
