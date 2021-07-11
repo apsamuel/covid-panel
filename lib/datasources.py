@@ -1,5 +1,5 @@
 """The datasources module provides methods for acquiring statistical & geometric data
-pertaining to the COVID-19 pandemiFunctionsi
+pertaining to the COVID-19 pandemic
 """
 #import sys
 import os
@@ -10,6 +10,7 @@ import warnings
 import json
 from urllib.parse import (
     urljoin)
+import datetime as dt
 from datetime import (
     timedelta)
 import requests as curl
@@ -298,52 +299,6 @@ def codedb():
     data_frame = data_frame.rename(columns={'COUNTRY': 'Country/Region'})
     #df_country_codes = country_codes_df
     return data_frame
-
-# deprecated.. use shapesdb
-
-
-# def shapedb():
-#     """
-#     Placeholder
-#     """
-#     gdf = gpd.read_file(gpd.datasets.get_path('naturalearth_lowres'))
-#     gdf = gdf.to_crs(3857)
-#     return gdf
-
-
-# def shapesdb():
-#     """
-#     Placeholder
-#     """
-#     #url = 'https://naciscdn.org/naturalearth/110m/cultural/ne_110m_admin_0_countries.zip'
-#     req = curl.get(srcbase['countryshapes']['base'], allow_redirects=True)
-#     open(os.path.basename(req.url), 'wb').write(req.content)
-
-#     with zipfile.ZipFile(os.path.basename(req.url), "r") as zf:
-#         #zf.extractall(path='data')
-#         # only extract the needed file into data dir
-#         zf.extract('ne_110m_admin_0_countries.shp', path='./data')
-#         zf.extract('ne_110m_admin_0_countries.shx', path='./data')
-#         zf.extract('ne_110m_admin_0_countries.prj', path='./data')
-#         zf.extract('ne_110m_admin_0_countries.cpg', path='./data')
-#         zf.extract('ne_110m_admin_0_countries.dbf', path='./data')
-
-#     if os.path.exists(os.path.basename(req.url)):
-#         os.remove(os.path.basename(req.url))
-
-#     gdf = gpd.read_file(
-#         os.path.join(
-#             'data',
-#             'ne_110m_admin_0_countries.shp'
-#         )
-#     )
-#     gdf = gdf.rename(columns={
-#         'ADMIN': 'Official Name',
-#         'ADM0_A3': 'alpha_3'
-#     })
-#     #gdf = gdf.to_crs(3857)
-#     return gdf
-
 
 def shapesdb(shape_key,shape_type,scale):
     """Fetch respective binary shape files from natural earth
@@ -739,7 +694,25 @@ def usdb():
     #return df
 
 
-def strigencydb():
+# ['Timor-Leste', - East Timor
+#  'Bermuda', - not in JHU dataset drop from stringency
+#  'United States Virgin Islands', - "British Virgin Islands"
+#  'Tonga', - constitutional monarchy, drop
+#  'Turkmenistan', - drop
+#  'Hong Kong', - ""
+#  'Eswatini', - Swaziland
+#  "Cote d'Ivoire", Ivory Coast
+#  'Democratic Republic of Congo', -> 'Democratic Republic of the Congo'
+#  'Aruba', - "" -> drop
+#  'Faeroe Islands', - ""
+#  'Kyrgyz Republic', - ""
+#  'Puerto Rico', - check if it is in the csv
+#  'Congo', -> 'Republic of the Congo'
+#  'Guam', - ""
+#  'Macao', - ??
+#  'Slovak Republic']
+
+def strigencydb(df_codes: pd.core.frame.DataFrame) -> pd.core.frame.DataFrame:
     """Creates DataFrame from full Oxford dataset on GitHub
 
     Parameters
@@ -764,6 +737,26 @@ def strigencydb():
     data_frame['Date'] = data_frame['Date'].astype(str)
     data_frame['Date'] = data_frame['Date'].str.replace(rgx, replace)
     data_frame['Date'] = pd.to_datetime(data_frame['Date'])
+
+
+    # prepare data frame for merge on the `alpha_3` column
+    data_frame = data_frame.rename(columns={'CountryCode': 'alpha_3'})
+    # merge code db
+    data_frame = pd.merge(data_frame, df_codes, how='left', on=['alpha_3'])
+
+    # clean up some of the data frame
+    data_frame.loc[data_frame['CountryName'] == 'Congo',
+                   'CountryName'] = 'Republic of the Congo'
+    data_frame.loc[data_frame['CountryName'] == 'Democratic Republic of Congo',
+                   'CountryName'] = 'Democratic Republic of the Congo'
+    data_frame.loc[data_frame['CountryName'] == 'Timor-Leste',
+                   'CountryName'] = 'East Timor'
+    data_frame.loc[data_frame['CountryName'] == 'Eswatini', 
+                   'CountryName'] = 'Swaziland'
+    data_frame.loc[data_frame['CountryName'] == 'Cote d\'Ivoire', 
+                   'CountryName'] = 'Ivory Coast'
+    data_frame.loc[data_frame['CountryName'] == 'United States Virgin Islands',
+                   'CountryName'] = 'British Virgin Islands'
     return data_frame
 
 
@@ -811,6 +804,7 @@ def worldometersdb():
         'Population',
         'Continent',
     ]
+    #reorder
     data_frame = data_frame[[
         'Country/Region',
         'Continent',
@@ -840,11 +834,77 @@ def worldometersdb():
     data_frame = data_frame.replace('', np.nan)
     return data_frame
 
+def geostringencydb(
+    df_stringency: pd.core.frame.DataFrame,
+    df_shapes: gpd.geodataframe.GeoDataFrame,
+    country_code: str = None) -> gpd.geodataframe.GeoDataFrame:
+    """Creates GeoPandas DataFrame from Oxford Stringency DB source DataFrame
+    This is accomplished by:
+        - merging the shapesdb on '___' Column
+
+    Parameters
+    -----------
+    df_stringency: pd.core.frame.DataFrame
+        The stringency Database DataFrame
+    df_shapes: gpd.geodataframe.GeoDataFrame
+        A GeoPandas admin_0 or admin_1 level shape dataframe
+    country_code: str
+        The country code to drill down into, requires passing an 
+        admin_1 df_stringency with state and province specificty
+
+    Returns
+    -----------
+    pd.DataFrame = a geopandas DataFrame
+    """
+
+    if country_code is None:
+        geo_data_frame = df_shapes.merge(
+            df_stringency,
+            left_on='alpha_3',
+            right_on='alpha_3',
+            how='left'
+        )
+        return geo_data_frame
+
+    # return carved data
+    df_shapes = df_shapes[(df_shapes.adm0_a3==country_code)]
+    df_stringency = df_stringency[
+        (df_stringency.alpha_3 == country_code) &
+        (df_stringency.RegionName != '')
+    ].reset_index(drop=False)
+    df_stringency = df_stringency.rename(
+        columns={
+            'RegionName': 'name'
+        }
+    )
+    # Great Britain must be merged on two columns, geonunit to name
+    if country_code == 'GBR':
+        geo_data_frame = df_shapes.merge(
+            df_stringency,
+            how='inner',
+            left_on=['geonunit'],
+            right_on=['name']
+        )
+        geo_data_frame = geo_data_frame.rename(
+            columns={
+                'name_x': 'name'
+            }
+        )
+
+
+    else:
+        geo_data_frame = df_shapes.merge(
+            df_stringency,
+            on=[
+                'name'
+            ]
+        )
+    return geo_data_frame
 
 def geodb(df_grouped: pd.core.frame.DataFrame,
           df_shapes: gpd.geodataframe.GeoDataFrame,
           df_codes: pd.core.frame.DataFrame) -> gpd.geodataframe.GeoDataFrame:
-    """Creates GeoPandas DataFrame from a grouped DataFram
+    """Creates GeoPandas DataFrame from a grouped JHU source DataFrame
     This is accomplished by:
         - merging the codedb on 'Country/Region' Column
         - merging the shapesdb on 'alpha_3' Column
@@ -874,3 +934,18 @@ def geodb(df_grouped: pd.core.frame.DataFrame,
                           right_on='alpha_3',
                           how='left')
     return geo_data_frame
+
+
+def slice_on_day(data_frame: pd.core.frame.DataFrame,
+                  date_column: str = None,
+                  slice_date: tuple = None):
+    """Placeholder"""
+    if date_column is None:
+        date_column = 'Date'
+
+    if slice_date is None:
+        slice_date: dt.datetime.now()
+
+    return data_frame[
+        data_frame[date_column] == pd.Timestamp(slice_date)
+    ]
