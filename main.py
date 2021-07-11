@@ -24,7 +24,7 @@ from bokeh.themes import (
 )
 from lib.FullDataTable import FullDataTable
 from lib.DataOverview import DataOverview
-from lib.ChoroplethMap import ChoroplethMap
+#from lib.ChoroplethMap import ChoroplethMap
 from lib import datasources
 import lib.loginator
 log = logging.getLogger(__name__)
@@ -76,8 +76,8 @@ def main():
     full_table = FullDataTable(db=full_db)
     overview = DataOverview(db=daywise_db)
     overview_layout = overview.layout(title='overview')
-    choro = ChoroplethMap(db=geo_db)
-    choro_layout = choro.layout()
+    #choro = ChoroplethMap(db=geo_db)
+    #choro_layout = choro.layout()
     table_layout = full_table.layout()
     logger.debug("[main] layout object generation complete")
 
@@ -90,9 +90,9 @@ def main():
     curdoc().add_root(
         overview_layout
     )
-    curdoc().add_root(
-        choro_layout
-    )
+    # curdoc().add_root(
+    #     choro_layout
+    # )
 
     # fin...
     logger.debug("[main] page has been rendered, please do validate the results in a browser")
